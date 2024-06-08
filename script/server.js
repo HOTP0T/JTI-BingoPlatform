@@ -4,7 +4,6 @@ const http = require('http');
 const socketIo = require('socket.io');
 const bodyParser = require('body-parser');
 const path = require('path');
-const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const app = express();
 const server = http.createServer(app);
@@ -12,35 +11,13 @@ const io = socketIo(server);
 
 const PORT = process.env.PORT || 3000;
 
-// MongoDB URI
-const uri = "mongodb+srv://tpcmaky:<password>@jti-bingo-cluster.metzsgm.mongodb.net/?retryWrites=true&w=majority&appName=JTI-Bingo-Cluster";
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-
-async function connectToMongoDB() {
-  try {
-    // Connect the client to the server
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } catch (err) {
-    console.error('Failed to connect to MongoDB', err);
-  }
-}
-
-// Connect to MongoDB
-connectToMongoDB().catch(console.dir);
+// Use the environment variable for MongoDB URI
+const MONGO_URI = process.env.MONGO_URI;
 
 // Connect to Mongoose
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Successfully connected to MongoDB"))
+  .catch(err => console.error("Connection error", err));
 
 // Define User Schema
 const userSchema = new mongoose.Schema({
@@ -109,6 +86,11 @@ io.on('connection', (socket) => {
     const tile = await Tile.findByIdAndUpdate(tileId, { color }, { new: true });
     io.to(team).emit('tileUpdated', tile);
   });
+});
+
+// Serve the main HTML file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 server.listen(PORT, () => {
