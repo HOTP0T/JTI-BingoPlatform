@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Project</title>
+    <title>Bingo Game</title>
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <div id="login">
+        <input type="text" id="username" placeholder="Enter your username" />
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="bingoCard" class="bingo-card"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>
