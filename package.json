@@ -1,0 +1,14 @@
+{
+  "name": "bingo-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script/server.js",
+  "scripts": {
+    "start": "node script/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10",
+    "socket.io": "^2.3.0"
+  }
+}
