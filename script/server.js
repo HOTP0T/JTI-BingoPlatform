@@ -4,6 +4,7 @@ const http = require('http');
 const socketIo = require('socket.io');
 const bodyParser = require('body-parser');
 const path = require('path');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const app = express();
 const server = http.createServer(app);
@@ -11,8 +12,35 @@ const io = socketIo(server);
 
 const PORT = process.env.PORT || 3000;
 
+// MongoDB URI
+const uri = "mongodb+srv://tpcmaky:<password>@jti-bingo-cluster.metzsgm.mongodb.net/?retryWrites=true&w=majority&appName=JTI-Bingo-Cluster";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
+async function connectToMongoDB() {
+  try {
+    // Connect the client to the server
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } catch (err) {
+    console.error('Failed to connect to MongoDB', err);
+  }
+}
+
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/bingo', { useNewUrlParser: true, useUnifiedTopology: true });
+connectToMongoDB().catch(console.dir);
+
+// Connect to Mongoose
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define User Schema
 const userSchema = new mongoose.Schema({
