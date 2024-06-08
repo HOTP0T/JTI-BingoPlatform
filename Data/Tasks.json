@@ -1,0 +1,104 @@
+{
+  "BingoTiles": [
+    {
+      "tile": "Any wildy pet",
+      "img_path": "path/to/image/any_wildy_pet.png"
+    },
+    {
+      "tile": "VW from scratch",
+      "img_path": "path/to/image/vw_from_scratch.png"
+    },
+    {
+      "tile": "Ring of the gods, treasonous, tyrannical",
+      "img_path": "path/to/image/ring_of_the_gods_treasonous_tyrannical.png"
+    },
+    {
+      "tile": "D pick & D2H",
+      "img_path": "path/to/image/d_pick_d2h.png"
+    },
+    {
+      "tile": "Claws, fangs, skull",
+      "img_path": "path/to/image/claws_fangs_skull.png"
+    },
+    {
+      "tile": "Odium from scratch",
+      "img_path": "path/to/image/odium_from_scratch.png"
+    },
+    {
+      "tile": "Chaos druid set",
+      "img_path": "path/to/image/chaos_druid_set.png"
+    },
+    {
+      "tile": "Any rev weapon",
+      "img_path": "path/to/image/any_rev_weapon.png"
+    },
+    {
+      "tile": "Ancient crystal",
+      "img_path": "path/to/image/ancient_crystal.png"
+    },
+    {
+      "tile": "Any 4 statuettes (no dupes)",
+      "img_path": "path/to/image/any_4_statuettes_no_dupes.png"
+    },
+    {
+      "tile": "Averice",
+      "img_path": "path/to/image/averice.png"
+    },
+    {
+      "tile": "Dagon hai set",
+      "img_path": "path/to/image/dagon_hai_set.png"
+    },
+    {
+      "tile": "Teleport scroll",
+      "img_path": "path/to/image/teleport_scroll.png"
+    },
+    {
+      "tile": "D boots",
+      "img_path": "path/to/image/d_boots.png"
+    },
+    {
+      "tile": "Whip",
+      "img_path": "path/to/image/whip.png"
+    },
+    {
+      "tile": "Imbued heart or eternal gem",
+      "img_path": "path/to/image/imbued_heart_eternal_gem.png"
+    },
+    {
+      "tile": "Eternal glory",
+      "img_path": "path/to/image/eternal_glory.png"
+    },
+    {
+      "tile": "3m agility xp collectively",
+      "img_path": "path/to/image/3m_agility_xp_collectively.png"
+    },
+    {
+      "tile": "Malediction from scratch",
+      "img_path": "path/to/image/malediction_from_scratch.png"
+    },
+    {
+      "tile": "3m fishing xp collectively",
+      "img_path": "path/to/image/3m_fishing_xp_collectively.png"
+    },
+    {
+      "tile": "3m thieving xp collectively",
+      "img_path": "path/to/image/3m_thieving_xp_collectively.png"
+    },
+    {
+      "tile": "KBD heads",
+      "img_path": "path/to/image/kbd_heads.png"
+    },
+    {
+      "tile": "3m hunter xp collectively",
+      "img_path": "path/to/image/3m_hunter_xp_collectively.png"
+    },
+    {
+      "tile": "10 lms wins collectively",
+      "img_path": "path/to/image/10_lms_wins_collectively.png"
+    },
+    {
+      "tile": "Pk 20m total collectively",
+      "img_path": "path/to/image/pk_20m_total_collectively.png"
+    }
+  ]
+}
