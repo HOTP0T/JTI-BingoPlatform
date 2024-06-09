@@ -1,17 +1,16 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-  overflow: hidden;
+* {
+  font-family: osrs-font, Arial, sans-serif;;
 }
 
-#login {
-  margin-bottom: 20px;
+body {
+  font-family: osrs-font, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the body takes the full height of the viewport */
+  margin: 0;
+  background-color: #f0f0f0;
+  overflow: hidden; /* Ensure no scrollbars */
 }
 
 .bingo-card {
@@ -38,6 +37,7 @@ body {
   justify-content: space-between;
   position: relative;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .front-side, .back-side {
@@ -75,25 +75,11 @@ body {
   max-width: 100%;
   max-height: 60px; /* Reduced max height for smaller images */
   object-fit: contain;
-  cursor: pointer;
 }
 
 .bingo-tile p {
   margin: 10px 0 0;
   font-size: 12px; /* Smaller font size */
-}
-
-.bingo-tile .buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 0 5px;
-}
-
-.bingo-tile button {
-  padding: 5px;
-  font-size: 10px; /* Smaller button text */
-  cursor: pointer;
 }
 
 .bingo-tile .note {
@@ -102,4 +88,44 @@ body {
   background: #f9f9f9;
   padding: 5px;
   border: 1px solid #ddd;
+}
+
+.scoreboard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bingo-tile .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+  padding: 0;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.bingo-tile button {
+  padding: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.bingo-tile.completed {
+  background-color: purple;
+}
+
+
+@font-face {
+  font-family: 'osrs-font';
+  src: url(../assets/Fonts/runescape.ttf);
 }

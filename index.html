@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div id="login">
-        <input type="text" id="username" placeholder="Enter your username" />
-        <button onclick="login()">Login</button>
-    </div>
-    <div id="bingoCard" class="bingo-card"></div>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="script/script.js"></script>
+  <div id="scoreboard" class="scoreboard">
+      <p>Total Tiles: <span id="totalTiles">0</span></p>
+      <p>Completed Tiles: <span id="completedTiles">0</span></p>
+      <p>Uncompleted Tiles: <span id="uncompletedTiles">0</span></p>
+  </div>
+  <div id="bingoCard" class="bingo-card"></div>
+  <script src="script/script.js"></script>
 </body>
+
 </html>
