@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User = require('../models/User');
+const User = require('../models/User'); // Ensure the correct path
 
 const mongoURI = process.env.MONGO_URI;
 
@@ -18,6 +18,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     mongoose.connection.close();
   })
   .catch(err => console.log('MongoDB connection error:', err));
+
 
 
 // const mongoose = require('mongoose');

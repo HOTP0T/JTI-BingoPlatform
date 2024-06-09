@@ -1,25 +1,32 @@
-document.getElementById('login-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const User = require('../models/User'); // Ensure the correct path
 
-  const username = document.getElementById('username').value;
+const app = express();
+app.use(bodyParser.json());
+
+const mongoURI = process.env.MONGO_URI;
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log('MongoDB connection error:', err));
+
+app.post('/login', async (req, res) => {
+  const { username } = req.body;
 
   try {
-    const response = await fetch('/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username })
-    });
+    const user = await User.findOne({ username });
 
-    const data = await response.json();
-
-    if (response.ok) {
-      alert('Login successful!');
-      // Perform additional actions like redirecting the user based on their team
-    } else {
-      alert(data.error);
+    if (!user) {
+      return res.status(400).json({ error: 'Username not found' });
     }
+
+    res.json({ message: 'Login successful', team: user.team });
   } catch (error) {
-    console.error('Error:', error);
-    alert('An error occurred. Please try again.');
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
