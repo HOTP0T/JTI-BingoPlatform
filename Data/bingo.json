@@ -2,7 +2,7 @@
   "BingoTiles": [
     {
       "tile": "Any wildy pet",
-      "img_path": "../assets/luna.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Any wildy pet."
     },
     {
