@@ -275,6 +275,20 @@ body {
   perspective: 1000px;
 }
 
+.bingo-tile .buttons button.completed-button {
+  color: #00FE00; /* Default color for Mark as Complete */
+}
+
+.bingo-tile.completed .buttons button.completed-button {
+  color: #FA3800; /* Color for Mark as Incomplete */
+}
+
+/* Ensure title color change */
+.bingo-tile.completed p {
+  color: #00FE00; /* Title color when marked as completed */
+}
+
+
 .bingo-tile:hover {
   transform: scale(1.05);
 }
@@ -360,8 +374,8 @@ body {
 }
 
 .bingo-tile button {
-  padding: 3px;
-  font-size: 10px;
+  padding: 5px; /* Increased from 3px */
+  font-size: 12px; /* Increased from 10px */
   cursor: pointer;
   border: none;
   border-radius: 5px;

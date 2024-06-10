@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector('.nav-menu');
   const savedState = JSON.parse(localStorage.getItem('bingoState')) || {};
 
-  fetch('Data/bingo.json')
+  fetch('Data/sample.json')
     .then(response => response.json())
     .then(data => {
       const tiles = data.BingoTiles;
@@ -186,12 +186,15 @@ function setTileCompletion(tileElement, isCompleted, updateButton = true) {
   const completedButton = tileElement.querySelector('.completed-button');
   const noteButton = tileElement.querySelector('.note-button');
   const colorButton = tileElement.querySelector('.color-button');
+  const title = tileElement.querySelector('p');
 
   if (isCompleted) {
     tileElement.style.backgroundColor = 'grey';
+    title.style.color = '#00FE00';
 
     if (updateButton && completedButton) {
       completedButton.textContent = 'Mark as Incomplete';
+      completedButton.style.color = '#FA3800';
     }
 
     tileElement.style.pointerEvents = 'none';
@@ -202,10 +205,12 @@ function setTileCompletion(tileElement, isCompleted, updateButton = true) {
   } else {
     if (updateButton && completedButton) {
       completedButton.textContent = 'Mark as Complete';
+      completedButton.style.color = '#00FE00';
     }
 
     tileElement.style.pointerEvents = 'auto';
     tileElement.style.backgroundColor = '';
+    title.style.color = 'white';
 
     if (noteButton) noteButton.style.display = 'inline-block';
     if (colorButton) colorButton.style.display = 'inline-block';
