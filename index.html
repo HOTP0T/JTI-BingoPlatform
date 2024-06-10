@@ -6,15 +6,64 @@
     <title>Bingo Game</title>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/914ca5d668.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="scoreboard" class="scoreboard">
-      <p>Total Tiles: <span id="totalTiles">0</span></p>
-      <p>Completed Tiles: <span id="completedTiles">0</span></p>
-      <p>Uncompleted Tiles: <span id="uncompletedTiles">0</span></p>
-  </div>
-  <div id="bingoCard" class="bingo-card"></div>
-  <script src="script/script.js"></script>
-</body>
+    <div class="burger-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#" data-target="helpPopup">Help</a></li>
+            <li><a href="#" data-target="contactPopup">Contact</a></li>
+            <li><a href="#" data-target="aboutPopup">About</a></li>
+        </ul>
+    </nav>
 
+    <div id="scoreboard" class="scoreboard">
+        <p>Completed Tiles: <span id="completedCount">0</span></p>
+        <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
+    </div>
+    <div id="bingoCard" class="bingo-card"></div>
+
+    <button id="resetAllButton" class="reset-all-button">RESET ALL</button>
+
+    <div id="resetConfirmModal" class="modal">
+      <div class="modal-content">
+        <p>Are you sure you want to reset all data? This action cannot be undone.</p>
+        <button id="confirmResetButton" class="confirm-button">Yes, reset</button>
+        <button id="cancelResetButton" class="cancel-button">Cancel</button>
+      </div>
+    </div>
+
+    <div id="mobileWarningModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <p>The current version of the app doesn't meet the tablet/mobile requirements so it's going to look like shit. I RECOMMEND STAYING ON A PAGE LARGER THEN 768px</p>
+      </div>
+    </div>
+
+    <div id="helpPopup" class="popup-sidebar">
+      <div class="popup-content">
+        <h2>Help</h2>
+        <p>Content for Help section...</p>
+      </div>
+    </div>
+
+    <div id="contactPopup" class="popup-sidebar">
+      <div class="popup-content">
+        <h2>Contact</h2>
+        <p>Content for Contact section...</p>
+      </div>
+    </div>
+
+    <div id="aboutPopup" class="popup-sidebar">
+      <div class="popup-content">
+        <h2>About</h2>
+        <p>Content for About section...</p>
+      </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
 </html>
