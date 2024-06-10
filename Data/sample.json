@@ -7,72 +7,72 @@
     },
     {
       "tile": "Task2",
-      "img_path": "./assets/luna1.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task2."
     },
     {
       "tile": "Task3",
-      "img_path": "./assets/luna2.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task3."
     },
     {
       "tile": "Task4",
-      "img_path": "./assets/luna3.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task4."
     },
     {
       "tile": "Task5",
-      "img_path": "./assets/luna4.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task5."
     },
     {
       "tile": "Task6",
-      "img_path": "./assets/luna5.jpg",
+      "img_path": "./assets/luna3.jpg",
       "text": "This is the text for Task6."
     },
     {
       "tile": "Task7",
-      "img_path": "./assets/luna6.jpg",
+      "img_path": "./assets/luna3.jpg",
       "text": "This is the text for Task7."
     },
     {
       "tile": "Task8",
-      "img_path": "./assets/luna7.jpg",
+      "img_path": "./assets/luna3.jpg",
       "text": "This is the text for Task8."
     },
     {
       "tile": "Task9",
-      "img_path": "./assets/luna8.jpg",
+      "img_path": "./assets/luna3.jpg",
       "text": "This is the text for Task9."
     },
     {
       "tile": "Task10",
-      "img_path": "./assets/luna9.jpg",
+      "img_path": "./assets/luna3.jpg",
       "text": "This is the text for Task10."
     },
     {
       "tile": "Task11",
-      "img_path": "./assets/luna10.jpg",
+      "img_path": "./assets/luna2.jpg",
       "text": "This is the text for Task11."
     },
     {
       "tile": "Task12",
-      "img_path": "./assets/luna11.jpg",
+      "img_path": "./assets/luna2.jpg",
       "text": "This is the text for Task12."
     },
     {
       "tile": "Task13",
-      "img_path": "./assets/luna12.jpg",
+      "img_path": "./assets/luna2.jpg",
       "text": "This is the text for Task13."
     },
     {
       "tile": "Task14",
-      "img_path": "./assets/luna13.jpg",
+      "img_path": "./assets/luna2.jpg",
       "text": "This is the text for Task14."
     },
     {
       "tile": "Task15",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "./assets/luna2.jpg",
       "text": "This is the text for Task15."
     },
     {
@@ -82,47 +82,47 @@
     },
     {
       "tile": "Task17",
-      "img_path": "./assets/luna2.jpg",
+      "img_path": "./assets/luna1.jpg",
       "text": "This is the text for Task17."
     },
     {
       "tile": "Task18",
-      "img_path": "./assets/luna3.jpg",
+      "img_path": "./assets/luna1.jpg",
       "text": "This is the text for Task18."
     },
     {
       "tile": "Task19",
-      "img_path": "./assets/luna4.jpg",
+      "img_path": "./assets/luna1.jpg",
       "text": "This is the text for Task19."
     },
     {
       "tile": "Task20",
-      "img_path": "./assets/luna5.jpg",
+      "img_path": "./assets/luna1.jpg",
       "text": "This is the text for Task20."
     },
     {
       "tile": "Task21",
-      "img_path": "./assets/luna6.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task21."
     },
     {
       "tile": "Task22",
-      "img_path": "./assets/luna7.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task22."
     },
     {
       "tile": "Task23",
-      "img_path": "./assets/luna8.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task23."
     },
     {
       "tile": "Task24",
-      "img_path": "./assets/luna9.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task24."
     },
     {
       "tile": "Task25",
-      "img_path": "./assets/luna10.jpg",
+      "img_path": "./assets/luna.jpg",
       "text": "This is the text for Task25."
     }
   ]
