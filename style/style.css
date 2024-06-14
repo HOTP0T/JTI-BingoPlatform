@@ -40,7 +40,8 @@
 }
 
 /* Confirmation buttons for reset modal */
-.confirm-button, .cancel-button {
+.confirm-button,
+.cancel-button {
   padding: 10px 20px;
   font-size: 14px;
   margin: 10px;
@@ -181,7 +182,7 @@
   width: 300px;
   height: 100%;
   background-color: #2a2a2a;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 3000;
   overflow-y: auto;
   transition: transform 0.3s ease;
@@ -222,7 +223,6 @@
 .overlay.active {
   display: block;
 }
-
 
 /* STYLING FOR BINGO CARD */
 
@@ -276,18 +276,17 @@ body {
 }
 
 .bingo-tile .buttons button.completed-button {
-  color: #00FE00; /* Default color for Mark as Complete */
+  color: #00fe00; /* Default color for Mark as Complete */
 }
 
 .bingo-tile.completed .buttons button.completed-button {
-  color: #FA3800; /* Color for Mark as Incomplete */
+  color: #fa3800; /* Color for Mark as Incomplete */
 }
 
 /* Ensure title color change */
 .bingo-tile.completed p {
-  color: #00FE00; /* Title color when marked as completed */
+  color: #00fe00; /* Title color when marked as completed */
 }
-
 
 .bingo-tile:hover {
   transform: scale(1.05);
