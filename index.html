@@ -27,10 +27,7 @@
             <li><a href="#" data-target="helpPopup">Help</a></li>
             <li><a href="#" data-target="contactPopup">Contact</a></li>
             <li><a href="#" data-target="aboutPopup">About</a></li>
-
-            <!-- The HOME navlink is currently useless as there is only one page -->
             <li><a href="https://www.jti.com/" target="_blank">Home</a></li>
-            
         </ul>
     </nav>
 
@@ -83,6 +80,18 @@
       </div>
     </div>
 
+    <div id="lightbox" style="display:none;">
+      <div id="lightbox-content">
+        <span class="close" id="close-button">&times;</span>
+        <img id="lightbox-img" src="" alt="Image">
+        <h2 id="lightbox-title"></h2>
+        <p id="lightbox-notes"></p>
+        <button class="left-arrow" id="prev-button">&#10094;</button>
+        <button class="right-arrow" id="next-button">&#10095;</button>
+      </div>
+    </div>
+
+    <script src="script/lightbox.js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>

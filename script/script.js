@@ -10,18 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector('.nav-menu');
   const savedState = JSON.parse(localStorage.getItem('bingoState')) || {};
 
-  fetch('Data/sample.json')
-    .then(response => response.json())
-    .then(data => {
-      const tiles = data.BingoTiles;
-      tiles.forEach(tile => {
-        const tileElement = createTileElement(tile, savedState[tile.tile]);
-        bingoCard.appendChild(tileElement);
-      });
-      // Update the scoreboard with initial values
-      updateScoreboard();
-    })
-    .catch(error => console.error('Error fetching the JSON data:', error));
+  fetch('Data/bingo.json')
+  .then(response => response.json())
+  .then(data => {
+    const tiles = data.BingoTiles;
+    tiles.forEach(tile => {
+      const tileElement = createTileElement(tile, savedState[tile.tile]);
+      bingoCard.appendChild(tileElement);
+    });
+    updateScoreboard();
+  })
+  .catch(error => console.error('Error fetching the JSON data:', error));
 
   resetAllButton.addEventListener('click', () => {
     resetConfirmModal.style.display = 'block';
@@ -61,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     overlay.classList.remove('active');
   });
+
+  window.addEventListener("resize", checkViewportWidth);
+  window.addEventListener("load", checkViewportWidth);
 });
 
 function createTileElement(tile, savedTileState) {
@@ -74,7 +76,6 @@ function createTileElement(tile, savedTileState) {
 
   const backSide = document.createElement('div');
   backSide.className = 'back-side';
-  backSide.textContent = tile.text;
 
   const img = document.createElement('img');
   img.src = tile.img_path;
@@ -86,59 +87,31 @@ function createTileElement(tile, savedTileState) {
   const buttons = document.createElement('div');
   buttons.className = 'buttons';
 
-  const noteButton = document.createElement('button');
-  noteButton.textContent = 'Notes';
-  noteButton.classList.add('note-button');
-  noteButton.tabIndex = 0; // Make the button focusable
-  noteButton.addEventListener('click', (event) => {
-    event.stopPropagation();
-    toggleNoteTextbox(tileElement);
-  });
+  const noteButton = createButton('Notes', 'note-button', () => toggleNoteTextbox(tileElement));
+  const colorButton = createButton('Color', 'color-button', () => showColorOptions(tileElement));
+  const completedButton = createButton(savedTileState && savedTileState.completed ? 'Mark as Incomplete' : 'Mark as Complete', 'completed-button', () => toggleCompletion(tileElement, tile.tile));
 
-  const colorButton = document.createElement('button');
-  colorButton.textContent = 'Color';
-  colorButton.classList.add('color-button');
-  colorButton.tabIndex = 0; // Make the button focusable
-  colorButton.addEventListener('click', (event) => {
-    event.stopPropagation();
-    showColorOptions(tileElement);
-  });
-
-  const completedButton = document.createElement('button');
-  completedButton.textContent = savedTileState && savedTileState.completed ? 'Mark as Incomplete' : 'Mark as Complete';
-  completedButton.classList.add('completed-button');
-  completedButton.tabIndex = 0; // Make the button focusable
-  completedButton.addEventListener('click', (event) => {
-    event.stopPropagation();
-    toggleCompletion(tileElement, tile.tile);
-  });
-
-  buttons.appendChild(noteButton);
-  buttons.appendChild(colorButton);
-  buttons.appendChild(completedButton);
-
-  frontSide.appendChild(img);
-  frontSide.appendChild(title);
-
-  tileElement.appendChild(frontSide);
-  tileElement.appendChild(backSide);
-  tileElement.appendChild(buttons);
+  buttons.append(noteButton, colorButton, completedButton);
+  frontSide.append(img, title);
+  tileElement.append(frontSide, backSide, buttons);
 
   const noteTextbox = document.createElement('textarea');
   noteTextbox.className = 'note-textbox';
   noteTextbox.dataset.tileName = tile.tile;
+  noteTextbox.value = savedTileState?.note || '';
   noteTextbox.style.display = 'none'; // Initially hidden
-  if (savedTileState && savedTileState.note) {
-    noteTextbox.value = savedTileState.note;
-  }
-  noteTextbox.addEventListener('input', () => saveState());
+  noteTextbox.addEventListener('input', () => {
+    adjustFontSize(noteTextbox);
+    saveState();
+  });
+  noteTextbox.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the tile from flipping back when clicking on the text area
+  });
+  backSide.appendChild(noteTextbox);
 
-  document.body.appendChild(noteTextbox);
-
-  // Make the entire tile (except buttons) clickable
   tileElement.addEventListener('click', (event) => {
-    if (!tileElement.classList.contains('completed') && !event.target.classList.contains('buttons') && !event.target.closest('.buttons')) {
-      flipTile(tileElement, tile.tile);
+    if (!tileElement.classList.contains('completed') && !event.target.closest('.buttons')) {
+      window.openLightbox(window.tiles.findIndex(t => t.tile === tile.tile));
     }
   });
 
@@ -155,20 +128,37 @@ function createTileElement(tile, savedTileState) {
 }
 
 function toggleNoteTextbox(tileElement) {
-  const tileName = tileElement.dataset.tileName;
-  const noteTextbox = document.querySelector(`.note-textbox[data-tile-name="${tileName}"]`);
-  const rect = tileElement.getBoundingClientRect();
-  noteTextbox.style.top = `${rect.top + window.scrollY}px`;
-  noteTextbox.style.left = `${rect.left + window.scrollX}px`;
-  noteTextbox.style.display = noteTextbox.style.display === 'block' ? 'none' : 'block';
+  const noteTextbox = tileElement.querySelector('.note-textbox');
+  tileElement.classList.toggle('flipped');
+  if (tileElement.classList.contains('flipped')) {
+    noteTextbox.style.display = 'block';
+    noteTextbox.focus();
+  } else {
+    noteTextbox.style.display = 'none';
+  }
 }
-
+function adjustFontSize(noteTextbox) {
+  const maxFontSize = 16;
+  const minFontSize = 8;
+  const textLength = noteTextbox.value.length;
+  const newFontSize = Math.max(minFontSize, maxFontSize - Math.floor(textLength / 10));
+  noteTextbox.style.fontSize = `${newFontSize}px`;
+}
 function showColorOptions(tileElement) {
   const colorOptions = ['red', '#3a3a3a', 'green', 'yellow']; // Use the initial grey color #3a3a3a
-  const currentColor = tileElement.style.backgroundColor || '#3a3a3a';
-  const nextColor = colorOptions[(colorOptions.indexOf(currentColor) + 1) % colorOptions.length];
-  tileElement.style.backgroundColor = nextColor;
+  const currentColor = window.getComputedStyle(tileElement).backgroundColor; // Get the computed style for accurate color
 
+  const colorsMap = {
+    'rgb(255, 0, 0)': 'red', // Red
+    'rgb(58, 58, 58)': '#3a3a3a', // Grey
+    'rgb(0, 128, 0)': 'green', // Green
+    'rgb(255, 255, 0)': 'yellow' // Yellow
+  };
+
+  const currentColorKey = colorsMap[currentColor] || '#3a3a3a';
+  const currentColorIndex = colorOptions.indexOf(currentColorKey);
+  const nextColor = colorOptions[(currentColorIndex + 1) % colorOptions.length];
+  tileElement.style.backgroundColor = nextColor;
   saveState();
 }
 
@@ -191,36 +181,26 @@ function setTileCompletion(tileElement, isCompleted, updateButton = true) {
   if (isCompleted) {
     tileElement.style.backgroundColor = 'grey';
     title.style.color = '#00FE00';
-
-    if (updateButton && completedButton) {
-      completedButton.textContent = 'Mark as Incomplete';
-      completedButton.style.color = '#FA3800';
-    }
-
+    if (updateButton) completedButton.textContent = 'Mark as Incomplete';
     tileElement.style.pointerEvents = 'none';
     completedButton.style.pointerEvents = 'auto';
-
-    if (noteButton) noteButton.style.display = 'none';
-    if (colorButton) colorButton.style.display = 'none';
+    noteButton.style.display = 'none';
+    colorButton.style.display = 'none';
   } else {
-    if (updateButton && completedButton) {
-      completedButton.textContent = 'Mark as Complete';
-      completedButton.style.color = '#00FE00';
-    }
-
+    if (updateButton) completedButton.textContent = 'Mark as Complete';
     tileElement.style.pointerEvents = 'auto';
     tileElement.style.backgroundColor = '';
     title.style.color = 'white';
-
-    if (noteButton) noteButton.style.display = 'inline-block';
-    if (colorButton) colorButton.style.display = 'inline-block';
+    noteButton.style.display = 'inline-block';
+    colorButton.style.display = 'inline-block';
   }
 }
 
-function flipTile(tileElement, tileName) {
-  tileElement.classList.toggle('flipped');
-  saveState();
-}
+// no longer needed since replaced by text content for content and lightbox for onclick
+// function flipTile(tileElement) {
+//   tileElement.classList.toggle('flipped');
+//   saveState();
+// }
 
 function saveState() {
   const tiles = document.querySelectorAll('.bingo-tile');
@@ -231,7 +211,7 @@ function saveState() {
     state[tileName] = {
       completed: tile.classList.contains('completed'),
       color: tile.style.backgroundColor,
-      note: noteTextbox && noteTextbox.value ? noteTextbox.value : ''
+      note: noteTextbox?.value || ''
     };
   });
   localStorage.setItem('bingoState', JSON.stringify(state));
@@ -265,27 +245,32 @@ function resetAll() {
       noteTextbox.style.display = 'none';
     }
     const completedButton = tile.querySelector('.completed-button');
-    if (completedButton) {
-      completedButton.textContent = 'Mark as Complete';
-    }
-    const noteButton = tile.querySelector('.note-button');
-    const colorButton = tile.querySelector('.color-button');
-    if (noteButton) noteButton.style.display = 'inline-block';
-    if (colorButton) colorButton.style.display = 'inline-block';
+    if (completedButton) completedButton.textContent = 'Mark as Complete';
+    tile.querySelectorAll('.note-button, .color-button').forEach(button => button.style.display = 'inline-block');
+    const title = tile.querySelector('p');
+    if (title) title.style.color = 'white'; // Reset the title color
     tile.style.pointerEvents = 'auto';
   });
   updateScoreboard();
 }
 
 function checkViewportWidth() {
+  const mobileWarningModal = document.getElementById("mobileWarningModal");
   if (window.innerWidth <= 768) {
-    document.getElementById("mobileWarningModal").style.display = "block";
+    mobileWarningModal.style.display = "block";
+  } else {
+    mobileWarningModal.style.display = "none";
   }
 }
 
-function closeModal() {
-  document.getElementById("mobileWarningModal").style.display = "none";
+function createButton(text, className, onClick) {
+  const button = document.createElement('button');
+  button.textContent = text;
+  button.className = className;
+  button.tabIndex = 0; // Make the button focusable
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+    onClick();
+  });
+  return button;
 }
-
-window.addEventListener("resize", checkViewportWidth);
-window.addEventListener("load", checkViewportWidth);

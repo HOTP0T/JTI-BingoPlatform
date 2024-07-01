@@ -110,6 +110,58 @@
   font-size: 16px;
 }
 
+/* Ensure front and back sides of the tile are properly styled */
+.front-side,
+.back-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  top: 0;
+  left: 0;
+}
+
+.front-side {
+  transform: rotateY(0deg);
+}
+
+.back-side {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3a3a3a;
+  color: #d4c79e;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.bingo-tile.flipped .front-side {
+  transform: rotateY(-180deg);
+}
+
+.bingo-tile.flipped .back-side {
+  transform: rotateY(0deg);
+}
+
+/* Style for the note textbox to fit within the tile */
+.note-textbox {
+  display: none; /* Hidden by default */
+  width: 90%; /* Responsive width */
+  height: 90%; /* Responsive height */
+  padding: 10px;
+  font-size: 14px;
+  background: #4a4a4a;
+  color: #d4c79e;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none; /* Disable resizing */
+  z-index: 1000; /* Lower than modal */
+  overflow: auto;
+}
+
 /* RESET BUTTON */
 .reset-all-button {
   position: absolute;
@@ -458,4 +510,101 @@ body {
   .bingo-tile .buttons {
     display: none;
   }
+}
+
+/* LIGHTBOX */
+#lightbox {
+  display: none; /* Hidden initially */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#lightbox-content {
+  width: 80%;
+  height: 80%;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border: 1px solid #af8848;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 60%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+#lightbox-title {
+  color: #d4c79e;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#lightbox-notes {
+  width: 100%;
+  height: calc(30% - 10px);
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4a4a4a;
+  color: #d4c79e;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+  overflow: auto;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #af8848;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "osrs-font", Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #d4a36e;
+}
+
+button:focus {
+  outline: none;
+}
+
+#close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#prev-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#next-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
