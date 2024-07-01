@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgerMenu = document.querySelector('.burger-menu');
   const navMenu = document.querySelector('.nav-menu');
   const savedState = JSON.parse(localStorage.getItem('bingoState')) || {};
-  
 
   fetch('Data/bingo.json')
     .then(response => response.json())
@@ -21,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       // Update the scoreboard with initial values
       updateScoreboard();
+      // Adjust tile sizes after adding all tiles
+      adjustTileSizes();
     })
     .catch(error => console.error('Error fetching the JSON data:', error));
 
@@ -65,6 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", checkViewportWidth);
   window.addEventListener("load", checkViewportWidth);
+
+  // Adjust tile sizes on window resize
+  window.addEventListener('resize', function() {
+    adjustTileSizes();
+  });
+
+  // Initial call to adjust tile sizes
+  adjustTileSizes();
 });
 
 function createTileElement(tile, savedTileState) {
