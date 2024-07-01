@@ -64,11 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove('active');
   });
 
-  window.addEventListener("resize", checkViewportWidth);
-  window.addEventListener("load", checkViewportWidth);
+  // window.addEventListener("resize", checkViewportWidth);
+  // window.addEventListener("load", checkViewportWidth);
 
   // Adjust tile sizes on window resize
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
+    adjustTileSizes();
+  });
+
+  window.addEventListener('resize', function () {
     adjustTileSizes();
   });
 
@@ -185,14 +189,14 @@ function adjustFontSize(noteTextbox) {
 }
 
 function showColorOptions(tileElement) {
-  const colorOptions = ['red', '#3a3a3a', 'green', 'yellow']; // Use the initial grey color #3a3a3a
+  const colorOptions = ['red', '#3a3a3a', 'green', 'purple']; // Use the initial grey color #3a3a3a
   const currentColor = window.getComputedStyle(tileElement).backgroundColor; // Get the computed style for accurate color
 
   const colorsMap = {
     'rgb(255, 0, 0)': 'red', // Red
     'rgb(58, 58, 58)': '#3a3a3a', // Grey
     'rgb(0, 128, 0)': 'green', // Green
-    'rgb(255, 255, 0)': 'yellow' // Yellow
+    'rgb(128, 0, 128)': 'purple' // Purple
   };
 
   const currentColorKey = colorsMap[currentColor] || '#3a3a3a';
@@ -295,14 +299,14 @@ function resetAll() {
   updateScoreboard();
 }
 
-function checkViewportWidth() {
-  const mobileWarningModal = document.getElementById("mobileWarningModal");
-  if (window.innerWidth <= 768) {
-    mobileWarningModal.style.display = "block";
-  } else {
-    mobileWarningModal.style.display = "none";
-  }
-}
+// function checkViewportWidth() {
+//   const mobileWarningModal = document.getElementById("mobileWarningModal");
+//   if (window.innerWidth <= 768) {
+//     mobileWarningModal.style.display = "block";
+//   } else {
+//     mobileWarningModal.style.display = "none";
+//   }
+// }
 
 function createButton(text, className, onClick) {
   const button = document.createElement('button');
@@ -314,4 +318,12 @@ function createButton(text, className, onClick) {
     onClick();
   });
   return button;
+}
+
+function adjustTileSizes() {
+  const tiles = document.querySelectorAll('.bingo-tile');
+  tiles.forEach(tile => {
+    const tileWidth = tile.offsetWidth;
+    tile.style.height = `${tileWidth}px`; // Make the height equal to the width for a square tile
+  });
 }
