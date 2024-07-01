@@ -9,18 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgerMenu = document.querySelector('.burger-menu');
   const navMenu = document.querySelector('.nav-menu');
   const savedState = JSON.parse(localStorage.getItem('bingoState')) || {};
+  
 
   fetch('Data/bingo.json')
-  .then(response => response.json())
-  .then(data => {
-    const tiles = data.BingoTiles;
-    tiles.forEach(tile => {
-      const tileElement = createTileElement(tile, savedState[tile.tile]);
-      bingoCard.appendChild(tileElement);
-    });
-    updateScoreboard();
-  })
-  .catch(error => console.error('Error fetching the JSON data:', error));
+    .then(response => response.json())
+    .then(data => {
+      const tiles = data.BingoTiles;
+      tiles.forEach(tile => {
+        const tileElement = createTileElement(tile, savedState[tile.tile]);
+        bingoCard.appendChild(tileElement);
+      });
+      // Update the scoreboard with initial values
+      updateScoreboard();
+    })
+    .catch(error => console.error('Error fetching the JSON data:', error));
 
   resetAllButton.addEventListener('click', () => {
     resetConfirmModal.style.display = 'block';
@@ -111,7 +113,15 @@ function createTileElement(tile, savedTileState) {
 
   tileElement.addEventListener('click', (event) => {
     if (!tileElement.classList.contains('completed') && !event.target.closest('.buttons')) {
-      window.openLightbox(window.tiles.findIndex(t => t.tile === tile.tile));
+      const note = noteTextbox.value;
+      window.openLightbox(window.tiles.findIndex(t => t.tile === tile.tile), note);
+    }
+  });
+
+  tileElement.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !tileElement.classList.contains('completed')) {
+      const note = noteTextbox.value;
+      window.openLightbox(window.tiles.findIndex(t => t.tile === tile.tile), note);
     }
   });
 
@@ -127,6 +137,24 @@ function createTileElement(tile, savedTileState) {
   return tileElement;
 }
 
+function createButton(text, className, onClick) {
+  const button = document.createElement('button');
+  button.textContent = text;
+  button.className = className;
+  button.tabIndex = 0; // Make the button focusable
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+    onClick();
+  });
+  button.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.stopPropagation();
+      onClick();
+    }
+  });
+  return button;
+}
+
 function toggleNoteTextbox(tileElement) {
   const noteTextbox = tileElement.querySelector('.note-textbox');
   tileElement.classList.toggle('flipped');
@@ -136,7 +164,9 @@ function toggleNoteTextbox(tileElement) {
   } else {
     noteTextbox.style.display = 'none';
   }
+  noteTextbox.addEventListener('input', saveState); // Add this line to update state on input
 }
+
 function adjustFontSize(noteTextbox) {
   const maxFontSize = 16;
   const minFontSize = 8;
@@ -144,6 +174,7 @@ function adjustFontSize(noteTextbox) {
   const newFontSize = Math.max(minFontSize, maxFontSize - Math.floor(textLength / 10));
   noteTextbox.style.fontSize = `${newFontSize}px`;
 }
+
 function showColorOptions(tileElement) {
   const colorOptions = ['red', '#3a3a3a', 'green', 'yellow']; // Use the initial grey color #3a3a3a
   const currentColor = window.getComputedStyle(tileElement).backgroundColor; // Get the computed style for accurate color
@@ -196,6 +227,7 @@ function setTileCompletion(tileElement, isCompleted, updateButton = true) {
   }
 }
 
+
 // no longer needed since replaced by text content for content and lightbox for onclick
 // function flipTile(tileElement) {
 //   tileElement.classList.toggle('flipped');
@@ -207,7 +239,7 @@ function saveState() {
   const state = {};
   tiles.forEach(tile => {
     const tileName = tile.dataset.tileName;
-    const noteTextbox = document.querySelector(`.note-textbox[data-tile-name="${tileName}"]`);
+    const noteTextbox = tile.querySelector('.note-textbox');
     state[tileName] = {
       completed: tile.classList.contains('completed'),
       color: tile.style.backgroundColor,

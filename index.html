@@ -9,14 +9,14 @@
     <script src="https://kit.fontawesome.com/914ca5d668.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./assets/JTI-favicon.svg">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KL0T6ZX1ZL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL0T6ZX1ZL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-KL0T6ZX1ZL');
-</script>
+        gtag('config', 'G-KL0T6ZX1ZL');
+    </script>
 </head>
 <body>
     <div class="burger-menu">
@@ -27,7 +27,6 @@
             <li><a href="#" data-target="helpPopup">Help</a></li>
             <li><a href="#" data-target="contactPopup">Contact</a></li>
             <li><a href="#" data-target="aboutPopup">About</a></li>
-            <li><a href="https://www.jti.com/" target="_blank">Home</a></li>
         </ul>
     </nav>
 
@@ -37,57 +36,88 @@
     </div>
     <div id="bingoCard" class="bingo-card"></div>
 
-    <button id="resetAllButton" class="reset-all-button">RESET ALL</button>
+    <button id="resetAllButton" class="reset-all-button" tabindex="0">RESET ALL</button>
 
     <div id="resetConfirmModal" class="modal">
-      <div class="modal-content">
-        <p>Are you sure you want to reset all data? This action cannot be undone.</p>
-        <button id="confirmResetButton" class="confirm-button">Yes, reset</button>
-        <button id="cancelResetButton" class="cancel-button">Cancel</button>
-      </div>
+        <div class="modal-content">
+            <p>Are you sure you want to reset all data? This action cannot be undone.</p>
+            <button id="confirmResetButton" class="confirm-button" tabindex="0">Yes, reset</button>
+            <button id="cancelResetButton" class="cancel-button" tabindex="0">Cancel</button>
+        </div>
     </div>
 
     <div id="mobileWarningModal" class="modal">
-      <div class="modal-content">
-        <span class="close-button" onclick="closeModal()">&times;</span>
-        <p>The current version of the app doesn't meet the tablet/mobile requirements so it's going to look like shit if you reduce your page's size too much... 
-          
-          <br>
-          <br>
-          
-          I RECOMMEND STAYING ON A PAGE LARGER THEN 768px</p>
-      </div>
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()" tabindex="0">&times;</span>
+            <p>The current version of the app doesn't meet the tablet/mobile requirements so it's going to look like shit if you reduce your page's size too much...
+                <br>
+                <br>
+                I RECOMMEND STAYING ON A PAGE LARGER THEN 768px</p>
+        </div>
     </div>
 
     <div id="helpPopup" class="popup-sidebar">
-      <div class="popup-content">
-        <h2>Help</h2>
-        <p>Content for Help section...</p>
-      </div>
+        <div class="popup-content">
+            <h2>Help</h2>
+
+            <div class="help-section">
+                <h3>Color Coding</h3>
+                <p>You can click on the colors button to color code your tiles. For example: green is easy, yellow is team mass, red is for Slaytr.</p>
+                <img src="assets/HelpSection/Colors_JTI_Guide.gif" alt="Color Coding Guide">
+            </div>
+
+            <div class="help-section">
+                <h3>Mark as Complete</h3>
+                <p>Click the "Mark as Complete" button to mark a tile as completed. This will update the tile's appearance and count in the scoreboard.</p>
+                <img src="assets/HelpSection/MarkAsComplete_JTI_Guide.gif" alt="Mark as Complete Guide">
+            </div>
+
+            <div class="help-section">
+                <h3>Notes</h3>
+                <p>Click the "Notes" button to add notes to a tile. This allows you to keep track of important information for each tile.</p>
+                <img src="assets/HelpSection/Notes_JTI_Guide.gif" alt="Notes Guide">
+            </div>
+
+            <div class="help-section">
+                <h3>Reset All</h3>
+                <p>The "RESET ALL" button will reset all your progress and data. Use this if you want to start over.</p>
+                <img src="assets/HelpSection/RESETALL_JTI_GUIDE.png" alt="Reset All Guide">
+            </div>
+
+            <div class="help-section">
+                <h3>Scoreboard</h3>
+                <p>The scoreboard keeps track of your completed and uncompleted tiles. This helps you monitor your progress.</p>
+                <img src="assets/HelpSection/ScoreBoard_JTI_Guide.png" alt="Scoreboard Guide">
+            </div>
+
+        </div>
     </div>
 
     <div id="contactPopup" class="popup-sidebar">
-      <div class="popup-content">
-        <h2>Contact</h2>
-        <p>Content for Contact section...</p>
-      </div>
+        <div class="popup-content">
+            <h2>Contact</h2>
+            <p><a href="dsc.gg/jti">JTI DISCORD</a></p>
+            <p><a href="https://discord.com/">Discord@hotp0t</a></p>
+        </div>
     </div>
 
     <div id="aboutPopup" class="popup-sidebar">
-      <div class="popup-content">
-        <h2>About</h2>
-        <p>Content for About section...</p>
-      </div>
+        <div class="popup-content">
+            <h2>About</h2>
+            <p>v2.3.2</p>
+        </div>
     </div>
 
-    <div id="lightbox" style="display:none;">
+    <div class="footer-message">Made by <a href="#" id="hotpot-link">HOTP0T</a> ❤️</div>
+
+    <div id="lightbox" class="lightbox">
       <div id="lightbox-content">
-        <span class="close" id="close-button">&times;</span>
-        <img id="lightbox-img" src="" alt="Image">
+        <button id="close-button" class="close-button">&times;</button>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
         <h2 id="lightbox-title"></h2>
-        <p id="lightbox-notes"></p>
-        <button class="left-arrow" id="prev-button">&#10094;</button>
-        <button class="right-arrow" id="next-button">&#10095;</button>
+        <textarea id="lightbox-notes" class="lightbox-notes" placeholder="Enter your notes here..."></textarea>
+        <button id="prev-button" class="arrow left">&lt;</button>
+        <button id="next-button" class="arrow right">&gt;</button>
       </div>
     </div>
 

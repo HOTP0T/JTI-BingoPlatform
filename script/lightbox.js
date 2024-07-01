@@ -9,14 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = -1;
   window.tiles = [];
 
-  window.openLightbox = function(index) {
+  // Hide the lightbox initially
+  lightbox.style.display = 'none';
+
+  window.openLightbox = function (index, note) {
     currentIndex = index;
     const tile = window.tiles[currentIndex];
     lightboxImg.src = tile.img_path;
     lightboxTitle.textContent = tile.tile;
-    lightboxNotes.textContent = tile.text;
+    lightboxNotes.value = note || ''; // Set the lightbox note to the passed note
     lightbox.style.display = 'flex'; // Changed to 'flex' to match the CSS
+    closeBtn.focus(); // Focus the close button for accessibility
   }
+
+  lightboxNotes.addEventListener('input', () => {
+    const tileName = window.tiles[currentIndex].tile;
+    const tileElement = document.querySelector(`.bingo-tile[data-tile-name="${tileName}"]`);
+    const noteTextbox = tileElement.querySelector('.note-textbox');
+    noteTextbox.value = lightboxNotes.value;
+    saveState(); // Ensure state is saved whenever lightbox notes change
+  });
 
   function closeLightbox() {
     lightbox.style.display = 'none';
@@ -24,19 +36,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showNext() {
     if (currentIndex < window.tiles.length - 1) {
-      window.openLightbox(currentIndex + 1);
+      currentIndex++;
+      const tile = window.tiles[currentIndex];
+      const tileElement = document.querySelector(`.bingo-tile[data-tile-name="${tile.tile}"]`);
+      const note = tileElement.querySelector('.note-textbox').value;
+      window.openLightbox(currentIndex, note);
     }
   }
 
   function showPrevious() {
     if (currentIndex > 0) {
-      window.openLightbox(currentIndex - 1);
+      currentIndex--;
+      const tile = window.tiles[currentIndex];
+      const tileElement = document.querySelector(`.bingo-tile[data-tile-name="${tile.tile}"]`);
+      const note = tileElement.querySelector('.note-textbox').value;
+      window.openLightbox(currentIndex, note);
     }
   }
 
   if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
   if (leftArrow) leftArrow.addEventListener('click', showPrevious);
   if (rightArrow) rightArrow.addEventListener('click', showNext);
+
+  // Keyboard accessibility for lightbox
+  document.addEventListener('keydown', (event) => {
+    if (lightbox.style.display === 'flex') {
+      switch (event.key) {
+        case 'Escape':
+          closeLightbox();
+          break;
+        case 'ArrowLeft':
+          showPrevious();
+          break;
+        case 'ArrowRight':
+          showNext();
+          break;
+      }
+    }
+  });
 
   // Fetch data and initialize tiles
   fetch('Data/bingo.json')
