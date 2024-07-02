@@ -10,6 +10,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector('.nav-menu');
   const savedState = JSON.parse(localStorage.getItem('bingoState')) || {};
 
+  // New code integration
+  const menuLinks = document.querySelectorAll('.nav-menu a');
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  document.body.appendChild(overlay);
+
+  burgerMenu.addEventListener('click', () => {
+    navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetPopup = document.getElementById(link.getAttribute('data-target'));
+      document.querySelectorAll('.popup-sidebar').forEach(popup => {
+        popup.classList.remove('active');
+      });
+      targetPopup.classList.add('active');
+      overlay.classList.add('active');
+    });
+  });
+
+  overlay.addEventListener('click', () => {
+    document.querySelectorAll('.popup-sidebar').forEach(popup => {
+      popup.classList.remove('active');
+    });
+    overlay.classList.remove('active');
+    navMenu.style.display = 'none'; // Hide the menu when overlay is clicked
+  });
+
   fetch('Data/updated_bingo.json')
     .then(response => response.json())
     .then(data => {
@@ -18,9 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const tileElement = createTileElement(tile, savedState[tile.tile]);
         bingoCard.appendChild(tileElement);
       });
-      // Update the scoreboard with initial values
       updateScoreboard();
-      // Adjust tile sizes after adding all tiles
       adjustTileSizes();
     })
     .catch(error => console.error('Error fetching the JSON data:', error));
@@ -36,32 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cancelResetButton.addEventListener('click', () => {
     resetConfirmModal.style.display = 'none';
-  });
-
-  burgerMenu.addEventListener('click', () => {
-    navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
-  });
-
-  // Popup Sidebar Functionality
-  const menuLinks = document.querySelectorAll('.nav-menu a');
-  const overlay = document.createElement('div');
-  overlay.className = 'overlay';
-  document.body.appendChild(overlay);
-
-  menuLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const targetPopup = document.getElementById(link.getAttribute('data-target'));
-      targetPopup.classList.add('active');
-      overlay.classList.add('active');
-    });
-  });
-
-  overlay.addEventListener('click', () => {
-    document.querySelectorAll('.popup-sidebar').forEach(popup => {
-      popup.classList.remove('active');
-    });
-    overlay.classList.remove('active');
   });
 
   // window.addEventListener("resize", checkViewportWidth);
