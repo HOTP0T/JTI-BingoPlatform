@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector('.nav-menu');
   const savedState = JSON.parse(localStorage.getItem('bingoState')) || {};
 
-  fetch('Data/bingo.json')
+  fetch('Data/updated_bingo.json')
     .then(response => response.json())
     .then(data => {
       const tiles = data.BingoTiles;
