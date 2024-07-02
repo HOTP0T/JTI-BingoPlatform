@@ -764,15 +764,13 @@ body {
   font-weight: bold;
   color: white;
   position: absolute;
-  top: 135px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 3vh;
+  left: 0;
+  right: 0;
   margin: 0;
-  width: 90%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
-  border-radius: 5px;
-  z-index: 1;
+  box-sizing: border-box;
 }
 
 /* Responsive Design */
@@ -919,7 +917,8 @@ body {
 }
 
 /* Ensure the body and html can scroll */
-html, body {
+html,
+body {
   height: 100%;
   overflow: auto; /* Allow scrolling */
 }
@@ -936,7 +935,8 @@ body {
 }
 
 /* Ensure the body and html can scroll */
-html, body {
+html,
+body {
   height: 100%;
   overflow: auto; /* Allow scrolling */
 }
@@ -1033,7 +1033,7 @@ body {
     font-size: 14px;
     height: auto;
   }
-/* 
+  /* 
   .bingo-tile img {
     max-width: 100%;
     max-height: 100px;
