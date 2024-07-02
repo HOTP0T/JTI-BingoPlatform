@@ -75,7 +75,7 @@
     {
       "id": 13,
       "tile": "Dragon chainbody",
-      "img_path": "./assets/TileImages/Dchain.webp",
+      "img_path": "./assets/TileImages/DChain.webp",
       "text": "This is the text for Dragon chainbody."
     },
     {
