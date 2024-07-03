@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       updateScoreboard();
       adjustTileSizes();
+      adjustBingoCardHeight();
     })
     .catch(error => console.error('Error fetching the JSON data:', error));
 
@@ -66,20 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
     resetConfirmModal.style.display = 'none';
   });
 
-  // window.addEventListener("resize", checkViewportWidth);
-  // window.addEventListener("load", checkViewportWidth);
-
   // Adjust tile sizes on window resize
-  window.addEventListener('resize', function () {
+  window.addEventListener('resize', () => {
     adjustTileSizes();
-  });
-
-  window.addEventListener('resize', function () {
-    adjustTileSizes();
+    adjustBingoCardHeight();
   });
 
   // Initial call to adjust tile sizes
   adjustTileSizes();
+  adjustBingoCardHeight();
 });
 
 function createTileElement(tile, savedTileState) {
@@ -242,13 +238,6 @@ function setTileCompletion(tileElement, isCompleted, updateButton = true) {
   }
 }
 
-
-// no longer needed since replaced by text content for content and lightbox for onclick
-// function flipTile(tileElement) {
-//   tileElement.classList.toggle('flipped');
-//   saveState();
-// }
-
 function saveState() {
   const tiles = document.querySelectorAll('.bingo-tile');
   const state = {};
@@ -301,31 +290,19 @@ function resetAll() {
   updateScoreboard();
 }
 
-// function checkViewportWidth() {
-//   const mobileWarningModal = document.getElementById("mobileWarningModal");
-//   if (window.innerWidth <= 768) {
-//     mobileWarningModal.style.display = "block";
-//   } else {
-//     mobileWarningModal.style.display = "none";
-//   }
-// }
-
-function createButton(text, className, onClick) {
-  const button = document.createElement('button');
-  button.textContent = text;
-  button.className = className;
-  button.tabIndex = 0; // Make the button focusable
-  button.addEventListener('click', (event) => {
-    event.stopPropagation();
-    onClick();
-  });
-  return button;
-}
-
 function adjustTileSizes() {
   const tiles = document.querySelectorAll('.bingo-tile');
   tiles.forEach(tile => {
     const tileWidth = tile.offsetWidth;
     tile.style.height = `${tileWidth}px`; // Make the height equal to the width for a square tile
   });
+}
+
+function adjustBingoCardHeight() {
+  const bingoCard = document.getElementById('bingoCard');
+  const tiles = document.querySelectorAll('.bingo-tile');
+  const rowHeight = tiles[0].offsetHeight;
+  const rows = Math.ceil(tiles.length / 5); // Assuming 5 tiles per row
+  // Remove the line that sets the height of the bingo card
+  // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
 }
