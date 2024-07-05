@@ -217,8 +217,15 @@
           frameborder="0"
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
         ></iframe> -->
-      </div>
-    </div>
+        <div id="chat-container">
+          <div id="chat-box">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type a message">
+            <button id="chat-send">Send</button>
+          </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="chat.js"></script>
 
     <div id="aboutPopup" class="popup-sidebar">
       <div class="popup-content">
@@ -289,7 +296,7 @@
 
     <script src="script/lightbox.js"></script>
     <script src="script/script.js"></script>
-
+    <script src="script/chat.js"></script>
     <!-- Start of OpenWidget (www.openwidget.com) code -->
     <script>
       window.__ow = window.__ow || {};
