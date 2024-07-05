@@ -250,7 +250,8 @@
   color: #d4c79e;
 }
 
-.popup-content h2 {
+.popup-content h2,
+.popup-content h1 {
   margin-bottom: 10px;
   color: #af8848;
 }
