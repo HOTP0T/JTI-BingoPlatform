@@ -287,6 +287,29 @@
       </div>
     </div>
 
+<!-- Ensure only one Crate initialization -->
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    new Crate({
+      server: '1258158936603758663',
+      channel: '1258616481990840371',
+      location: [-60, -20] // Move the button 50px from the top and 20px from the right
+    });
+  </script>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+    <script>
+      function toggleWidget() {
+        const widget = document.getElementById('discord-widget');
+        if (widget.style.display === 'none' || widget.style.display === '') {
+          widget.style.display = 'block';
+        } else {
+          widget.style.display = 'none';
+        }
+      }
+    </script>
+
     <script src="script/lightbox.js"></script>
     <script src="script/script.js"></script>
 
