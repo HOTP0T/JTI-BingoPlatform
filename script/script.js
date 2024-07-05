@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       updateScoreboard();
       adjustTileSizes();
-      adjustBingoCardHeight();
+      // adjustBingoCardHeight();
     })
     .catch(error => console.error('Error fetching the JSON data:', error));
 
@@ -70,12 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Adjust tile sizes on window resize
   window.addEventListener('resize', () => {
     adjustTileSizes();
-    adjustBingoCardHeight();
+    // adjustBingoCardHeight();
   });
 
   // Initial call to adjust tile sizes
   adjustTileSizes();
-  adjustBingoCardHeight();
+  // adjustBingoCardHeight();
 });
 
 function createTileElement(tile, savedTileState) {
@@ -298,11 +298,11 @@ function adjustTileSizes() {
   });
 }
 
-function adjustBingoCardHeight() {
-  const bingoCard = document.getElementById('bingoCard');
-  const tiles = document.querySelectorAll('.bingo-tile');
-  const rowHeight = tiles[0].offsetHeight;
-  const rows = Math.ceil(tiles.length / 5); // Assuming 5 tiles per row
-  // Remove the line that sets the height of the bingo card
-  // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
-}
+// function adjustBingoCardHeight() {
+//   const bingoCard = document.getElementById('bingoCard');
+//   const tiles = document.querySelectorAll('.bingo-tile');
+//   const rowHeight = tiles[0].offsetHeight;
+//   const rows = Math.ceil(tiles.length / 5); // Assuming 5 tiles per row
+//   // Remove the line that sets the height of the bingo card
+//   // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
+// }
