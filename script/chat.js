@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const socket = io('https://your-render-app-name.onrender.com');  // Update with your Render URL
+  const socket = io('https://your-render-app-name.onrender.com');  // Replace with your actual Render URL
 
   const chatMessages = document.getElementById('chat-messages');
   const chatInput = document.getElementById('chat-input');
