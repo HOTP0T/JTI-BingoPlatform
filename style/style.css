@@ -707,6 +707,10 @@ button:focus {
 }
 
 /* HOTP0T MSG */
+#coffee {
+  opacity: 12.5%;
+}
+
 .footer-message {
   position: fixed;
   bottom: 10px;
@@ -723,7 +727,6 @@ button:focus {
 
 .footer-message a {
   color: #af8848;
-  text-decoration: none;
 }
 
 .footer-message a:hover {
