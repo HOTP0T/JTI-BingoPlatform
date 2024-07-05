@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /user/
+Disallow: /settings/
+Disallow: /api/
+Allow: /public/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+Sitemap: https://bingosrs.online/sitemap.xml
