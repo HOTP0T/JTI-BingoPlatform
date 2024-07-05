@@ -7,6 +7,7 @@
     <title>JTI Bingo Card</title>
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/leaderboard.css" />
     <script
       src="https://kit.fontawesome.com/914ca5d668.js"
       crossorigin="anonymous"
@@ -101,8 +102,43 @@
       <p>Completed Tiles: <span id="completedCount">0</span></p>
       <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
     </div>
+    <div class="container">
+      <section class="demo nigiri-column">
+        <dl class="list nigiri">
+          <dt>Nigiri</dt>
+          <dd><a href="#">Maguro</a></dd>
+          <dd><a href="#">Sake</a></dd>
+          <dd><a href="#">Unagi</a></dd>
+          <dd><a href="#">Buri</a></dd>
+          <dd><a href="#">Suzuki</a></dd>
+          <dd><a href="#">Saba</a></dd>
+          <dd><a href="#">Iwashi</a></dd>
+          <dd><a href="#">Kohada</a></dd>
+          <dd><a href="#">Hirame</a></dd>
+          <dd><a href="#">Tobiwo</a></dd>
+        </dl>
+      </section>
+  
+      <section class="bingo-card-section">
     <div id="bingoCard" class="bingo-card"></div>
+  </section>
 
+  <section class="demo sashimi-column">
+    <dl class="list sashimi">
+      <dt>Sashimi</dt>
+      <dd><a href="#">Maguro</a></dd>
+      <dd><a href="#">Toro</a></dd>
+      <dd><a href="#">Ebi</a></dd>
+      <dd><a href="#">Saba</a></dd>
+      <dd><a href="#">Ika</a></dd>
+      <dd><a href="#">Tako</a></dd>
+      <dd><a href="#">Tomago</a></dd>
+      <dd><a href="#">Kani</a></dd>
+      <dd><a href="#">Katsuo</a></dd>
+      <dd><a href="#">Maguro</a></dd>
+    </dl>
+  </section>
+</div>
     <button id="resetAllButton" class="reset-all-button" tabindex="0">
       RESET ALL
     </button>
@@ -381,5 +417,6 @@
       ></noscript
     >
     <!-- End of OpenWidget code -->
+    <script src="script/leaderboard.js"></script>
   </body>
 </html>
