@@ -4,4 +4,4 @@ This is a Bingo Card for OSRS community events. It is designed to help you keep 
 
 Please keep in mind this is a work in progress and will be updated regularly. If you have any suggestions or feedback, please let me know.
 
-![Discord Banner 3](https://discord.com/api/guilds/1258158936603758663/widget.png?style=banner3)
+![BingOsrs Discord Server](https://discord.gg/HP3ju2r4)
