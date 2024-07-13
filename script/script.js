@@ -1,10 +1,3 @@
-import './auth.js';
-import './team.js';
-import './bingo.js';
-import './chat.js';
-import { supabase } from './supabase.js';
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const bingoCard = document.getElementById('bingoCard');
   const completedCount = document.getElementById('completedCount');
@@ -47,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.style.display = 'none'; // Hide the menu when overlay is clicked
   });
 
-  fetch('Data/updated_bingo.json')
+  fetch('../script/public/Data/updated_bingo.json')
     .then(response => response.json())
     .then(data => {
       const tiles = data.BingoTiles;
@@ -314,3 +307,15 @@ function adjustTileSizes() {
 //   // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
 // }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector('.toggle');
+  const flipCardInner = document.querySelector('.flip-card__inner');
+
+  toggle.addEventListener('change', function() {
+    if (this.checked) {
+      flipCardInner.style.transform = 'rotateY(180deg)';
+    } else {
+      flipCardInner.style.transform = 'rotateY(0deg)';
+    }
+  });
+});

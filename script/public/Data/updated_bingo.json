@@ -1,0 +1,154 @@
+{
+  "BingoTiles": [
+    {
+      "id": 1,
+      "tile": "Any barrows item",
+      "img_path": "./assets/TileImages/Dharok.webp",
+      "text": "This is the text for Any barrows item."
+    },
+    {
+      "id": 2,
+      "tile": "Any Vork unique",
+      "img_path": "./assets/TileImages/Vorkath.webp",
+      "text": "This is the text for Any Vork unique."
+    },
+    {
+      "id": 3,
+      "tile": "Any zulrah unique (no teles or scales)",
+      "img_path": "./assets/TileImages/Zulrah.webp",
+      "text": "This is the text for Any zulrah unique (no teles or scales)."
+    },
+    {
+      "id": 4,
+      "tile": "Any Odium piece",
+      "img_path": "./assets/TileImages/Odium.webp",
+      "text": "This is the text for Any Odium piece."
+    },
+    {
+      "id": 5,
+      "tile": "Any Mal shard piece",
+      "img_path": "./assets/TileImages/MaledicationwardShard.webp",
+      "text": "This is the text for Any Mal shard piece."
+    },
+    {
+      "id": 6,
+      "tile": "Cudgel",
+      "img_path": "./assets/TileImages/Cudgel.webp",
+      "text": "This is the text for Cudgel."
+    },
+    {
+      "id": 7,
+      "tile": "Any Muspah unique (no essence or cache)",
+      "img_path": "./assets/TileImages/Muspah.webp",
+      "text": "This is the text for Any Muspah unique (no essence or cache)."
+    },
+    {
+      "id": 8,
+      "tile": "Any MOP unique (no atlattl darts)",
+      "img_path": "./assets/TileImages/MoonsGlyph.webp",
+      "text": "This is the text for Any MOP unique (no atlattl darts)."
+    },
+    {
+      "id": 9,
+      "tile": "Any Godsword hilt",
+      "img_path": "./assets/TileImages/GWHilt.webp",
+      "text": "This is the text for Any Godsword hilt."
+    },
+    {
+      "id": 10,
+      "tile": "Tentacle",
+      "img_path": "./assets/TileImages/Tentacule.webp",
+      "text": "This is the text for Tentacle."
+    },
+    {
+      "id": 11,
+      "tile": "Trident",
+      "img_path": "./assets/TileImages/Trident.webp",
+      "text": "This is the text for Trident."
+    },
+    {
+      "id": 12,
+      "tile": "KBD heads",
+      "img_path": "./assets/TileImages/KBDHead.webp",
+      "text": "This is the text for KBD heads."
+    },
+    {
+      "id": 13,
+      "tile": "Dragon chainbody",
+      "img_path": "./assets/TileImages/DChain.webp",
+      "text": "This is the text for Dragon chainbody."
+    },
+    {
+      "id": 14,
+      "tile": "Crystal armour seed or ENH weapon seed",
+      "img_path": "./assets/TileImages/CrystalBody.png",
+      "text": "This is the text for Crystal armour seed or ENH weapon seed."
+    },
+    {
+      "id": 15,
+      "tile": "Any Colosseum unique (no sunfire splinters)",
+      "img_path": "./assets/TileImages/Colosseum.png",
+      "text": "This is the text for Any Colosseum unique (no sunfire splinters)."
+    },
+    {
+      "id": 16,
+      "tile": "Fire cape",
+      "img_path": "./assets/TileImages/Jad.png",
+      "text": "This is the text for Fire cape."
+    },
+    {
+      "id": 17,
+      "tile": "Any DKS ring",
+      "img_path": "./assets/TileImages/Prime.png",
+      "text": "This is the text for Any DKS ring."
+    },
+    {
+      "id": 18,
+      "tile": "Fedora",
+      "img_path": "./assets/TileImages/Fedora.png",
+      "text": "This is the text for Fedora."
+    },
+    {
+      "id": 19,
+      "tile": "Any med clue boots",
+      "img_path": "./assets/TileImages/WizardBoots.png",
+      "text": "This is the text for Any med clue boots."
+    },
+    {
+      "id": 20,
+      "tile": "Any clue blessing",
+      "img_path": "./assets/TileImages/Blessing.png",
+      "text": "This is the text for Any clue blessing."
+    },
+    {
+      "id": 21,
+      "tile": "Any blessed dhide piece",
+      "img_path": "./assets/TileImages/DhideBody.png",
+      "text": "This is the text for Any blessed dhide piece."
+    },
+    {
+      "id": 22,
+      "tile": "Amulet of the damned",
+      "img_path": "./assets/TileImages/Damned.png",
+      "text": "This is the text for Amulet of the damned."
+    },
+    {
+      "id": 23,
+      "tile": "Gnome restaurant scarf or goggles",
+      "img_path": "./assets/TileImages/GnomeGoggles.png",
+      "text": "This is the text for Gnome restaurant scarf or goggles."
+    },
+    {
+      "id": 24,
+      "tile": "Any angler piece",
+      "img_path": "./assets/TileImages/Angler.png",
+      "text": "This is the text for Any angler piece."
+    },
+    {
+      "id": 25,
+      "tile": "Crystal grail",
+      "img_path": "./assets/TileImages/CrystalGrail.png",
+      "text": "This is the text for Crystal grail."
+    }
+  ]
+}

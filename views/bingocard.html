@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo</title>
+</head>
+<body>
+  <input type="hidden" id="teamId" value="<%= team._id %>">
+  <div id="bingoCard">
+    <div id="bingoCard" class="bingo-card"></div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/bingo.js"></script>
+</body>
+</html>
