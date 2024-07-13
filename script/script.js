@@ -1,3 +1,10 @@
+import './auth.js';
+import './team.js';
+import './bingo.js';
+import './chat.js';
+import { supabase } from './supabase.js';
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const bingoCard = document.getElementById('bingoCard');
   const completedCount = document.getElementById('completedCount');
@@ -154,7 +161,7 @@ function createButton(text, className, onClick) {
   button.className = className;
   button.tabIndex = 0; // Make the button focusable
   button.addEventListener('click', (event) => {
-    event.stopPropagation();
+    event.stopPropagation();q
     onClick();
   });
   button.addEventListener('keydown', (event) => {
@@ -306,3 +313,4 @@ function adjustTileSizes() {
 //   // Remove the line that sets the height of the bingo card
 //   // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
 // }
+

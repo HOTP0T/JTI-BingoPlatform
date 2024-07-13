@@ -21,51 +21,56 @@
           <div class="flip-card__inner">
             <div class="flip-card__front">
               <div class="title">Access Bingo Card</div>
-              <form class="flip-card__form" action="">
-                <input
-                  class="flip-card__input"
-                  name="username"
-                  placeholder="RSN"
-                  type="username"
-                />
-                <input
-                  class="flip-card__input"
-                  name="password"
-                  placeholder="Daily Bingo Password"
-                  type="password"
-                />
-                <button class="flip-card__btn">
-                  <a href="index.html">Let's go!</a>
-                </button>
-              </form>
-            </div>
-            <div class="flip-card__back">
-              <div class="title">Sign up</div>
-              <form class="flip-card__form" action="">
-                <input
-                  class="flip-card__input"
-                  placeholder="Name"
-                  type="name"
-                />
+              <form id="login-form" class="flip-card__form" action="">
                 <input
                   class="flip-card__input"
                   name="email"
                   placeholder="Email"
                   type="email"
+                  required
                 />
                 <input
                   class="flip-card__input"
                   name="password"
                   placeholder="Password"
                   type="password"
+                  required
                 />
-                <button class="flip-card__btn">Confirm!</button>
+                <button type="submit" class="flip-card__btn">
+                  Let's go!
+                </button>
+              </form>
+            </div>
+            <div class="flip-card__back">
+              <div class="title">Sign up</div>
+              <form id="signup-form" class="flip-card__form" action="">
+                <input
+                  class="flip-card__input"
+                  placeholder="Name"
+                  type="text"
+                />
+                <input
+                  class="flip-card__input"
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                  required
+                />
+                <input
+                  class="flip-card__input"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                  required
+                />
+                <button type="submit" class="flip-card__btn">Confirm!</button>
               </form>
             </div>
           </div>
         </label>
       </div>
     </div>
-    <!-- <script src="script/script.js"></script> -->
+    <script type="module" src="./script/supabase.js"></script>
+    <script type="module" src="./script/auth.js"></script>
   </body>
 </html>

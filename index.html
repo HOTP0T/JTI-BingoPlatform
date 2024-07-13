@@ -110,7 +110,6 @@
           
         });
   
-  
         // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
         // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
         var webTracingScript = document.createElement("script");
@@ -259,7 +258,8 @@
           allowtransparency="true"
           frameborder="0"
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-        ></iframe>
+          title="Bingosrs Discord Widget"
+          ></iframe>
         <br />
         <br />
         <br />
@@ -271,6 +271,7 @@
           allowtransparency="true"
           frameborder="0"
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          title="JTI-CC Discord Widget"
         ></iframe>
       </div>
     </div>
@@ -296,10 +297,11 @@
         <br />
         ANALYTICS PROVIDED BY :
         <a
-          href="https://simpleanalytics.com"
-          referrerpolicy="origin"
-          target="_blank"
-          ><picture
+        href="https://simpleanalytics.com"
+        referrerpolicy="origin"
+        target="_blank"
+        rel="noopener noreferrer"
+            ><picture
             ><source
               srcset="
                 https://simpleanalyticsbadges.com/bingosrs.online?mode=dark
@@ -309,11 +311,12 @@
               src="https://simpleanalyticsbadges.com/bingosrs.online?mode=light"
               loading="lazy"
               referrerpolicy="no-referrer"
-              crossorigin="anonymous" /></picture
+              crossorigin="anonymous" 
+              alt="SimpleAnalytics Logo" title="SimpleAnalytics Logo"/></picture
         ></a>
         <a href="https://posthog.com/"
-          ><img src="./assets/posthog-logo.svg" height="150" width="200"
-        /></a>
+          ><img src="./assets/posthog-logo.svg" height="150" width="200" alt="Posthog Logo" title="Posthog Logo" />
+        </a>
         <br />
         <br />
         <div id="coffee">
@@ -377,6 +380,11 @@ function toggleWidget() {
     <script src="script/openwidget.js"></script>
     <script src="script/lightbox.js"></script>
     <script src="script/script.js"></script>
+    <script type="module" src="script/team.js"></script>
+    <script type="module" src="script/bingo.js"></script>
+    <script type="module" src="script/chat.js"></script>
+    <script type="module" src="./script/supabase.js"></script>
+    <script type="module" src="./script/auth.js"></script>
 
   </body>
 </html>
