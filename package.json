@@ -1,0 +1,21 @@
+{
+  "name": "jti-bingoplatform",
+  "version": "1.0.0",
+  "description": "This is a Bingo Card for OSRS community events. It is designed to help you keep track of your progress and goals. You can color code your tiles, mark them as complete, add notes, and more. This is a tool to help you stay organized and motivated.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "socket.io-client": "^4.7.5"
+  }
+}
