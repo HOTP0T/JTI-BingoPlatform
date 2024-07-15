@@ -1,0 +1,34 @@
+{
+  "BingoTiles": [
+    {
+      "id": 1,
+      "tile": "Any barrows item",
+      "img_path": "./assets/TileImages/Dharok.webp",
+      "text": "This is the text for Any barrows item."
+    },
+    {
+      "id": 2,
+      "tile": "Any Vork unique",
+      "img_path": "./assets/TileImages/Vorkath.webp",
+      "text": "This is the text for Any Vork unique."
+    },
+    {
+      "id": 3,
+      "tile": "Any zulrah unique (no teles or scales)",
+      "img_path": "./assets/TileImages/Zulrah.webp",
+      "text": "This is the text for Any zulrah unique (no teles or scales)."
+    },
+    {
+      "id": 4,
+      "tile": "Any Odium piece",
+      "img_path": "./assets/TileImages/Odium.webp",
+      "text": "This is the text for Any Odium piece."
+    },
+    {
+      "id": 5,
+      "tile": "Any Mal shard piece",
+      "img_path": "./assets/TileImages/MaledicationwardShard.webp",
+      "text": "This is the text for Any Mal shard piece."
+    }
+  ]
+}

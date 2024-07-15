@@ -1,0 +1,1106 @@
+/* WARNING POP UP */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2000; /* Higher than notepads */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+}
+
+.modal-content p {
+  color: black;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Confirmation buttons for reset modal */
+.confirm-button,
+.cancel-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "osrs-font", Arial, sans-serif;
+}
+
+.confirm-button {
+  background-color: #af8848;
+  color: #fff;
+}
+
+.confirm-button:hover {
+  background-color: #d4a36e;
+}
+
+.cancel-button {
+  background-color: #555;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background-color: #777;
+}
+
+/* NOTEPAD SECTION */
+.note-textbox {
+  display: none; /* Hidden by default */
+  position: absolute;
+  width: calc(20% - 30px); /* Adjust the size to be similar to a tile */
+  height: 150px;
+  padding: 5px;
+  font-size: 14px;
+  background: #4a4a4a;
+  color: #d4c79e;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  z-index: 1000; /* Lower than modal */
+  resize: both; /* Allow resizing */
+}
+
+.note-container {
+  position: absolute;
+  z-index: 1000; /* Lower than modal */
+  background: #4a4a4a;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+  display: none; /* Hidden by default */
+}
+
+.note-textbox p {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #d4c79e;
+}
+
+.note-textbox p {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Ensure front and back sides of the tile are properly styled */
+.front-side,
+.back-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  top: 0;
+  left: 0;
+}
+
+.front-side {
+  transform: rotateY(0deg);
+}
+
+.back-side {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3a3a3a;
+  color: #d4c79e;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.bingo-tile.flipped .front-side {
+  transform: rotateY(-180deg);
+}
+
+.bingo-tile.flipped .back-side {
+  transform: rotateY(0deg);
+}
+
+/* Style for the note textbox to fit within the tile */
+.note-textbox {
+  display: none; /* Hidden by default */
+  width: 90%; /* Responsive width */
+  height: 90%; /* Responsive height */
+  padding: 10px;
+  font-size: 14px;
+  background: #4a4a4a;
+  color: #d4c79e;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none; /* Disable resizing */
+  z-index: 1000; /* Lower than modal */
+  overflow: auto;
+}
+
+/* RESET BUTTON */
+.reset-all-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #af8848;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "osrs-font", Arial, sans-serif;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.reset-all-button:hover {
+  background-color: #d4a36e;
+  transform: scale(1.05);
+}
+
+/* BURGER MENU */
+.burger-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 2000;
+  color: #af8848;
+}
+
+.nav-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: #2a2a2a;
+  border: 2px solid #af8848;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  padding: 10px;
+}
+
+.nav-menu ul li a {
+  color: #d4c79e;
+  text-decoration: none;
+  font-family: "osrs-font", Arial, sans-serif;
+}
+
+.nav-menu ul li a:hover {
+  color: #d4a36e;
+}
+
+/* Popup Sidebar */
+.popup-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #2a2a2a;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.popup-sidebar.active {
+  display: block;
+  transform: translateX(0);
+}
+
+.popup-content {
+  padding: 20px;
+  color: #d4c79e;
+}
+
+.popup-content h2,
+.popup-content h1 {
+  margin-bottom: 10px;
+  color: #af8848;
+}
+
+.popup-content p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Overlay for closing the popup by clicking outside */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure it's behind the nav menu */
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* STYLING FOR BINGO CARD */
+
+@font-face {
+  font-family: "osrs-font";
+  src: url(../assets/Fonts/runescape.ttf);
+}
+
+/* General Styles */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a;
+  color: #d4c79e;
+  font-family: "osrs-font", Arial, sans-serif;
+}
+
+/* Bingo card container styles */
+.bingo-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  border: 3px solid #af8848;
+  background: #2a2a2a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 90vmin;
+  max-width: 100%;
+  height: 90vh;
+  box-sizing: border-box;
+  margin: auto;
+  overflow-y: auto;
+}
+
+/* Bingo tile styles */
+.bingo-tile {
+  background: #3a3a3a;
+  border: 2px solid #af8848;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+
+
+
+.bingo-tile .buttons button.completed-button {
+  color: #00fe00; /* Default color for Mark as Complete */
+}
+
+.bingo-tile.completed .buttons button.completed-button {
+  color: #fa3800; /* Color for Mark as Incomplete */
+}
+
+/* Ensure title color change */
+.bingo-tile.completed p {
+  color: #00fe00; /* Title color when marked as completed */
+}
+
+.bingo-tile:hover {
+  transform: scale(1.05);
+}
+
+.front-side,
+.back-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  top: 0;
+  left: 0;
+}
+
+.front-side {
+  transform: rotateY(0deg);
+}
+
+.back-side {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3a3a3a;
+  color: #d4c79e;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.bingo-tile.flipped .front-side {
+  transform: rotateY(-180deg);
+}
+
+.bingo-tile.flipped .back-side {
+  transform: rotateY(0deg);
+}
+
+.bingo-tile img {
+  width: 100%;
+  height: 70%; /* Increased to take up more space */
+  object-fit: cover;
+  margin-bottom: 5px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+  margin-top: 5px;
+}
+
+.bingo-tile p {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  box-sizing: border-box;
+  width: 90%;
+  text-align: center;
+}
+
+.bingo-tile .note {
+  margin-top: 10px;
+  font-size: 12px;
+  background: #4a4a4a;
+  padding: 5px;
+  border: 1px solid #af8848;
+}
+
+.scoreboard {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #2a2a2a;
+  padding: 15px;
+  border: 3px solid #af8848;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Tile buttons container */
+.bingo-tile .buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  background: #2a2a2a;
+  border-top: 2px solid #af8848;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 5px;
+  z-index: 10;
+}
+
+.bingo-tile button {
+  padding: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #af8848;
+  color: #fff;
+  font-family: "osrs-font", Arial, sans-serif;
+  flex: 1;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.bingo-tile button:hover {
+  background: #d4a36e;
+  transform: scale(1.1);
+}
+
+.bingo-tile.completed {
+  background-color: grey;
+}
+
+.bingo-tile.completed .buttons button.completed-button {
+  background-color: #af8848;
+}
+
+.bingo-tile.completed .buttons button.note-button,
+.bingo-tile.completed .buttons button.color-button {
+  display: none;
+}
+
+/* Responsive design for tablet */
+/* @media (max-width: 1024px) {
+  .bingo-card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .bingo-tile {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .bingo-tile img {
+    height: 60%;
+  }
+
+  .bingo-tile p {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .bingo-tile .buttons {
+    display: none;
+  }
+} */
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .bingo-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .bingo-tile {
+    padding: 5px;
+    font-size: 14px;
+    height: auto;
+  }
+
+  .bingo-tile img {
+    max-width: 100%;
+    max-height: 100px;
+    margin-bottom: 5px;
+  }
+
+  .bingo-tile p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
+
+/* LIGHTBOX */
+#lightbox {
+  display: none; /* Hidden initially */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#lightbox-content {
+  width: 80%;
+  height: 80%;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border: 1px solid #af8848;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 60%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px; /* Rounded borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
+}
+
+#lightbox-title {
+  color: #d4c79e;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#lightbox-notes {
+  width: 100%;
+  height: calc(30% - 10px);
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4a4a4a;
+  color: #d4c79e;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+  overflow: auto;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #af8848;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "osrs-font", Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #d4a36e;
+}
+
+button:focus {
+  outline: none;
+}
+
+#close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #af8848; /* Ensure it matches other buttons */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 24px; /* Increase font size for a bigger "X" */
+  font-family: "osrs-font", Arial, sans-serif;
+}
+
+#close-button:hover {
+  background-color: #d4a36e;
+}
+
+#close-button:focus {
+  outline: none;
+}
+
+#prev-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#next-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*POPUP CONTENT*/
+.popup-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: #2a2a2a;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popup-sidebar.active {
+  display: block;
+}
+
+.popup-content {
+  padding: 20px;
+  color: #d4c79e;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.popup-content a {
+  color: #d4c79e;
+}
+/* HELP SECTION */
+.help-section {
+  margin-bottom: 20px;
+}
+
+.help-section h3 {
+  margin-top: 0;
+}
+
+.help-section p {
+  margin: 10px 0;
+}
+
+.help-section img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* HOTP0T MSG */
+#coffee {
+  opacity: 12.5%;
+}
+
+.footer-message {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(42, 42, 42, 0.8);
+  color: #d4c79e;
+  padding: 10px 20px;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  font-family: "osrs-font", Arial, sans-serif;
+  font-size: 14px;
+  z-index: 1000; /* Ensure it sits on top */
+}
+
+.footer-message a {
+  color: #af8848;
+}
+
+.footer-message a:hover {
+  color: #d4a36e;
+}
+
+/* General Styles */
+body {
+  font-family: "osrs-font", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #1a1a1a;
+  color: #d4c79e;
+  overflow: hidden;
+}
+
+.bingo-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+  border: 3px solid #af8848;
+  background: #2a2a2a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  max-width: 90vmin;
+  max-height: 90vmin;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.bingo-tile {
+  background: #3a3a3a;
+  border: 2px solid #af8848;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.bingo-tile img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.bingo-tile p {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  box-sizing: border-box;
+  width: 90%; /* Ensure the title doesn't overflow the tile */
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .bingo-card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .bingo-tile {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .bingo-tile p {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .bingo-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .bingo-tile {
+    padding: 5px;
+    font-size: 14px;
+    height: auto;
+  }
+
+  /* .bingo-tile img {
+    max-width: 100%;
+    max-height: 100px;
+    margin-bottom: 5px;
+  } */
+
+  .bingo-tile p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
+
+/* Adjust burger menu and navigation for responsiveness */
+.burger-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 2000;
+  color: #af8848;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: #2a2a2a;
+  border: 2px solid #af8848;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  padding: 10px;
+}
+
+.nav-menu ul li a {
+  color: #d4c79e;
+  text-decoration: none;
+  font-family: "osrs-font", Arial, sans-serif;
+  display: block;
+}
+
+.nav-menu ul li a:hover {
+  color: #d4a36e;
+}
+
+/* Popup Sidebar */
+.popup-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: #2a2a2a;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popup-sidebar.active {
+  display: block;
+}
+
+.popup-content {
+  padding: 20px;
+  color: #d4c79e;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.popup-content a {
+  color: #d4c79e;
+}
+
+/* Adjust modal content for responsiveness */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px; /* Limit max width for large screens */
+  text-align: center;
+}
+
+/* Additional adjustments for the lightbox */
+#lightbox-content {
+  width: 80%;
+  max-width: 800px; /* Limit max width for large screens */
+  height: 80%;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border: 1px solid #af8848;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 60%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#lightbox-title {
+  color: #d4c79e;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#lightbox-notes {
+  width: 100%;
+  height: calc(30% - 10px);
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4a4a4a;
+  color: #d4c79e;
+  border: 1px solid #af8848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+  overflow: auto;
+}
+
+
+body {
+  font-family: "osrs-font", Arial, sans-serif;
+  margin: 0;
+  background: #1a1a1a;
+  color: #d4c79e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+}
+
+body {
+  font-family: "osrs-font", Arial, sans-serif;
+  margin: 0;
+  background: #1a1a1a;
+  color: #d4c79e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  padding: 20px; /* Add some padding to ensure content isn't flush with edges */
+}
+
+/* Style the bingo card to allow scrolling if necessary */
+.bingo-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+  border: 3px solid #af8848;
+  background: #2a2a2a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 90vmin;
+  max-width: 100%;
+  height: auto; /* Allow the height to adjust */
+  box-sizing: border-box;
+  margin: auto; /* Center the bingo card horizontally */
+}
+
+.bingo-tile {
+  background: #3a3a3a;
+  border: 2px solid #af8848;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* .bingo-tile img {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 5px;
+} */
+
+/* Adjustments for modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .bingo-card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .bingo-tile {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .bingo-tile p {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .bingo-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .bingo-tile {
+    padding: 5px;
+    font-size: 14px;
+    height: auto;
+  }
+  /* 
+  .bingo-tile img {
+    max-width: 100%;
+    max-height: 100px;
+    margin-bottom: 5px;
+  } */
+
+  .bingo-tile p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
