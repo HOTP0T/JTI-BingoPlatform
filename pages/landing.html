@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to OSRS Bingo Platform</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://kit.fontawesome.com/914ca5d668.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/JTI-favicon.svg" />
+    <style>
+      @font-face {
+          font-family: 'RuneScape';
+          src: url('assets/Fonts/runescape.ttf') format('truetype');
+      }
+      body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          text-align: center;
+          background: url('assets/osrs-background.jpg') no-repeat center center fixed;
+          background-size: cover;
+          font-family: 'RuneScape', Arial, sans-serif;
+          color: #fff;
+          margin: 0;
+          overflow-x: hidden; /* Prevent horizontal overflow */
+      }
+      .container {
+          max-width: 800px;
+          margin: 20px;
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          border-radius: 8px;
+          overflow-y: auto; /* Allow vertical scrolling if needed */
+      }
+      h1 {
+          font-size: 2.5em;
+          margin-bottom: 20px;
+          color: #ffcc00;
+      }
+      p {
+          font-size: 1.2em;
+          margin-bottom: 30px;
+          color: #cccccc;
+      }
+      .redirect-btn {
+          padding: 10px 20px;
+          font-size: 1em;
+          color: white;
+          background-color: #007bff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+      }
+      .redirect-btn:hover {
+          background-color: #0056b3;
+      }
+      .graphic {
+          width: 100%;
+          max-width: 400px;
+          margin: 20px auto;
+      }
+      .graphic img {
+          width: 100%;
+          border-radius: 8px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+          h1 {
+              font-size: 2em;
+          }
+          p {
+              font-size: 1em;
+          }
+          .redirect-btn {
+              padding: 8px 16px;
+              font-size: 0.9em;
+          }
+      }
+
+      @media (max-width: 480px) {
+          h1 {
+              font-size: 1.5em;
+          }
+          p {
+              font-size: 0.9em;
+          }
+          .redirect-btn {
+              padding: 6px 12px;
+              font-size: 0.8em;
+          }
+      }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the OSRS Bingo Platform</h1>
+        <p>Join the community event and track your progress with our OSRS Bingo cards. Customize tiles, mark them as complete, add notes, and more. Stay organized and motivated with your goals!</p>
+        <div class="graphic">
+            <img src="assets/Coins_10000.webp" alt="OSRS Bingo">
+        </div>
+        <a href="/login.html" class="redirect-btn">Go to Login</a>
+        <a href="/demo.html" class="redirect-btn demo">Guest demo</a>
+    </div>
+    <div class="footer-message">
+      Made by
+      <a
+        href="https://discord.gg/HP3ju2r4"
+        id="hotpot-link"
+        >HOTP0T</a
+      >
+      ❤️
+    </div>
+</body>
+</html>

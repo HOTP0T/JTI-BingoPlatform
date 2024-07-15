@@ -2,127 +2,127 @@
   "BingoTiles": [
     {
       "tile": "Any wildy pet",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Any wildy pet."
     },
     {
       "tile": "VW from scratch",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for VW from scratch."
     },
     {
       "tile": "Ring of the gods, treasonous, tyrannical",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Ring of the gods, treasonous, tyrannical."
     },
     {
       "tile": "D pick & D2H",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for D pick & D2H."
     },
     {
       "tile": "Claws, fangs, skull",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Claws, fangs, skull."
     },
     {
       "tile": "Odium from scratch",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Odium from scratch."
     },
     {
       "tile": "Chaos druid set",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Chaos druid set."
     },
     {
       "tile": "Any rev weapon",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Any rev weapon."
     },
     {
       "tile": "Ancient crystal",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Ancient crystal."
     },
     {
       "tile": "Any 4 statuettes (no dupes)",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Any 4 statuettes (no dupes)."
     },
     {
       "tile": "Averice",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Averice."
     },
     {
       "tile": "Dagon hai set",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Dagon hai set."
     },
     {
       "tile": "Teleport scroll",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Teleport scroll."
     },
     {
       "tile": "D boots",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for D boots."
     },
     {
       "tile": "Whip",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Whip."
     },
     {
       "tile": "Imbued heart or eternal gem",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Imbued heart or eternal gem."
     },
     {
       "tile": "Eternal glory",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Eternal glory."
     },
     {
       "tile": "3m agility xp collectively",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for 3m agility xp collectively."
     },
     {
       "tile": "Malediction from scratch",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Malediction from scratch."
     },
     {
       "tile": "3m fishing xp collectively",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for 3m fishing xp collectively."
     },
     {
       "tile": "3m thieving xp collectively",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for 3m thieving xp collectively."
     },
     {
       "tile": "KBD heads",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for KBD heads."
     },
     {
       "tile": "3m hunter xp collectively",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for 3m hunter xp collectively."
     },
     {
       "tile": "10 lms wins collectively",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for 10 lms wins collectively."
     },
     {
       "tile": "Pk 20m total collectively",
-      "img_path": "./assets/luna.jpg",
+      "img_path": "../assets/luna.jpg",
       "text": "This is the text for Pk 20m total collectively."
     }
   ]

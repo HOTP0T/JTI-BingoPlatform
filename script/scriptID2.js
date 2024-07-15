@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.style.display = 'none'; // Hide the menu when overlay is clicked
   });
 
-  fetch('Data/updated_bingo2.json')
+  fetch('../Data/updated_bingo2.json')
     .then(response => response.json())
     .then(data => {
       const tiles = data.BingoTiles;
