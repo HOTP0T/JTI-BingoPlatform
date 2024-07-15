@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="OSRS Bingo Card - Keep track of your progress and goals in Old School RuneScape. Customize tiles with color codes, mark them as complete, add notes, and more. Regular updates and community feedback are welcome." />
+      <title>OSRS Bingo Card - Track Your Progress in Old School RuneScape</title>
+      <meta name="keywords" content="OSRS, Bingo Card, Old School RuneScape, progress tracker, community events, gaming tools" />
+      <meta name="author" content="Your Name or Organization" />
+      <meta property="og:title" content="OSRS Bingo Card - Track Your Progress in Old School RuneScape" />
+      <meta property="og:description" content="Keep track of your progress and goals in Old School RuneScape with our customizable bingo card. Add notes, color-code tiles, and mark them as complete. Join the community for regular updates." />
+      <meta property="og:image" content="https://bingosrs.online/assets/hotpotimg.png" />
+      <meta property="og:url" content="https://bingosrs.online" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="OSRS Bingo Card - Track Your Progress in Old School RuneScape" />
+      <meta name="twitter:description" content="Keep track of your progress and goals in Old School RuneScape with our customizable bingo card. Add notes, color-code tiles, and mark them as complete. Join the community for regular updates." />
+      <meta name="twitter:image" content="https://bingosrs.online/assets/hotpotimg.png" />
+      <link rel="stylesheet" href="../style/reset.css" />
+      <link rel="stylesheet" href="../style/style.css" />
+      <script src="https://kit.fontawesome.com/914ca5d668.js" crossorigin="anonymous"></script>
+      <link rel="icon" type="image/x-icon" href="./assets/JTI-favicon.svg" />
+
+  <!-- START POSTHOG analytics -->
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                });
+            }
+            ((p = t.createElement("script")).type = "text/javascript"),
+              (p.async = !0),
+              (p.src =
+                s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") +
+                "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
+                p,
+                r
+              );
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return (
+                    "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                  );
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(
+                    " "
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("phc_Ybp7LHQmmEUzikWCH3mv5wxFu6BLcFPLWYG65RTvi5F", {
+        api_host: "https://us.i.posthog.com",
+        person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
+      });
+    </script>
+  <!-- END POSTHOG analytics -->
+
+  <!-- START 100% privacy-first analytics from SimpleAnalytics -->
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+    /></noscript>
+  <!-- END 100% privacy-first analytics from SimpleAnalytics -->
+
+  <script>
+    (function () {
+      var webSdkScript = document.createElement("script");
+  
+      // fetch the latest version of the Web-SDK from the CDN
+      webSdkScript.src =
+        "https://unpkg.com/@grafana/faro-web-sdk@^1.4.0/dist/bundle/faro-web-sdk.iife.js";
+  
+      webSdkScript.onload = () => {
+        window.GrafanaFaroWebSdk.initializeFaro({
+          url: "https://faro-collector-prod-eu-west-2.grafana.net/collect/0f3bfa0dd3ec7c11d606cb0b5fe295ba",
+          app: {
+            name: "Bingosrs",
+            version: "1.0.0",
+            environment: "production",
+          },
+          
+        });
+  
+  
+        // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+        // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+        var webTracingScript = document.createElement("script");
+  
+        // fetch the latest version of the Web Tracing package from the CDN
+        webTracingScript.src =
+          "https://unpkg.com/@grafana/faro-web-tracing@^1.4.0/dist/bundle/faro-web-tracing.iife.js";
+  
+        // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+        webTracingScript.onload = () => {
+          window.GrafanaFaroWebSdk.faro.instrumentations.add(
+            new window.GrafanaFaroWebTracing.TracingInstrumentation()
+          );
+        };
+  
+        // Append the Web Tracing script script tag to the HTML page
+        document.head.appendChild(webTracingScript);
+      };
+  
+      // Append the Web-SDK script script tag to the HTML page
+      document.head.appendChild(webSdkScript);
+    })();
+  </script>
+  
+
+  </head>
+  <body>
+    <div class="burger-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" data-target="helpPopup">Help</a></li>
+        <li><a href="#" data-target="contactPopup">Contact</a></li>
+        <li><a href="#" data-target="aboutPopup">About</a></li>
+      </ul>
+    </nav>
+
+    <div id="scoreboard" class="scoreboard">
+      <p>Completed Tiles: <span id="completedCount">0</span></p>
+      <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
+    </div>
+    <div id="bingoCard" class="bingo-card"></div>
+
+    <button id="resetAllButton" class="reset-all-button" tabindex="0">
+      RESET ALL
+    </button>
+
+    <div id="resetConfirmModal" class="modal">
+      <div class="modal-content">
+        <p>
+          Are you sure you want to reset all data? This action cannot be undone.
+        </p>
+        <button id="confirmResetButton" class="confirm-button" tabindex="0">
+          Yes, reset
+        </button>
+        <button id="cancelResetButton" class="cancel-button" tabindex="0">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <div id="helpPopup" class="popup-sidebar">
+      <div class="popup-content">
+        <h1>Help</h1>
+
+        <div class="help-section">
+          <h3>Color Coding</h3>
+          <p>
+            You can click on the colors button to color code your tiles. For
+            example: green is easy, purple is team mass, red is for Slaytr.
+          </p>
+          <img
+            src="assets/HelpSection/Colors_JTI_Guide.gif"
+            alt="Color Coding Guide"
+          />
+        </div>
+
+        <div class="help-section">
+          <h3>Mark as Complete</h3>
+          <p>
+            Click the "Mark as Complete" button to mark a tile as completed.
+            This will update the tile's appearance and count in the scoreboard.
+          </p>
+          <img
+            src="assets/HelpSection/MarkAsComplete_JTI_Guide.gif"
+            alt="Mark as Complete Guide"
+          />
+        </div>
+
+        <div class="help-section">
+          <h3>Notes</h3>
+          <p>
+            Click the "Notes" button to add notes to a tile. This allows you to
+            keep track of important information for each tile.
+          </p>
+          <img src="assets/HelpSection/Notes_JTI_Guide.gif" alt="Notes Guide" />
+        </div>
+
+        <div class="help-section">
+          <h3>Reset All</h3>
+          <p>
+            The "RESET ALL" button will reset all your progress and data. Use
+            this if you want to start over.
+          </p>
+          <img
+            src="assets/HelpSection/RESETALL_JTI_GUIDE.png"
+            alt="Reset All Guide"
+          />
+        </div>
+
+        <div class="help-section">
+          <h3>Scoreboard</h3>
+          <p>
+            The scoreboard keeps track of your completed and uncompleted tiles.
+            This helps you monitor your progress.
+          </p>
+          <img
+            src="assets/HelpSection/ScoreBoard_JTI_Guide.png"
+            alt="Scoreboard Guide"
+          />
+        </div>
+
+        <div class="help-section">
+          <h3>LightBox</h3>
+          <p>
+            You can change the viewing of the tiles by clicking on each one of
+            them to focus on the selected tile.
+          </p>
+          <img
+            src="assets/HelpSection/LightBox_JTI_Guide.gif"
+            alt="Scoreboard Guide"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="contactPopup" class="popup-sidebar">
+      <div class="popup-content">
+        <h2>Contact</h2>
+        <p>BINGOSRS DISCORD</p>
+        <iframe
+          src="https://discord.com/widget?id=1258158936603758663&theme=dark"
+          width="250"
+          height="250"
+          allowtransparency="true"
+          frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        ></iframe>
+        <br />
+        <br />
+        <br />
+        <p>[JTI-CC] DISCORD</p>
+        <iframe
+          src="https://discord.com/widget?id=866006265045975060&theme=dark"
+          width="250"
+          height="250"
+          allowtransparency="true"
+          frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="aboutPopup" class="popup-sidebar">
+      <div class="popup-content">
+        <h2>About</h2>
+        <p>
+          This is a Bingo Card for JTI. It is designed to help you keep track of
+          your progress and goals. You can color code your tiles, mark them as
+          complete, add notes, and more. This is a tool to help you stay
+          organized and motivated.
+          <br />
+          <br />
+          Please keep in mind this is a work in progress and will be updated
+          regularly. If you have any suggestions or feedback, please let me
+          know.
+        </p>
+        <br />
+        <p>v2.5.5</p>
+        <br />
+        <br />
+        <br />
+        ANALYTICS PROVIDED BY :
+        <a
+          href="https://simpleanalytics.com"
+          referrerpolicy="origin"
+          target="_blank"
+          ><picture
+            ><source
+              srcset="
+                https://simpleanalyticsbadges.com/bingosrs.online?mode=dark
+              "
+              media="(prefers-color-scheme: dark)" />
+            <img
+              src="https://simpleanalyticsbadges.com/bingosrs.online?mode=light"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              crossorigin="anonymous" /></picture
+        ></a>
+        <a href="https://posthog.com/"
+          ><img src="./assets/posthog-logo.svg" height="150" width="200"
+        /></a>
+        <br />
+        <br />
+        <div id="coffee">
+        omnomnomnomnom
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="HOTP0T" data-color="#af8848" data-emoji="🍕"  data-font="Cookie" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="footer-message">
+      Made by
+      <a
+        href="https://discord.gg/HP3ju2r4"
+        id="hotpot-link"
+        >HOTP0T</a
+      >
+      ❤️
+    </div>
+
+    <div id="lightbox" class="lightbox">
+      <div id="lightbox-content">
+        <button id="close-button" class="close-button">&times;</button>
+        <img id="lightbox-img" src="" alt="Lightbox Image" />
+        <h2 id="lightbox-title"></h2>
+        <textarea
+          id="lightbox-notes"
+          class="lightbox-notes"
+          placeholder="Enter your notes here..."
+        ></textarea>
+        <button id="prev-button" class="arrow left">&lt;</button>
+        <button id="next-button" class="arrow right">&gt;</button>
+      </div>
+    </div>
+
+<!-- Crate initialization -->
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+  new Crate({
+    server: '1258158936603758663',
+    channel: '1258616481990840371',
+    location: [-60, -20], // Move the button 60px from the top and 20px from the right
+    // token: 'your_jwt_token_here', // Add your JWT token here
+    notifications: false, // Disable notifications
+    indicator: true, // Enable unread message indicator
+    allChannelNotifications: true, // Enable notifications for all channels
+    defer: true // Load the widget only when the user opens it
+  });
+function toggleWidget() {
+  const widget = document.getElementById('discord-widget');
+  if (widget.style.display === 'none' || widget.style.display === '') {
+    widget.style.display = 'block';
+  } else {
+    widget.style.display = 'none';
+  }
+}
+</script>
+
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <!-- <script src="script/socket.js"></script> -->
+
+    <script src="./script/openwidget.js"></script>
+    <script src="./script/lightbox.js"></script>
+    <script src="./script/scriptID2.js"></script>
+    <script src="./script/realtime.js"></script>
+    <script src="./script/hula.js"></script>
+
+  </body>
+</html>
