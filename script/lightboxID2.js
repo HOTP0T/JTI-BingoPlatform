@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Fetch data and initialize tiles
-  fetch('Data/updated_bingo.json')
+  fetch('../Data/updated_bingo2.json')
     .then(response => response.json())
     .then(data => {
       window.tiles = data.BingoTiles;
