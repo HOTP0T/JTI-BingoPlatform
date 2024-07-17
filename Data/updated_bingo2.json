@@ -53,6 +53,60 @@
       "tile": "Abyssal Dagger",
       "img_path": "../assets/TileID2/1024px-Abyssal_dagger_detail.webp",
       "text": "This is the text for Abyssal Dagger."
+    },
+    {
+      "id": 1,
+      "tile": "3rd Age Kiteshield",
+      "img_path": "../assets/TileID2/366px-3rd_age_kiteshield_detail.webp",
+      "text": "This is the text for 3rd Age Kiteshield."
+    },
+    {
+      "id": 2,
+      "tile": "Bloodhound",
+      "img_path": "../assets/TileID2/500px-Bloodhound_detail.webp",
+      "text": "This is the text for Bloodhound."
+    },
+    {
+      "id": 3,
+      "tile": "Bandos Tassets",
+      "img_path": "../assets/TileID2/513px-Bandos_tassets_detail.webp",
+      "text": "This is the text for Bandos Tassets."
+    },
+    {
+      "id": 4,
+      "tile": "Blessed Dizana's Quiver (Broken)",
+      "img_path": "../assets/TileID2/590px-Blessed_dizana's_quiver_(broken)_detail.webp",
+      "text": "This is the text for Blessed Dizana's Quiver (Broken)."
+    },
+    {
+      "id": 5,
+      "tile": "Arclight",
+      "img_path": "../assets/TileID2/591px-Arclight_detail.webp",
+      "text": "This is the text for Arclight."
+    },
+    {
+      "id": 6,
+      "tile": "Black Mask (i)",
+      "img_path": "../assets/TileID2/613px-Black_mask_(i)_detail.webp",
+      "text": "This is the text for Black Mask (i)."
+    },
+    {
+      "id": 7,
+      "tile": "Bryophyta's Essence",
+      "img_path": "../assets/TileID2/bryophytas_essence_detail.webp",
+      "text": "This is the text for Arclight."
+    },
+    {
+      "id": 8,
+      "tile": "Accursed Sceptre (u) Webp",
+      "img_path": "../assets/TileID2/Accursed_sceptre_(u)_detail.webp",
+      "text": "This is the text for Accursed Sceptre (u) Webp."
+    },
+    {
+      "id": 9,
+      "tile": "Abyssal Dagger",
+      "img_path": "../assets/TileID2/1024px-Abyssal_dagger_detail.webp",
+      "text": "This is the text for Abyssal Dagger."
     }
   ]
 }
