@@ -1,0 +1,13 @@
+.completed-tile-contianer {
+  width: 100%;
+
+}
+
+.completed-tile-contianer table {
+  border: solid 2px #d4c79e;
+}
+
+tr,
+td {
+  border: solid 1px #d4c79e;
+}
