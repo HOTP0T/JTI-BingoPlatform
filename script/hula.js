@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const passwordMappings = {
       'password1': '../pages/CardID1.html',
     'password2': '../pages/CardID2.html',
-    'BETABINGO': '../pages/JtiBingo.html',
+    'BINWILDYGO': '../pages/JtiBingo.html',
       // Add more password-URL pairs as needed
   };
 
