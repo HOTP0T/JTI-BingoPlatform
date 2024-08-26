@@ -23,15 +23,28 @@ document.addEventListener("DOMContentLoaded", () => {
   menuLinks.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
-      const targetPopup = document.getElementById(link.getAttribute('data-target'));
-      document.querySelectorAll('.popup-sidebar').forEach(popup => {
-        popup.classList.remove('active');
-      });
-      targetPopup.classList.add('active');
-      overlay.classList.add('active');
+  
+      const target = link.getAttribute('data-target');
+  
+      // Skip if the link doesn't have a data-target attribute (like the Home link)
+      if (!target) {
+        window.location.href = link.getAttribute('href'); // Navigate to the link's href if no data-target is present
+        return;
+      }
+  
+      const targetPopup = document.getElementById(target);
+  
+      if (targetPopup) {
+        document.querySelectorAll('.popup-sidebar').forEach(popup => {
+          popup.classList.remove('active');
+        });
+        targetPopup.classList.add('active');
+        overlay.classList.add('active');
+      } else {
+        console.error(`Popup with target '${target}' not found. Check the data-target attribute.`);
+      }
     });
   });
-
   overlay.addEventListener('click', () => {
     document.querySelectorAll('.popup-sidebar').forEach(popup => {
       popup.classList.remove('active');

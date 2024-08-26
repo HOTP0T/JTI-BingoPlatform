@@ -3,13 +3,13 @@
     {
       "id": 1,
       "tile": "Any wildy pet",
-      "img_path": "",
+      "img_path": "../assets/WildyBingo/Callisto_cub_(follower).webp",
       "text": "This is the text for Any wildy pet."
     },
     {
       "id": 2,
       "tile": "VW from scratch",
-      "img_path": "",
+      "img_path": "../assets/WildyBingo/Voidwaker_detail.webp",
       "text": "This is the text for VW from scratch."
     },
     {
@@ -33,13 +33,13 @@
     {
       "id": 6,
       "tile": "Odium from scratch",
-      "img_path": "",
+      "img_path": "../assets/WildyBingo/Odium_ward_detail.png",
       "text": "This is the text for Odium from scratch."
     },
     {
       "id": 7,
       "tile": "Chaos druid set",
-      "img_path": "",
+      "img_path": "../assets/WildyBingo/Elder_chaos_druid_robes_equipped_male.webp",
       "text": "This is the text for Chaos druid set."
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": 10,
       "tile": "Any 4 statuettes (no dupes)",
-      "img_path": "",
+      "img_path": "../assets/WildyBingo/Ancient_relic_detail.png",
       "text": "This is the text for Any 4 statuettes (no dupes)."
     },
     {
@@ -69,7 +69,7 @@
     {
       "id": 12,
       "tile": "Dagon hai set",
-      "img_path": "",
+      "img_path": "../assets/WildyBingo/Dagon'hai_robes_equipped_male.webp",
       "text": "This is the text for Dagon hai set."
     },
     {
@@ -111,7 +111,7 @@
     {
       "id": 19,
       "tile": "Malediction from scratch",
-      "img_path": "",
+      "img_path": "../assets/WildyBingo/Malediction_ward_detail.png",
       "text": "This is the text for Malediction from scratch."
     },
     {
@@ -123,7 +123,7 @@
     {
       "id": 21,
       "tile": "3m thieving xp collectively",
-      "img_path": "../assets/WildyBingo/Pickpocket.gif",
+      "img_path": "../assets/WildyBingo/Thieving_icon_(detail).webp",
       "text": "This is the text for 3m thieving xp collectively."
     },
     {
@@ -141,7 +141,7 @@
     {
       "id": 24,
       "tile": "10 lms wins collectively",
-      "img_path": "../assets/WildyBingo/LMS_wins_collectively_detail.webp",
+      "img_path": "../assets/WildyBingo/Victor's_cape_(10)_detail.png",
       "text": "This is the text for 10 lms wins collectively."
     },
     {
