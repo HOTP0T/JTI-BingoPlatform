@@ -2,153 +2,153 @@
   "BingoTiles": [
     {
       "id": 1,
-      "tile": "Any barrows item",
-      "img_path": "../assets/TileImages/Dharok.webp",
-      "text": "This is the text for Any barrows item."
+      "tile": "Any wildy pet",
+      "img_path": "",
+      "text": "This is the text for Any wildy pet."
     },
     {
       "id": 2,
-      "tile": "Any Vork unique",
-      "img_path": "../assets/TileImages/Vorkath.webp",
-      "text": "This is the text for Any Vork unique."
+      "tile": "VW from scratch",
+      "img_path": "",
+      "text": "This is the text for VW from scratch."
     },
     {
       "id": 3,
-      "tile": "Any zulrah unique (no teles or scales)",
-      "img_path": "../assets/TileImages/Zulrah.webp",
-      "text": "This is the text for Any zulrah unique (no teles or scales)."
+      "tile": "Ring of the gods, treasonous, tyrannical",
+      "img_path": "../assets/WildyBingo/Ring_of_the_gods_detail.webp",
+      "text": "This is the text for Ring of the gods, treasonous, tyrannical."
     },
     {
       "id": 4,
-      "tile": "Any Odium piece",
-      "img_path": "../assets/TileImages/Odium.webp",
-      "text": "This is the text for Any Odium piece."
+      "tile": "D pick & D2H",
+      "img_path": "../assets/WildyBingo/D_pick_and_D2H_detail.webp",
+      "text": "This is the text for D pick & D2H."
     },
     {
       "id": 5,
-      "tile": "Any Mal shard piece",
-      "img_path": "../assets/TileImages/MaledicationwardShard.webp",
-      "text": "This is the text for Any Mal shard piece."
+      "tile": "Claws, fangs, skull",
+      "img_path": "../assets/WildyBingo/",
+      "text": "This is the text for Claws, fangs, skull."
     },
     {
       "id": 6,
-      "tile": "Cudgel",
-      "img_path": "../assets/TileImages/Cudgel.webp",
-      "text": "This is the text for Cudgel."
+      "tile": "Odium from scratch",
+      "img_path": "",
+      "text": "This is the text for Odium from scratch."
     },
     {
       "id": 7,
-      "tile": "Any Muspah unique (no essence or cache)",
-      "img_path": "../assets/TileImages/Muspah.webp",
-      "text": "This is the text for Any Muspah unique (no essence or cache)."
+      "tile": "Chaos druid set",
+      "img_path": "",
+      "text": "This is the text for Chaos druid set."
     },
     {
       "id": 8,
-      "tile": "Any MOP unique (no atlattl darts)",
-      "img_path": "../assets/TileImages/MoonsGlyph.webp",
-      "text": "This is the text for Any MOP unique (no atlattl darts)."
+      "tile": "Any rev weapon",
+      "img_path": "../assets/WildyBingo/Rev_weapon_detail.webp",
+      "text": "This is the text for Any rev weapon."
     },
     {
       "id": 9,
-      "tile": "Any Godsword hilt",
-      "img_path": "../assets/TileImages/GWHilt.webp",
-      "text": "This is the text for Any Godsword hilt."
+      "tile": "Ancient crystal",
+      "img_path": "../assets/WildyBingo/Ancient_crystal_detail.png",
+      "text": "This is the text for Ancient crystal."
     },
     {
       "id": 10,
-      "tile": "Tentacle",
-      "img_path": "../assets/TileImages/Tentacule.webp",
-      "text": "This is the text for Tentacle."
+      "tile": "Any 4 statuettes (no dupes)",
+      "img_path": "",
+      "text": "This is the text for Any 4 statuettes (no dupes)."
     },
     {
       "id": 11,
-      "tile": "Trident",
-      "img_path": "../assets/TileImages/Trident.webp",
-      "text": "This is the text for Trident."
+      "tile": "Avarice",
+      "img_path": "../assets/WildyBingo/Amulet_of_avarice_detail.png",
+      "text": "This is the text for Avarice."
     },
     {
       "id": 12,
-      "tile": "KBD heads",
-      "img_path": "../assets/TileImages/KBDHead.webp",
-      "text": "This is the text for KBD heads."
+      "tile": "Dagon hai set",
+      "img_path": "",
+      "text": "This is the text for Dagon hai set."
     },
     {
       "id": 13,
-      "tile": "Dragon chainbody",
-      "img_path": "../assets/TileImages/DChain.webp",
-      "text": "This is the text for Dragon chainbody."
+      "tile": "Teleport scroll",
+      "img_path": "../assets/WildyBingo/Reading_teleport_scroll.gif",
+      "text": "This is the text for Teleport scroll."
     },
     {
       "id": 14,
-      "tile": "Crystal armour seed or ENH weapon seed",
-      "img_path": "../assets/TileImages/CrystalBody.png",
-      "text": "This is the text for Crystal armour seed or ENH weapon seed."
+      "tile": "D boots",
+      "img_path": "../assets/WildyBingo/Dragon_boots_detail.png",
+      "text": "This is the text for D boots."
     },
     {
       "id": 15,
-      "tile": "Any Colosseum unique (no sunfire splinters)",
-      "img_path": "../assets/TileImages/Colosseum.png",
-      "text": "This is the text for Any Colosseum unique (no sunfire splinters)."
+      "tile": "Whip",
+      "img_path": "../assets/WildyBingo/Abyssal_whip_detail.webp",
+      "text": "This is the text for Whip."
     },
     {
       "id": 16,
-      "tile": "Fire cape",
-      "img_path": "../assets/TileImages/Jad.png",
-      "text": "This is the text for Fire cape."
+      "tile": "Imbued heart or eternal gem",
+      "img_path": "../assets/WildyBingo/Imbued_heart_or_eternal_gem_detail.webp",
+      "text": "This is the text for Imbued heart or eternal gem."
     },
     {
       "id": 17,
-      "tile": "Any DKS ring",
-      "img_path": "../assets/TileImages/Prime.png",
-      "text": "This is the text for Any DKS ring."
+      "tile": "Eternal glory",
+      "img_path": "../assets/WildyBingo/Amulet_of_eternal_glory_detail.webp",
+      "text": "This is the text for Eternal glory."
     },
     {
       "id": 18,
-      "tile": "Fedora",
-      "img_path": "../assets/TileImages/Fedora.png",
-      "text": "This is the text for Fedora."
+      "tile": "3m agility xp collectively",
+      "img_path": "../assets/WildyBingo/Agility_icon_(detail).webp",
+      "text": "This is the text for 3m agility xp collectively."
     },
     {
       "id": 19,
-      "tile": "Any med clue boots",
-      "img_path": "../assets/TileImages/WizardBoots.png",
-      "text": "This is the text for Any med clue boots."
+      "tile": "Malediction from scratch",
+      "img_path": "",
+      "text": "This is the text for Malediction from scratch."
     },
     {
       "id": 20,
-      "tile": "Any clue blessing",
-      "img_path": "../assets/TileImages/Blessing.png",
-      "text": "This is the text for Any clue blessing."
+      "tile": "3m fishing xp collectively",
+      "img_path": "../assets/WildyBingo/Barbarian_Fishing_(shark).gif",
+      "text": "This is the text for 3m fishing xp collectively."
     },
     {
       "id": 21,
-      "tile": "Any blessed dhide piece",
-      "img_path": "../assets/TileImages/DhideBody.png",
-      "text": "This is the text for Any blessed dhide piece."
+      "tile": "3m thieving xp collectively",
+      "img_path": "../assets/WildyBingo/Pickpocket.gif",
+      "text": "This is the text for 3m thieving xp collectively."
     },
     {
       "id": 22,
-      "tile": "Amulet of the damned",
-      "img_path": "../assets/TileImages/Damned.png",
-      "text": "This is the text for Amulet of the damned."
+      "tile": "KBD heads",
+      "img_path": "../assets/WildyBingo/KBDHead.webp",
+      "text": "This is the text for KBD heads."
     },
     {
       "id": 23,
-      "tile": "Gnome restaurant scarf or goggles",
-      "img_path": "../assets/TileImages/GnomeGoggles.png",
-      "text": "This is the text for Gnome restaurant scarf or goggles."
+      "tile": "3m hunter xp collectively",
+      "img_path": "../assets/WildyBingo/Hunter_icon_(detail).webp",
+      "text": "This is the text for 3m hunter xp collectively."
     },
     {
       "id": 24,
-      "tile": "Any angler piece",
-      "img_path": "../assets/TileImages/Angler.png",
-      "text": "This is the text for Any angler piece."
+      "tile": "10 lms wins collectively",
+      "img_path": "../assets/WildyBingo/LMS_wins_collectively_detail.webp",
+      "text": "This is the text for 10 lms wins collectively."
     },
     {
       "id": 25,
-      "tile": "Crystal grail",
-      "img_path": "../assets/TileImages/CrystalGrail.png",
-      "text": "This is the text for Crystal grail."
+      "tile": "Pk 20m total collectively",
+      "img_path": "../assets/WildyBingo/Skull_(Loot_key)_icon_(5).webp",
+      "text": "This is the text for Pk 20m total collectively."
     }
   ]
 }

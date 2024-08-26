@@ -187,13 +187,13 @@ function adjustFontSize(noteTextbox) {
 }
 
 function showColorOptions(tileElement) {
-  const colorOptions = ['red', '#3a3a3a', 'green', 'purple']; // Use the initial grey color #3a3a3a
+  const colorOptions = ['red', '#3a3a3a', 'gold', 'purple']; // Use the initial grey color #3a3a3a
   const currentColor = window.getComputedStyle(tileElement).backgroundColor; // Get the computed style for accurate color
 
   const colorsMap = {
     'rgb(255, 0, 0)': 'red', // Red
     'rgb(58, 58, 58)': '#3a3a3a', // Grey
-    'rgb(0, 128, 0)': 'green', // Green
+    'rgb(255, 215, 0)': 'gold', // Gold
     'rgb(128, 0, 128)': 'purple' // Purple
   };
 
@@ -221,7 +221,7 @@ function setTileCompletion(tileElement, isCompleted, updateButton = true) {
   const title = tileElement.querySelector('p');
 
   if (isCompleted) {
-    tileElement.style.backgroundColor = 'grey';
+    tileElement.style.backgroundColor = 'green';
     title.style.color = '#00FE00';
     if (updateButton) completedButton.textContent = 'Mark as Incomplete';
     tileElement.style.pointerEvents = 'none';
