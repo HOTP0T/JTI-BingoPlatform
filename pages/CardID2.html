@@ -137,226 +137,239 @@
   </script>
   
 
-  </head>
-  <body>
-    <div class="burger-menu">
-      <i class="fas fa-bars"></i>
+</head>
+<body>
+  <div class="burger-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#" data-target="helpPopup">Help</a></li>
+      <li><a href="#" data-target="contactPopup">Contact</a></li>
+      <li><a href="#" data-target="aboutPopup">About</a></li>
+      <li><a href="#" data-target="eventPopup">Event Info</a></li>
+    </ul>
+  </nav>
+
+  <div id="scoreboard" class="scoreboard">
+    <p>Completed Tiles: <span id="completedCount">0</span></p>
+    <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
+  </div>
+  <div id="bingoCard" class="bingo-card"></div>
+
+  <button id="resetAllButton" class="reset-all-button" tabindex="0">
+    RESET ALL
+  </button>
+
+  <div id="resetConfirmModal" class="modal">
+    <div class="modal-content">
+      <p>
+        Are you sure you want to reset all data? This action cannot be undone.
+      </p>
+      <button id="confirmResetButton" class="confirm-button" tabindex="0">
+        Yes, reset
+      </button>
+      <button id="cancelResetButton" class="cancel-button" tabindex="0">
+        Cancel
+      </button>
     </div>
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="#" data-target="helpPopup">Help</a></li>
-        <li><a href="#" data-target="contactPopup">Contact</a></li>
-        <li><a href="#" data-target="aboutPopup">About</a></li>
-      </ul>
-    </nav>
+  </div>
 
-    <div id="scoreboard" class="scoreboard">
-      <p>Completed Tiles: <span id="completedCount">0</span></p>
-      <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
-    </div>
-    <div id="bingoCard" class="bingo-card"></div>
+  <div id="helpPopup" class="popup-sidebar">
+    <div class="popup-content">
+      <h1>Help</h1>
 
-    <button id="resetAllButton" class="reset-all-button" tabindex="0">
-      RESET ALL
-    </button>
-
-    <div id="resetConfirmModal" class="modal">
-      <div class="modal-content">
+      <div class="help-section">
+        <h3>Color Coding</h3>
         <p>
-          Are you sure you want to reset all data? This action cannot be undone.
+          You can click on the colors button to color code your tiles. For
+          example: green is easy, purple is team mass, red is for Slaytr.
         </p>
-        <button id="confirmResetButton" class="confirm-button" tabindex="0">
-          Yes, reset
-        </button>
-        <button id="cancelResetButton" class="cancel-button" tabindex="0">
-          Cancel
-        </button>
+        <img
+          src="../assets/HelpSection/Colors_JTI_Guide.gif"
+          alt="Color Coding Guide"
+        />
       </div>
-    </div>
 
-    <div id="helpPopup" class="popup-sidebar">
-      <div class="popup-content">
-        <h1>Help</h1>
-
-        <div class="help-section">
-          <h3>Color Coding</h3>
-          <p>
-            You can click on the colors button to color code your tiles. For
-            example: green is easy, purple is team mass, red is for Slaytr.
-          </p>
-          <img
-            src="../assets/HelpSection/Colors_JTI_Guide.gif"
-            alt="Color Coding Guide"
-          />
-        </div>
-
-        <div class="help-section">
-          <h3>Mark as Complete</h3>
-          <p>
-            Click the "Mark as Complete" button to mark a tile as completed.
-            This will update the tile's appearance and count in the scoreboard.
-          </p>
-          <img
-            src="../assets/HelpSection/MarkAsComplete_JTI_Guide.gif"
-            alt="Mark as Complete Guide"
-          />
-        </div>
-
-        <div class="help-section">
-          <h3>Notes</h3>
-          <p>
-            Click the "Notes" button to add notes to a tile. This allows you to
-            keep track of important information for each tile.
-          </p>
-          <img src="../assets/HelpSection/Notes_JTI_Guide.gif" alt="Notes Guide" />
-        </div>
-
-        <div class="help-section">
-          <h3>Reset All</h3>
-          <p>
-            The "RESET ALL" button will reset all your progress and data. Use
-            this if you want to start over.
-          </p>
-          <img
-            src="../assets/HelpSection/RESETALL_JTI_GUIDE.png"
-            alt="Reset All Guide"
-          />
-        </div>
-
-        <div class="help-section">
-          <h3>Scoreboard</h3>
-          <p>
-            The scoreboard keeps track of your completed and uncompleted tiles.
-            This helps you monitor your progress.
-          </p>
-          <img
-            src="../assets/HelpSection/ScoreBoard_JTI_Guide.png"
-            alt="Scoreboard Guide"
-          />
-        </div>
-
-        <div class="help-section">
-          <h3>LightBox</h3>
-          <p>
-            You can change the viewing of the tiles by clicking on each one of
-            them to focus on the selected tile.
-          </p>
-          <img
-            src="../assets/HelpSection/LightBox_JTI_Guide.gif"
-            alt="Scoreboard Guide"
-          />
-        </div>
-      </div>
-    </div>
-
-    <div id="contactPopup" class="popup-sidebar">
-      <div class="popup-content">
-        <h2>Contact</h2>
-        <p>BINGOSRS DISCORD</p>
-        <iframe
-          src="https://discord.com/widget?id=1258158936603758663&theme=dark"
-          width="250"
-          height="250"
-          allowtransparency="true"
-          frameborder="0"
-          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-        ></iframe>
-        <br />
-        <br />
-        <br />
-        <p>[JTI-CC] DISCORD</p>
-        <iframe
-          src="https://discord.com/widget?id=866006265045975060&theme=dark"
-          width="250"
-          height="250"
-          allowtransparency="true"
-          frameborder="0"
-          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-        ></iframe>
-      </div>
-    </div>
-
-    <div id="aboutPopup" class="popup-sidebar">
-      <div class="popup-content">
-        <h2>About</h2>
+      <div class="help-section">
+        <h3>Mark as Complete</h3>
         <p>
-          This is a Bingo Card for OSRS bingo events. It is designed to help you keep track of
-          your progress and goals. You can color code your tiles, mark them as
-          complete, add notes, and more. This is a tool to help you stay
-          organized and motivated.
-          <br />
-          <br />
-          Please keep in mind this is a work in progress and will be updated
-          regularly. If you have any suggestions or feedback, please let me
-          know.
-          <br />
-          <br />
-          The images are taken from <a href="https://www.oldschool.runescape.com/">oldschool.runescape.com</a> and its copyright is held by Jagex Ltd.
-          <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA 3.0</a>
+          Click the "Mark as Complete" button to mark a tile as completed.
+          This will update the tile's appearance and count in the scoreboard.
         </p>
-        <br />
-        <p>v2.8.0</p>
-        <br />
-        <br />
-        First version of this platform : <a href="https://hotp0t.github.io/JTI-BINGO-022024/">Click Here</a>
-        <br />
-        <br />
-        <br />
-        ANALYTICS PROVIDED BY :
-        <a rel="noopener"
-          href="https://simpleanalytics.com"
-          referrerpolicy="origin"
-          target="_blank"
-          title="Simple Analytics Links"
-          ><picture
-            ><source
-              srcset="
-                https://simpleanalyticsbadges.com/bingosrs.online?mode=dark
-              "
-              media="(prefers-color-scheme: dark)" />
-            <img
-              src="https://simpleanalyticsbadges.com/bingosrs.online?mode=light"
-              loading="lazy"
-              referrerpolicy="no-referrer"
-              crossorigin="anonymous" 
-              alt="Simple Analytics Badge"
-              /></picture
-        ></a>
-        <a href="https://posthog.com/"
-          ><img title="posthog logo" src="../assets/posthog-logo.svg" height="150" width="200"
-        /></a>
-        <br />
-        <br />
-        <div id="coffee">
-        omnomnomnomnom
-        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="HOTP0T" data-color="#af8848" data-emoji="🍕"  data-font="Cookie" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
+        <img
+          src="../assets/HelpSection/MarkAsComplete_JTI_Guide.gif"
+          alt="Mark as Complete Guide"
+        />
+      </div>
+
+      <div class="help-section">
+        <h3>Notes</h3>
+        <p>
+          Click the "Notes" button to add notes to a tile. This allows you to
+          keep track of important information for each tile.
+        </p>
+        <img src="../assets/HelpSection/Notes_JTI_Guide.gif" alt="Notes Guide" />
+      </div>
+
+      <div class="help-section">
+        <h3>Reset All</h3>
+        <p>
+          The "RESET ALL" button will reset all your progress and data. Use
+          this if you want to start over.
+        </p>
+        <img
+          src="../assets/HelpSection/RESETALL_JTI_GUIDE.png"
+          alt="Reset All Guide"
+        />
+      </div>
+
+      <div class="help-section">
+        <h3>Scoreboard</h3>
+        <p>
+          The scoreboard keeps track of your completed and uncompleted tiles.
+          This helps you monitor your progress.
+        </p>
+        <img
+          src="../assets/HelpSection/ScoreBoard_JTI_Guide.png"
+          alt="Scoreboard Guide"
+        />
+      </div>
+
+      <div class="help-section">
+        <h3>LightBox</h3>
+        <p>
+          You can change the viewing of the tiles by clicking on each one of
+          them to focus on the selected tile. 
+        </p>
+        <img
+          src="../assets/HelpSection/LightBox_JTI_Guide.gif"
+          alt="Scoreboard Guide"
+        />
       </div>
     </div>
-      </div>
+  </div>
+
+  <div id="contactPopup" class="popup-sidebar">
+    <div class="popup-content">
+      <h2>Contact</h2>
+      <p>BINGOSRS DISCORD</p>
+      <iframe
+        src="https://discord.com/widget?id=1258158936603758663&theme=dark"
+        width="250"
+        height="250"
+        allowtransparency="true"
+        frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      ></iframe>
+      <br />
+      <br />
+      <br />
+      <p>-[ ADD ANY DISCORD CHANNEL HERE ]-</p>
+    </div>
+  </div>
+
+  <div id="aboutPopup" class="popup-sidebar">
+    <div class="popup-content">
+      <h2>About</h2>
+      <p>
+        This is a Bingo Card for OSRS bingo events. It is designed to help you keep track of
+        your progress and goals. You can color code your tiles, mark them as
+        complete, add notes, and more. This is a tool to help you stay
+        organized and motivated.
+        <br />
+        <br />
+        Please keep in mind this is a work in progress and will be updated
+        regularly. If you have any suggestions or feedback, please let me
+        know.
+        <br />
+        <br />
+        The images are taken from <a href="https://www.oldschool.runescape.com/">oldschool.runescape.com</a> and its copyright is held by Jagex Ltd.
+        <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA 3.0</a>
+      </p>
+      <br />
+      <p>v2.8.0</p>
+      <br />
+      <br />
+      First version of this platform : <a href="https://hotp0t.github.io/JTI-BINGO-022024/">Click Here</a>
+      <br />
+      <br />
+      <br />
+      ANALYTICS PROVIDED BY :
+      <a rel="noopener"
+        href="https://simpleanalytics.com"
+        referrerpolicy="origin"
+        target="_blank"
+        title="Simple Analytics Links"
+        ><picture
+          ><source
+            srcset="
+              https://simpleanalyticsbadges.com/bingosrs.online?mode=dark
+            "
+            media="(prefers-color-scheme: dark)" />
+          <img
+            src="https://simpleanalyticsbadges.com/bingosrs.online?mode=light"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            crossorigin="anonymous" 
+            alt="Simple Analytics Badge"
+            /></picture
+      ></a>
+      <a href="https://posthog.com/"
+        ><img title="posthog logo" src="../assets/posthog-logo.svg" height="150" width="200"
+      /></a>
+      <br />
+      <br />
+      <div id="coffee">
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="HOTP0T" data-color="#af8848" data-emoji="🍕"  data-font="Cookie" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <div id="eventPopup" class="popup-sidebar">
+    <div class="popup-content">
+      <h2>Event Info</h2>
+        <div class="event-info">
+          <h3>Event Instructions</h3>
+          <br>
+          <ol>
+          <li>↓ Download the RuneLite plugin called Dink ↓</li>
+          <img src="../assets/eventInfo/DinkPlugIn.png" alt="Event Instructions" style="width: 100%;"/>
+          <li>Work In Progress</li>
+          </ol>
+
+          </div>
+    </div>
     </div>
 
-    <div class="footer-message">
-      Made by
-      <a
-        href="https://discord.gg/EQ9jqhGGjH"
-        id="hotpot-link"a
-      ❤️
-    </div>
 
-    <div id="lightbox" class="lightbox">
-      <div id="lightbox-content">
-        <button id="close-button" class="close-button">&times;</button>
-        <img id="lightbox-img" src="" alt="Lightbox Image" />
-        <h2 id="lightbox-title"></h2>
-        <textarea
-          id="lightbox-notes"
-          class="lightbox-notes"
-          placeholder="Enter your notes here..."
-        ></textarea>
-        <button id="prev-button" class="arrow left">&lt;</button>
-        <button id="next-button" class="arrow right">&gt;</button>
-      </div>
+
+  <div class="footer-message">
+    Made by
+    <a
+      href="https://discord.gg/EQ9jqhGGjH"
+      id="hotpot-link"
+      >HOTP0T</a
+    >
+    ❤️
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <div id="lightbox-content">
+      <button id="close-button" class="close-button">&times;</button>
+      <img id="lightbox-img" src="" alt="Lightbox Image" />
+      <h2 id="lightbox-title"></h2>
+      <textarea
+        id="lightbox-notes"
+        class="lightbox-notes"
+        placeholder="Enter your notes here..."
+      ></textarea>
+      <button id="prev-button" class="arrow left">&lt;</button>
+      <button id="next-button" class="arrow right">&gt;</button>
     </div>
+  </div>
 
 <!-- Crate initialization -->
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
