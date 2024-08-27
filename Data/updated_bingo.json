@@ -15,19 +15,19 @@
     {
       "id": 3,
       "tile": "Ring of the gods, treasonous, tyrannical",
-      "img_path": "../assets/WildyBingo/Ring_of_the_gods_detail.webp",
+      "img_path": "../assets/WildyBingo/multi_rings.gif",
       "text": "This is the text for Ring of the gods, treasonous, tyrannical."
     },
     {
       "id": 4,
       "tile": "D pick & D2H",
-      "img_path": "../assets/WildyBingo/D_pick_and_D2H_detail.webp",
+      "img_path": "../assets/WildyBingo/dpick_dlong.gif",
       "text": "This is the text for D pick & D2H."
     },
     {
       "id": 5,
       "tile": "Claws, fangs, skull",
-      "img_path": "../assets/WildyBingo/",
+      "img_path": "../assets/WildyBingo/claws_fangs_skull.gif",
       "text": "This is the text for Claws, fangs, skull."
     },
     {
@@ -45,7 +45,7 @@
     {
       "id": 8,
       "tile": "Any rev weapon",
-      "img_path": "../assets/WildyBingo/Rev_weapon_detail.webp",
+      "img_path": "../assets/WildyBingo/rev_weapons.gif",
       "text": "This is the text for Any rev weapon."
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": 10,
       "tile": "Any 4 statuettes (no dupes)",
-      "img_path": "../assets/WildyBingo/Ancient_relic_detail.png",
+      "img_path": "../assets/WildyBingo/wildy_totems.gif",
       "text": "This is the text for Any 4 statuettes (no dupes)."
     },
     {
@@ -93,7 +93,7 @@
     {
       "id": 16,
       "tile": "Imbued heart or eternal gem",
-      "img_path": "../assets/WildyBingo/Imbued_heart_or_eternal_gem_detail.webp",
+      "img_path": "../assets/WildyBingo/eternalgem_imbuedheart.gif",
       "text": "This is the text for Imbued heart or eternal gem."
     },
     {
