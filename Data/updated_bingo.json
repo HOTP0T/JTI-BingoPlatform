@@ -14,7 +14,7 @@
     },
     {
       "id": 3,
-      "tile": "Ring of the gods, treasonous, tyrannical",
+      "tile": "Ring of the gods, treasonous and tyrannical",
       "img_path": "../assets/WildyBingo/multi_rings.gif",
       "text": "This is the text for Ring of the gods, treasonous, tyrannical."
     },
@@ -26,7 +26,7 @@
     },
     {
       "id": 5,
-      "tile": "Claws, fangs, skull",
+      "tile": "claws, fangs and skull",
       "img_path": "../assets/WildyBingo/claws_fangs_skull.gif",
       "text": "This is the text for Claws, fangs, skull."
     },
