@@ -149,10 +149,11 @@
         <li><a href="#" data-target="helpPopup">Help</a></li>
         <li><a href="#" data-target="contactPopup">Contact</a></li>
         <li><a href="#" data-target="aboutPopup">About</a></li>
-        <li><a href="#" data-target="eventPopup">Event Info</a></li>
+        <li><a href="#" data-target="eventPopup">Event Instructions</a></li>
+        <!-- <li><a href="#" data-target="trackingPopup">Tile Tracking</a></li> -->
       </ul>
     </nav>
-
+<h1>Just Tbow It Wildy Bingo Event</h1>
     <div id="scoreboard" class="scoreboard">
       <p>Completed Tiles: <span id="completedCount">0</span></p>
       <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
@@ -345,20 +346,51 @@
 
     <div id="eventPopup" class="popup-sidebar">
       <div class="popup-content">
-        <h2>Event Info</h2>
+        <h2>Event Instructions</h2>
           <div class="event-info">
             <h3>Event Instructions</h3>
             <br>
             <ol>
-              <li>↓ Download the RuneLite plugin called Dink ↓</li>
-              <img src="../assets/eventInfo/DinkPlugIn.png" alt="Event Instructions" style="width: 100%;"/>
-              <li>Work In Progress</li>
+              <li>↓ Download the RuneLite plugin called Dink ↓
+                <br>
+              <img src="../assets/eventInfo/step1_DinkPlugIn.png" alt="Event Instructions Step 1" style="width: 100%;"/>
+              </li>
+              <br >
+              <li>↓ Click on the gear icon to access the plugins configs ↓
+                <br>
+                <img src="../assets/eventInfo/step2b_Dink_Config1.png" alt="Event Instructions Step 2a" style="width: 100%;"/>
+                <!-- ↓ or through your installed plugin list search bar ↓
+                <img src="../assets/eventInfo/Step2a_Dink_Config2.png" alt="Event Instructions Step 2b" style="width: 100%;"/> -->
+                </li>
+                <Br>
+                  <li>↓ Insert this link in the Webhook field ↓
+                    <code>WEBHOOK</code>
+                    <Br>
+              <img src="../assets/eventInfo/Step3_Dink_Webhook.png" alt="Event Instructions Step 1" style="width: 100%;"/>
+              </li>
+              <br>
+              <li>↓ Configure the loot section ↓
+                <br>
+                <img src="../assets/eventInfo/Step4_Dink_LootConfig.png" alt="Event Instructions Step 1" style="width: 100%;"/>
+                </li>
             </ol>
 
             </div>
       </div>
       </div>
 
+      <!-- <div id="trackingPopup" class="popup-sidebar">
+        <div class="popup-content">
+          <h2>Tile Tracking</h2>
+            <div class="track-info">
+              <h3>Tracking info</h3>
+              <br>
+              <div class="google-iframe">
+              <iframe src="https://docs.google.com/spreadsheets/d/10EE08vxefZnbLsIykrWx-sGqgP9hrW80bpVNyglM6rE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            </div>
+              </div>
+        </div>
+        </div> -->
 
 
     <div class="footer-message">
@@ -370,12 +402,14 @@
       >
       ❤️
     </div>
+    
 
     <div id="lightbox" class="lightbox">
       <div id="lightbox-content">
         <button id="close-button" class="close-button">&times;</button>
         <img id="lightbox-img" src="" alt="Lightbox Image" />
         <h2 id="lightbox-title"></h2>
+        <div id="lightbox-text"></div>
         <textarea
           id="lightbox-notes"
           class="lightbox-notes"

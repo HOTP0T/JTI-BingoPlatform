@@ -95,7 +95,7 @@ function createTileElement(tile, savedTileState) {
   const tileElement = document.createElement('div');
   tileElement.className = 'bingo-tile';
   tileElement.dataset.tileName = tile.tile;
-  tileElement.tabIndex = 0; // Make the tile focusable
+  tileElement.tabIndex = 0;
 
   const frontSide = document.createElement('div');
   frontSide.className = 'front-side';
@@ -121,17 +121,29 @@ function createTileElement(tile, savedTileState) {
   frontSide.append(img, title);
   tileElement.append(frontSide, backSide, buttons);
 
+  // Conditionally add loading bars if includeLoadingBars is true
+  if (tile.includeLoadingBars) {
+    const barsContainer = document.createElement('section');
+    barsContainer.className = 'bars-container';
+    for (let i = 0; i < 4; i++) { // Adjust the number of bars as needed
+      const loadingBar = document.createElement('div');
+      loadingBar.className = 'loading-bar';
+      barsContainer.appendChild(loadingBar);
+    }
+    tileElement.appendChild(barsContainer);
+  }
+
   const noteTextbox = document.createElement('textarea');
   noteTextbox.className = 'note-textbox';
   noteTextbox.dataset.tileName = tile.tile;
   noteTextbox.value = savedTileState?.note || '';
-  noteTextbox.style.display = 'none'; // Initially hidden
+  noteTextbox.style.display = 'none';
   noteTextbox.addEventListener('input', () => {
     adjustFontSize(noteTextbox);
     saveState();
   });
   noteTextbox.addEventListener('click', (event) => {
-    event.stopPropagation(); // Prevent the tile from flipping back when clicking on the text area
+    event.stopPropagation();
   });
   backSide.appendChild(noteTextbox);
 
@@ -319,3 +331,22 @@ function adjustTileSizes() {
 //   // Remove the line that sets the height of the bingo card
 //   // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
 // }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll(".loading-bar");
+  const barsCount = bars.length;
+  const percentPerBar = 100 / barsCount;
+  const barsGap = `${100 / barsCount}px`;
+
+  document.documentElement.style.setProperty("--barsCount", barsCount);
+  document.documentElement.style.setProperty("--barsGap", barsGap);
+
+  bars.forEach((bar, index) => {
+    const diff = ((0 - percentPerBar * index) / percentPerBar) * 100;
+    const barBackground = bar.style;
+    barBackground.setProperty(
+      "--background",
+      `linear-gradient(to right, #1fe576 ${diff}%, #d7e5de ${diff}%)`
+    );
+  });
+});
