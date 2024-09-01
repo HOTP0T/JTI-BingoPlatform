@@ -43,7 +43,7 @@
     {
       "id": 4,
       "tile": "D pick & D2H",
-      "img_path": "../assets/WildyBingo/dpick_dlong.gif",
+      "img_path": "../assets/WildyBingo/dpick_d2h.gif",
       "text": "Dragon Pickaxe || Dragon Londsword",
       "urls": [
         { "label": "Dragon Pickaxe", "url": "https://oldschool.runescape.wiki/w/Dragon_pickaxe#Item_sources" },
@@ -135,7 +135,7 @@
     {
       "id": 13,
       "tile": "Teleport scroll",
-      "img_path": "../assets/WildyBingo/Reading_teleport_scroll.gif",
+      "img_path": "../assets/WildyBingo/Revenant_cave_teleport_detail.png",
       "text": "This is the text for Teleport scroll.",
       "urls": [
         { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
@@ -185,7 +185,7 @@
     {
       "id": 18,
       "tile": "3m agility xp collectively",
-      "img_path": "../assets/WildyBingo/Agility_icon_(detail).webp",
+      "img_path": "../assets/WildyBingo/Agility_icon_(detail).png",
       "text": "This is the text for 3m agility xp collectively.",
       "urls": [
         { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
@@ -215,7 +215,7 @@
     {
       "id": 21,
       "tile": "3m thieving xp collectively",
-      "img_path": "../assets/WildyBingo/Thieving_icon_(detail).webp",
+      "img_path": "../assets/WildyBingo/Thieving_icon_(detail).png",
       "text": "This is the text for 3m thieving xp collectively.",
       "urls": [
         { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
@@ -235,7 +235,7 @@
     {
       "id": 23,
       "tile": "3m hunter xp collectively",
-      "img_path": "../assets/WildyBingo/Hunter_icon_(detail).webp",
+      "img_path": "../assets/WildyBingo/Hunter_icon_(detail).png",
       "text": "This is the text for 3m hunter xp collectively.",
       "urls": [
         { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
