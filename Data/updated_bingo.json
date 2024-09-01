@@ -25,7 +25,8 @@
       "text": "Voidwaker blade || Voidwaker hilt || Voidwaker gem",
       "urls": [
         { "label": "Voidwaker blade", "url": "https://oldschool.runescape.wiki/w/Voidwaker_blade" },
-        { "label": "Voidwaker hilt", "url": "https://example.com/link2" }
+        { "label": "Voidwaker hilt", "url": "https://oldschool.runescape.wiki/w/Voidwaker_hilt" },
+        { "label": "Voidwaker gem", "url": "https://oldschool.runescape.wiki/w/Voidwaker_gem" }
       ]
     },
     {
@@ -34,8 +35,9 @@
       "img_path": "../assets/WildyBingo/multi_rings.gif",
       "text": "Ring of the gods, Treasonous Ring, Tyrannical Ring.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        { "label": "Ring of the gods", "url": "https://oldschool.runescape.wiki/w/Ring_of_the_gods" },
+        { "label": "Treasonous Ring", "url": "https://oldschool.runescape.wiki/w/Treasonous_ring" },
+        { "label": "Tyrannical Ring", "url": "https://oldschool.runescape.wiki/w/Tyrannical_ring" }
       ]
     },
     {
@@ -44,8 +46,8 @@
       "img_path": "../assets/WildyBingo/dpick_dlong.gif",
       "text": "Dragon Pickaxe || Dragon Londsword",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        { "label": "Dragon Pickaxe", "url": "https://oldschool.runescape.wiki/w/Dragon_pickaxe#Item_sources" },
+        { "label": "Dragon Longsword", "url": "https://oldschool.runescape.wiki/w/Dragon_longsword#Item_sources" }
       ]
     },
     {
@@ -54,8 +56,9 @@
       "img_path": "../assets/WildyBingo/claws_fangs_skull.gif",
       "text": "Claws, fangs, skull.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        { "label": "Claws of Callisto", "url": "https://oldschool.runescape.wiki/w/Claws_of_callisto" },
+        { "label": "Fang of Venenatis", "url": "https://oldschool.runescape.wiki/w/Fangs_of_venenatis" },
+        { "label": "Skull of Vet'ion", "url": "https://oldschool.runescape.wiki/w/Skull_of_vet%27ion" }
       ]
     },
     {
@@ -64,8 +67,9 @@
       "img_path": "../assets/WildyBingo/Odium_ward_detail.png",
       "text": "This is the text for Odium from scratch.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        { "label": "ODium shard 1", "url": "https://oldschool.runescape.wiki/w/Odium_shard_1" },
+        { "label": "ODium shard 2", "url": "https://oldschool.runescape.wiki/w/Odium_shard_2" },
+        { "label": "ODium shard 3", "url": "https://oldschool.runescape.wiki/w/Odium_shard_3" }
       ]
     },
     {
