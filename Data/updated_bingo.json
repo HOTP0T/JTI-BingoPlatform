@@ -6,16 +6,46 @@
       "img_path": "../assets/WildyBingo/Callisto_cub_(follower).webp",
       "text": "Get any one of the wildy pets : Callisto Cub || Chaos Elemental Jr. || Scorpia's Offspring || Vet'ion Jr. || Venenatis Spiderling || Prince Black Dragon",
       "urls": [
-        { "label": "Callisto", "url": "https://oldschool.runescape.wiki/w/Callisto/Strategies#Equipment" },
-        { "label": "Artio", "url": "https://oldschool.runescape.wiki/w/artio/Strategies#Equipment" },
-        { "label": "Vet'ion", "url": "https://oldschool.runescape.wiki/w/Vet%27ion/Strategies#Equipment" },
-        { "label": "Calvar'ion", "url": "https://oldschool.runescape.wiki/w/Calvar%27ion/Strategies#Equipment" },
-        { "label": "Venenatis", "url": "https://oldschool.runescape.wiki/w/Venenatis/Strategies#Equipment" },
-        { "label": "Spindel", "url": "https://oldschool.runescape.wiki/w/Venenatis/Strategies#Equipment" },
-        { "label": "Chaos Elemental", "url": "https://oldschool.runescape.wiki/w/Chaos_Elemental/Strategies#Equipment" },
-        { "label": "Chaos Fanatic", "url": "https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies#Equipment" },
-        { "label": "Scorpia", "url": "https://oldschool.runescape.wiki/w/Scorpia/Strategies#Equipment" },
-        { "label": "Kind Black Dragon", "url": "https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies#Equipment" }
+        {
+          "label": "Callisto",
+          "url": "https://oldschool.runescape.wiki/w/Callisto/Strategies#Equipment"
+        },
+        {
+          "label": "Artio",
+          "url": "https://oldschool.runescape.wiki/w/artio/Strategies#Equipment"
+        },
+        {
+          "label": "Vet'ion",
+          "url": "https://oldschool.runescape.wiki/w/Vet%27ion/Strategies#Equipment"
+        },
+        {
+          "label": "Calvar'ion",
+          "url": "https://oldschool.runescape.wiki/w/Calvar%27ion/Strategies#Equipment"
+        },
+        {
+          "label": "Venenatis",
+          "url": "https://oldschool.runescape.wiki/w/Venenatis/Strategies#Equipment"
+        },
+        {
+          "label": "Spindel",
+          "url": "https://oldschool.runescape.wiki/w/Venenatis/Strategies#Equipment"
+        },
+        {
+          "label": "Chaos Elemental",
+          "url": "https://oldschool.runescape.wiki/w/Chaos_Elemental/Strategies#Equipment"
+        },
+        {
+          "label": "Chaos Fanatic",
+          "url": "https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies#Equipment"
+        },
+        {
+          "label": "Scorpia",
+          "url": "https://oldschool.runescape.wiki/w/Scorpia/Strategies#Equipment"
+        },
+        {
+          "label": "Kind Black Dragon",
+          "url": "https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies#Equipment"
+        }
       ]
     },
     {
@@ -24,9 +54,18 @@
       "img_path": "../assets/WildyBingo/Voidwaker_detail.webp",
       "text": "Voidwaker blade || Voidwaker hilt || Voidwaker gem",
       "urls": [
-        { "label": "Voidwaker blade", "url": "https://oldschool.runescape.wiki/w/Voidwaker_blade" },
-        { "label": "Voidwaker hilt", "url": "https://oldschool.runescape.wiki/w/Voidwaker_hilt" },
-        { "label": "Voidwaker gem", "url": "https://oldschool.runescape.wiki/w/Voidwaker_gem" }
+        {
+          "label": "Voidwaker blade",
+          "url": "https://oldschool.runescape.wiki/w/Voidwaker_blade"
+        },
+        {
+          "label": "Voidwaker hilt",
+          "url": "https://oldschool.runescape.wiki/w/Voidwaker_hilt"
+        },
+        {
+          "label": "Voidwaker gem",
+          "url": "https://oldschool.runescape.wiki/w/Voidwaker_gem"
+        }
       ]
     },
     {
@@ -35,9 +74,18 @@
       "img_path": "../assets/WildyBingo/multi_rings.gif",
       "text": "Ring of the gods, Treasonous Ring, Tyrannical Ring.",
       "urls": [
-        { "label": "Ring of the gods", "url": "https://oldschool.runescape.wiki/w/Ring_of_the_gods" },
-        { "label": "Treasonous Ring", "url": "https://oldschool.runescape.wiki/w/Treasonous_ring" },
-        { "label": "Tyrannical Ring", "url": "https://oldschool.runescape.wiki/w/Tyrannical_ring" }
+        {
+          "label": "Ring of the gods",
+          "url": "https://oldschool.runescape.wiki/w/Ring_of_the_gods"
+        },
+        {
+          "label": "Treasonous Ring",
+          "url": "https://oldschool.runescape.wiki/w/Treasonous_ring"
+        },
+        {
+          "label": "Tyrannical Ring",
+          "url": "https://oldschool.runescape.wiki/w/Tyrannical_ring"
+        }
       ]
     },
     {
@@ -46,8 +94,14 @@
       "img_path": "../assets/WildyBingo/dpick_d2h.gif",
       "text": "Dragon Pickaxe || Dragon Londsword",
       "urls": [
-        { "label": "Dragon Pickaxe", "url": "https://oldschool.runescape.wiki/w/Dragon_pickaxe#Item_sources" },
-        { "label": "Dragon Longsword", "url": "https://oldschool.runescape.wiki/w/Dragon_longsword#Item_sources" }
+        {
+          "label": "Dragon Pickaxe",
+          "url": "https://oldschool.runescape.wiki/w/Dragon_pickaxe#Item_sources"
+        },
+        {
+          "label": "Dragon 2h sword",
+          "url": "https://oldschool.runescape.wiki/w/Dragon_2h_sword#Item_sources"
+        }
       ]
     },
     {
@@ -56,9 +110,30 @@
       "img_path": "../assets/WildyBingo/claws_fangs_skull.gif",
       "text": "Claws, fangs, skull.",
       "urls": [
-        { "label": "Claws of Callisto", "url": "https://oldschool.runescape.wiki/w/Claws_of_callisto" },
-        { "label": "Fang of Venenatis", "url": "https://oldschool.runescape.wiki/w/Fangs_of_venenatis" },
-        { "label": "Skull of Vet'ion", "url": "https://oldschool.runescape.wiki/w/Skull_of_vet%27ion" }
+        {
+          "label": "Claws of Callisto",
+          "url": "https://oldschool.runescape.wiki/w/Claws_of_callisto"
+        },
+        {
+          "label": "Callisto",
+          "url": "https://oldschool.runescape.wiki/w/Callisto/Strategies#Equipment"
+        },
+        {
+          "label": "Fang of Venenatis",
+          "url": "https://oldschool.runescape.wiki/w/Fangs_of_venenatis"
+        },
+        {
+          "label": "Venenatis",
+          "url": "https://oldschool.runescape.wiki/w/Venenatis/Strategies#Equipment"
+        },
+        {
+          "label": "Skull of Vet'ion",
+          "url": "https://oldschool.runescape.wiki/w/Skull_of_vet%27ion"
+        },
+        {
+          "label": "Vet'ion",
+          "url": "https://oldschool.runescape.wiki/w/Vet%27ion/Strategies#Equipment"
+        }
       ]
     },
     {
@@ -67,19 +142,54 @@
       "img_path": "../assets/WildyBingo/Odium_ward_detail.png",
       "text": "This is the text for Odium from scratch.",
       "urls": [
-        { "label": "ODium shard 1", "url": "https://oldschool.runescape.wiki/w/Odium_shard_1" },
-        { "label": "ODium shard 2", "url": "https://oldschool.runescape.wiki/w/Odium_shard_2" },
-        { "label": "ODium shard 3", "url": "https://oldschool.runescape.wiki/w/Odium_shard_3" }
+        {
+          "label": "Odium shard 1",
+          "url": "https://oldschool.runescape.wiki/w/Odium_shard_1"
+        },
+        {
+          "label": "Chaos Fanatic",
+          "url": "https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies#Equipment"
+        },
+        {
+          "label": "Odium shard 2",
+          "url": "https://oldschool.runescape.wiki/w/Odium_shard_2"
+        },
+        {
+          "label": "Crazy archaeologist",
+          "url": "https://oldschool.runescape.wiki/w/Crazy_archaeologist/Strategies#Equipment"
+        },
+        {
+          "label": "Odium shard 3",
+          "url": "https://oldschool.runescape.wiki/w/Odium_shard_3"
+        },
+        {
+          "label": "Scorpia",
+          "url": "https://oldschool.runescape.wiki/w/Scorpia/Strategies#Equipment"
+        }
       ]
     },
     {
       "id": 7,
-      "tile": "Chaos druid set",
+      "tile": "Elder Chaos Druid set",
       "img_path": "../assets/WildyBingo/Elder_chaos_druid_robes_equipped_male.webp",
       "text": "This is the text for Chaos druid set.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Elder Chaos Druid",
+          "url": "https://oldschool.runescape.wiki/w/Elder_Chaos_druid#Strategy"
+        },
+        {
+          "label": "Elder Chaos Hood",
+          "url": "https://oldschool.runescape.wiki/w/Elder_chaos_hood"
+        },
+        {
+          "label": "Elder Chaos Top",
+          "url": "https://oldschool.runescape.wiki/w/Elder_chaos_top"
+        },
+        {
+          "label": "Elder Chaos Robe",
+          "url": "https://oldschool.runescape.wiki/w/Elder_chaos_robe"
+        }
       ]
     },
     {
@@ -88,8 +198,22 @@
       "img_path": "../assets/WildyBingo/rev_weapons.gif",
       "text": "This is the text for Any rev weapon.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Revenants",
+          "url": "https://oldschool.runescape.wiki/w/Revenants/Strategies#Equipment"
+        },
+        {
+          "label": "Thammaron's sceptre",
+          "url": "https://oldschool.runescape.wiki/w/Thammaron%27s_sceptre#Item_sources"
+        },
+        {
+          "label": "Craw's bow",
+          "url": "https://oldschool.runescape.wiki/w/Craw%27s_bow"
+        },
+        {
+          "label": "Viggora's chainmace",
+          "url": "https://oldschool.runescape.wiki/w/Viggora%27s_chainmace"
+        }
       ]
     },
     {
@@ -98,8 +222,14 @@
       "img_path": "../assets/WildyBingo/Ancient_crystal_detail.png",
       "text": "This is the text for Ancient crystal.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Revenants",
+          "url": "https://oldschool.runescape.wiki/w/Revenants/Strategies#Equipment"
+        },
+        {
+          "label": "Ancient crystal",
+          "url": "https://oldschool.runescape.wiki/w/Ancient_crystal"
+        }
       ]
     },
     {
@@ -108,28 +238,38 @@
       "img_path": "../assets/WildyBingo/wildy_totems.gif",
       "text": "This is the text for Any 4 statuettes (no dupes).",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Revenants",
+          "url": "https://oldschool.runescape.wiki/w/Revenants/Strategies#Equipment"
+        },
+        {
+          "label": "Ancient Artefacts",
+          "url": "https://oldschool.runescape.wiki/w/Ancient_artefacts"
+        }
       ]
     },
     {
       "id": 11,
-      "tile": "Avarice",
+      "tile": "Amulet of Avarice",
       "img_path": "../assets/WildyBingo/Amulet_of_avarice_detail.png",
       "text": "This is the text for Avarice.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Amulet of avarice",
+          "url": "https://oldschool.runescape.wiki/w/Amulet_of_avarice"
+        }
       ]
     },
     {
       "id": 12,
-      "tile": "Dagon hai set",
+      "tile": "Dagon'hai robes",
       "img_path": "../assets/WildyBingo/Dagon'hai_robes_equipped_male.webp",
       "text": "This is the text for Dagon hai set.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Dagon'hai robes",
+          "url": "https://oldschool.runescape.wiki/w/Dagon%27hai_robes"
+        }
       ]
     },
     {
@@ -138,8 +278,10 @@
       "img_path": "../assets/WildyBingo/Revenant_cave_teleport_detail.png",
       "text": "This is the text for Teleport scroll.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Teleport scrolls",
+          "url": "https://oldschool.runescape.wiki/w/Teleport_scrolls#Other"
+        }
       ]
     },
     {
@@ -148,8 +290,14 @@
       "img_path": "../assets/WildyBingo/Dragon_boots_detail.png",
       "text": "This is the text for D boots.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Dragon boots",
+          "url": "https://oldschool.runescape.wiki/w/Dragon_boots"
+        },
+        {
+          "label": "Spiritual mage",
+          "url": "https://oldschool.runescape.wiki/w/Spiritual_mage"
+        }
       ]
     },
     {
@@ -158,8 +306,14 @@
       "img_path": "../assets/WildyBingo/Abyssal_whip_detail.webp",
       "text": "This is the text for Whip.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Abyssal whip",
+          "url": "https://oldschool.runescape.wiki/w/Abyssal_whip"
+        },
+        {
+          "label": "Abyssal whip source",
+          "url": "https://oldschool.runescape.wiki/w/Abyssal_whip#Item_sources"
+        }
       ]
     },
     {
@@ -168,8 +322,10 @@
       "img_path": "../assets/WildyBingo/eternalgem_imbuedheart.gif",
       "text": "This is the text for Imbued heart or eternal gem.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Superior slayer monster",
+          "url": "https://oldschool.runescape.wiki/w/Superior_slayer_monster#Drops"
+        }
       ]
     },
     {
@@ -178,8 +334,10 @@
       "img_path": "../assets/WildyBingo/Amulet_of_eternal_glory_detail.webp",
       "text": "This is the text for Eternal glory.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Amulet of eternal glory",
+          "url": "https://oldschool.runescape.wiki/w/Amulet_of_eternal_glory"
+        }
       ]
     },
     {
@@ -188,18 +346,30 @@
       "img_path": "../assets/WildyBingo/Agility_icon_(detail).png",
       "text": "This is the text for 3m agility xp collectively.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Agility training",
+          "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
       ]
     },
-{
+    {
       "id": 19,
       "tile": "Malediction from scratch",
       "img_path": "../assets/WildyBingo/Malediction_ward_detail.png",
       "text": "This is the text for Malediction from scratch.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Chaos Fanatic - shard 1",
+          "url": "https://oldschool.runescape.wiki/w/Chaos_Fanatic"
+        },
+        {
+          "label": "Crazy archaeologist - shard 2",
+          "url": "https://oldschool.runescape.wiki/w/Crazy_archaeologist"
+        },
+        {
+          "label": "Scorpia - shard 3",
+          "url": "https://oldschool.runescape.wiki/w/Scorpia/Strategies#Equipment"
+        }
       ]
     },
     {
@@ -208,8 +378,10 @@
       "img_path": "../assets/WildyBingo/Barbarian_Fishing_(shark).gif",
       "text": "This is the text for 3m fishing xp collectively.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Fishing training",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+        }
       ]
     },
     {
@@ -218,8 +390,10 @@
       "img_path": "../assets/WildyBingo/Thieving_icon_(detail).png",
       "text": "This is the text for 3m thieving xp collectively.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Thieving training",
+          "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+        }
       ]
     },
     {
@@ -228,8 +402,10 @@
       "img_path": "../assets/WildyBingo/KBDHead.webp",
       "text": "This is the text for KBD heads.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "King Black Dragon - gear",
+          "url": "https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies#Equipment"
+        }
       ]
     },
     {
@@ -238,8 +414,10 @@
       "img_path": "../assets/WildyBingo/Hunter_icon_(detail).png",
       "text": "This is the text for 3m hunter xp collectively.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "Hunter training",
+          "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+        }
       ]
     },
     {
@@ -248,19 +426,17 @@
       "img_path": "../assets/WildyBingo/Victor's_cape_(10)_detail.png",
       "text": "This is the text for 10 lms wins collectively.",
       "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+        {
+          "label": "LMS wiki",
+          "url": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+        }
       ]
     },
     {
       "id": 25,
       "tile": "Pk 20m total collectively",
       "img_path": "../assets/WildyBingo/Skull_(Loot_key)_icon_(5).webp",
-      "text": "This is the text for Pking 20m total collectively.",
-      "urls": [
-        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
-        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
-      ]
+      "text": "This is the text for Pking 20m total collectively."
     }
   ]
 }
