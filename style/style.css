@@ -578,6 +578,14 @@ html, body {
   text-align: center;
 }
 
+#lightbox-text {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #lightbox-notes {
   width: 100%;
   height: calc(30% - 10px);

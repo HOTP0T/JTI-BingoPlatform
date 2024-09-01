@@ -95,7 +95,7 @@ function createTileElement(tile, savedTileState) {
   const tileElement = document.createElement('div');
   tileElement.className = 'bingo-tile';
   tileElement.dataset.tileName = tile.tile;
-  tileElement.tabIndex = 0;
+  tileElement.tabIndex = 0; // Make the tile focusable
 
   const frontSide = document.createElement('div');
   frontSide.className = 'front-side';
@@ -121,29 +121,17 @@ function createTileElement(tile, savedTileState) {
   frontSide.append(img, title);
   tileElement.append(frontSide, backSide, buttons);
 
-  // Conditionally add loading bars if includeLoadingBars is true
-  if (tile.includeLoadingBars) {
-    const barsContainer = document.createElement('section');
-    barsContainer.className = 'bars-container';
-    for (let i = 0; i < 4; i++) { // Adjust the number of bars as needed
-      const loadingBar = document.createElement('div');
-      loadingBar.className = 'loading-bar';
-      barsContainer.appendChild(loadingBar);
-    }
-    tileElement.appendChild(barsContainer);
-  }
-
   const noteTextbox = document.createElement('textarea');
   noteTextbox.className = 'note-textbox';
   noteTextbox.dataset.tileName = tile.tile;
   noteTextbox.value = savedTileState?.note || '';
-  noteTextbox.style.display = 'none';
+  noteTextbox.style.display = 'none'; // Initially hidden
   noteTextbox.addEventListener('input', () => {
     adjustFontSize(noteTextbox);
     saveState();
   });
   noteTextbox.addEventListener('click', (event) => {
-    event.stopPropagation();
+    event.stopPropagation(); // Prevent the tile from flipping back when clicking on the text area
   });
   backSide.appendChild(noteTextbox);
 
@@ -212,21 +200,16 @@ function adjustFontSize(noteTextbox) {
 }
 
 function showColorOptions(tileElement) {
-  const colorOptions = ['red', '#3a3a3a', 'gold', 'purple']; // Use the initial grey color #3a3a3a
-  const currentColor = window.getComputedStyle(tileElement).backgroundColor; // Get the computed style for accurate color
+  const colorPicker = document.createElement('input');
+  colorPicker.type = 'color';
+  colorPicker.value = window.getComputedStyle(tileElement).backgroundColor;
 
-  const colorsMap = {
-    'rgb(255, 0, 0)': 'red', // Red
-    'rgb(58, 58, 58)': '#3a3a3a', // Grey
-    'rgb(255, 215, 0)': 'gold', // Gold
-    'rgb(128, 0, 128)': 'purple' // Purple
-  };
+  colorPicker.addEventListener('input', () => {
+    tileElement.style.backgroundColor = colorPicker.value;
+    saveState();
+  });
 
-  const currentColorKey = colorsMap[currentColor] || '#3a3a3a';
-  const currentColorIndex = colorOptions.indexOf(currentColorKey);
-  const nextColor = colorOptions[(currentColorIndex + 1) % colorOptions.length];
-  tileElement.style.backgroundColor = nextColor;
-  saveState();
+  colorPicker.click(); // Trigger the color picker UI
 }
 
 function toggleCompletion(tileElement, tileName) {
@@ -322,31 +305,3 @@ function adjustTileSizes() {
     tile.style.height = `${tileWidth}px`; // Make the height equal to the width for a square tile
   });
 }
-
-// function adjustBingoCardHeight() {
-//   const bingoCard = document.getElementById('bingoCard');
-//   const tiles = document.querySelectorAll('.bingo-tile');
-//   const rowHeight = tiles[0].offsetHeight;
-//   const rows = Math.ceil(tiles.length / 5); // Assuming 5 tiles per row
-//   // Remove the line that sets the height of the bingo card
-//   // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
-// }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const bars = document.querySelectorAll(".loading-bar");
-  const barsCount = bars.length;
-  const percentPerBar = 100 / barsCount;
-  const barsGap = `${100 / barsCount}px`;
-
-  document.documentElement.style.setProperty("--barsCount", barsCount);
-  document.documentElement.style.setProperty("--barsGap", barsGap);
-
-  bars.forEach((bar, index) => {
-    const diff = ((0 - percentPerBar * index) / percentPerBar) * 100;
-    const barBackground = bar.style;
-    barBackground.setProperty(
-      "--background",
-      `linear-gradient(to right, #1fe576 ${diff}%, #d7e5de ${diff}%)`
-    );
-  });
-});

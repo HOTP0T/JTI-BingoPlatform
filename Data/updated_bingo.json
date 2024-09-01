@@ -4,151 +4,259 @@
       "id": 1,
       "tile": "Any wildy pet",
       "img_path": "../assets/WildyBingo/Callisto_cub_(follower).webp",
-      "text": "This is the text for Any wildy pet."
+      "text": "Get any one of the wildy pets : Callisto Cub || Chaos Elemental Jr. || Scorpia's Offspring || Vet'ion Jr. || Venenatis Spiderling || Prince Black Dragon",
+      "urls": [
+        { "label": "Callisto", "url": "https://oldschool.runescape.wiki/w/Callisto/Strategies#Equipment" },
+        { "label": "Artio", "url": "https://oldschool.runescape.wiki/w/artio/Strategies#Equipment" },
+        { "label": "Vet'ion", "url": "https://oldschool.runescape.wiki/w/Vet%27ion/Strategies#Equipment" },
+        { "label": "Calvar'ion", "url": "https://oldschool.runescape.wiki/w/Calvar%27ion/Strategies#Equipment" },
+        { "label": "Venenatis", "url": "https://oldschool.runescape.wiki/w/Venenatis/Strategies#Equipment" },
+        { "label": "Spindel", "url": "https://oldschool.runescape.wiki/w/Venenatis/Strategies#Equipment" },
+        { "label": "Chaos Elemental", "url": "https://oldschool.runescape.wiki/w/Chaos_Elemental/Strategies#Equipment" },
+        { "label": "Chaos Fanatic", "url": "https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies#Equipment" },
+        { "label": "Scorpia", "url": "https://oldschool.runescape.wiki/w/Scorpia/Strategies#Equipment" },
+        { "label": "Kind Black Dragon", "url": "https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies#Equipment" }
+      ]
     },
     {
       "id": 2,
       "tile": "VW from scratch",
       "img_path": "../assets/WildyBingo/Voidwaker_detail.webp",
-      "text": "This is the text for VW from scratch."
+      "text": "Voidwaker blade || Voidwaker hilt || Voidwaker gem",
+      "urls": [
+        { "label": "Voidwaker blade", "url": "https://oldschool.runescape.wiki/w/Voidwaker_blade" },
+        { "label": "Voidwaker hilt", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 3,
       "tile": "Ring of the gods, treasonous and tyrannical",
       "img_path": "../assets/WildyBingo/multi_rings.gif",
-      "text": "This is the text for Ring of the gods, treasonous, tyrannical."
+      "text": "Ring of the gods, Treasonous Ring, Tyrannical Ring.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 4,
       "tile": "D pick & D2H",
       "img_path": "../assets/WildyBingo/dpick_dlong.gif",
-      "text": "This is the text for D pick & D2H."
+      "text": "Dragon Pickaxe || Dragon Londsword",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 5,
       "tile": "claws, fangs and skull",
       "img_path": "../assets/WildyBingo/claws_fangs_skull.gif",
-      "text": "This is the text for Claws, fangs, skull."
+      "text": "Claws, fangs, skull.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 6,
       "tile": "Odium from scratch",
       "img_path": "../assets/WildyBingo/Odium_ward_detail.png",
-      "text": "This is the text for Odium from scratch."
+      "text": "This is the text for Odium from scratch.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 7,
       "tile": "Chaos druid set",
       "img_path": "../assets/WildyBingo/Elder_chaos_druid_robes_equipped_male.webp",
-      "text": "This is the text for Chaos druid set."
+      "text": "This is the text for Chaos druid set.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 8,
       "tile": "Any rev weapon",
       "img_path": "../assets/WildyBingo/rev_weapons.gif",
-      "text": "This is the text for Any rev weapon."
+      "text": "This is the text for Any rev weapon.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 9,
       "tile": "Ancient crystal",
       "img_path": "../assets/WildyBingo/Ancient_crystal_detail.png",
-      "text": "This is the text for Ancient crystal."
+      "text": "This is the text for Ancient crystal.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 10,
       "tile": "Any 4 statuettes (no dupes)",
       "img_path": "../assets/WildyBingo/wildy_totems.gif",
-      "text": "This is the text for Any 4 statuettes (no dupes)."
+      "text": "This is the text for Any 4 statuettes (no dupes).",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 11,
       "tile": "Avarice",
       "img_path": "../assets/WildyBingo/Amulet_of_avarice_detail.png",
-      "text": "This is the text for Avarice."
+      "text": "This is the text for Avarice.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 12,
       "tile": "Dagon hai set",
       "img_path": "../assets/WildyBingo/Dagon'hai_robes_equipped_male.webp",
-      "text": "This is the text for Dagon hai set."
+      "text": "This is the text for Dagon hai set.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 13,
       "tile": "Teleport scroll",
       "img_path": "../assets/WildyBingo/Reading_teleport_scroll.gif",
-      "text": "This is the text for Teleport scroll."
+      "text": "This is the text for Teleport scroll.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 14,
       "tile": "D boots",
       "img_path": "../assets/WildyBingo/Dragon_boots_detail.png",
-      "text": "This is the text for D boots."
+      "text": "This is the text for D boots.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 15,
       "tile": "Whip",
       "img_path": "../assets/WildyBingo/Abyssal_whip_detail.webp",
-      "text": "This is the text for Whip."
+      "text": "This is the text for Whip.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 16,
       "tile": "Imbued heart or eternal gem",
       "img_path": "../assets/WildyBingo/eternalgem_imbuedheart.gif",
-      "text": "This is the text for Imbued heart or eternal gem."
+      "text": "This is the text for Imbued heart or eternal gem.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 17,
       "tile": "Eternal glory",
       "img_path": "../assets/WildyBingo/Amulet_of_eternal_glory_detail.webp",
-      "text": "This is the text for Eternal glory."
+      "text": "This is the text for Eternal glory.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 18,
       "tile": "3m agility xp collectively",
       "img_path": "../assets/WildyBingo/Agility_icon_(detail).webp",
-      "text": "This is the text for 3m agility xp collectively."
+      "text": "This is the text for 3m agility xp collectively.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
-    {
+{
       "id": 19,
       "tile": "Malediction from scratch",
       "img_path": "../assets/WildyBingo/Malediction_ward_detail.png",
-      "text": "This is the text for Malediction from scratch."
+      "text": "This is the text for Malediction from scratch.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 20,
       "tile": "3m fishing xp collectively",
       "img_path": "../assets/WildyBingo/Barbarian_Fishing_(shark).gif",
-      "text": "This is the text for 3m fishing xp collectively."
+      "text": "This is the text for 3m fishing xp collectively.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 21,
       "tile": "3m thieving xp collectively",
       "img_path": "../assets/WildyBingo/Thieving_icon_(detail).webp",
-      "text": "This is the text for 3m thieving xp collectively."
+      "text": "This is the text for 3m thieving xp collectively.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 22,
       "tile": "KBD heads",
       "img_path": "../assets/WildyBingo/KBDHead.webp",
-      "text": "This is the text for KBD heads."
+      "text": "This is the text for KBD heads.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 23,
       "tile": "3m hunter xp collectively",
       "img_path": "../assets/WildyBingo/Hunter_icon_(detail).webp",
-      "text": "This is the text for 3m hunter xp collectively."
+      "text": "This is the text for 3m hunter xp collectively.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 24,
       "tile": "10 lms wins collectively",
       "img_path": "../assets/WildyBingo/Victor's_cape_(10)_detail.png",
-      "text": "This is the text for 10 lms wins collectively."
+      "text": "This is the text for 10 lms wins collectively.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     },
     {
       "id": 25,
       "tile": "Pk 20m total collectively",
       "img_path": "../assets/WildyBingo/Skull_(Loot_key)_icon_(5).webp",
-      "text": "This is the text for Pk 20m total collectively."
+      "text": "This is the text for Pk 20m total collectively.",
+      "urls": [
+        { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
+        { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
+      ]
     }
   ]
 }
