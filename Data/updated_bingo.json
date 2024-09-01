@@ -256,7 +256,7 @@
       "id": 25,
       "tile": "Pk 20m total collectively",
       "img_path": "../assets/WildyBingo/Skull_(Loot_key)_icon_(5).webp",
-      "text": "This is the text for Pk 20m total collectively.",
+      "text": "This is the text for Pking 20m total collectively.",
       "urls": [
         { "label": "Placeholder Link 1", "url": "https://example.com/link1" },
         { "label": "Placeholder Link 2", "url": "https://example.com/link2" }
