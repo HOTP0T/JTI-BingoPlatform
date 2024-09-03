@@ -1144,3 +1144,39 @@ body {
   width: 75%;
   height: 100%;
 }
+
+.score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Space between rows */
+}
+
+.score-row p {
+  margin: 0;
+  font-size: 16px; /* Adjust as needed */
+  flex-grow: 1;
+  text-align: center;
+}
+
+.score-button {
+  padding: 0 10px;
+  font-size: 16px; /* Adjust as needed */
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #af8848;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "osrs-font", Arial, sans-serif;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.score-button:hover {
+  background-color: #d4a36e;
+  transform: scale(1.05);
+}
+

@@ -328,14 +328,15 @@ window.closeLightbox = function() {
   overlay.classList.remove('active');
 };
 
-const teamScores = {
+// Existing teamScores object
+let teamScores = {
   team1: 0,
   team2: 0,
   team3: 0,
   team4: 0
 };
 
-// Function to update the scoreboard
+// Function to update the scoreboard UI
 function updateTeamScores() {
   document.getElementById('team1Score').textContent = teamScores.team1;
   document.getElementById('team2Score').textContent = teamScores.team2;
@@ -343,14 +344,42 @@ function updateTeamScores() {
   document.getElementById('team4Score').textContent = teamScores.team4;
 }
 
-// Example of setting team scores programmatically
-function setTeamScores(newScores) {
-  teamScores.team1 = newScores.team1 || 0;
-  teamScores.team2 = newScores.team2 || 0;
-  teamScores.team3 = newScores.team3 || 0;
-  teamScores.team4 = newScores.team4 || 0;
-  updateTeamScores();
+// Function to save scores to localStorage
+function saveScores() {
+  localStorage.setItem('teamScores', JSON.stringify(teamScores));
 }
 
-// Initial call to set the scores
-setTeamScores({ team1: 4, team2: 2, team3: 0, team4: 0 });
+// Function to load scores from localStorage
+function loadScores() {
+  const savedScores = localStorage.getItem('teamScores');
+  if (savedScores) {
+      teamScores = JSON.parse(savedScores);
+      updateTeamScores();
+  }
+}
+
+// Function to increment score
+function incrementScore(team) {
+  if (teamScores[team] !== undefined) {
+      teamScores[team]++;
+      updateTeamScores();
+      saveScores(); // Save the updated scores to localStorage
+  }
+}
+
+// Function to decrement score
+function decrementScore(team) {
+  if (teamScores[team] !== undefined && teamScores[team] > 0) { // Ensure score doesn't go below 0
+      teamScores[team]--;
+      updateTeamScores();
+      saveScores(); // Save the updated scores to localStorage
+  }
+}
+
+// Load scores when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+  loadScores();
+});
+
+// Example initial call to set the scores (can be omitted if you want to start from zero)
+// setTeamScores({ team1: 10, team2: 20, team3: 15, team4: 5 });
