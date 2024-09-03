@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = -1;
   window.tiles = [];
 
-
-  
   // Hide the lightbox initially
   lightbox.style.display = 'none';
 
@@ -102,6 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
           showNext();
           break;
       }
+    }
+  });
+
+  // Close lightbox when clicking outside of it
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
     }
   });
 

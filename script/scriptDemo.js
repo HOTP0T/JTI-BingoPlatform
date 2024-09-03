@@ -45,12 +45,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
   overlay.addEventListener('click', () => {
     document.querySelectorAll('.popup-sidebar').forEach(popup => {
       popup.classList.remove('active');
     });
     overlay.classList.remove('active');
     navMenu.style.display = 'none'; // Hide the menu when overlay is clicked
+    window.closeLightbox(); // Close any open lightbox
+  });
+
+  // Add escape key listener to close lightbox and overlay
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      window.closeLightbox();
+      overlay.classList.remove('active');
+    }
   });
 
   fetch('../Data/updated_bingo.json')
@@ -138,7 +148,10 @@ function createTileElement(tile, savedTileState) {
   tileElement.addEventListener('click', (event) => {
     if (!tileElement.classList.contains('completed') && !event.target.closest('.buttons')) {
       const note = noteTextbox.value;
-      window.openLightbox(window.tiles.findIndex(t => t.tile === tile.tile), note);
+      const lightboxIndex = window.tiles.findIndex(t => t.tile === tile.tile);
+      window.openLightbox(lightboxIndex, note);
+
+      overlay.classList.add('active'); // Make overlay visible when the lightbox is open
     }
   });
 
@@ -305,3 +318,12 @@ function adjustTileSizes() {
     tile.style.height = `${tileWidth}px`; // Make the height equal to the width for a square tile
   });
 }
+
+// Ensure you have this function to close the lightbox properly
+window.closeLightbox = function() {
+  const activePopup = document.querySelector('.popup-sidebar.active');
+  if (activePopup) {
+    activePopup.classList.remove('active');
+  }
+  overlay.classList.remove('active');
+};
