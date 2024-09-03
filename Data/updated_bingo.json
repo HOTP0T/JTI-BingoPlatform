@@ -5,6 +5,7 @@
       "tile": "Any wildy pet",
       "img_path": "../assets/WildyBingo/Callisto_cub_(follower).webp",
       "text": "Get any one of the wildy pets : Callisto Cub || Chaos Elemental Jr. || Scorpia's Offspring || Vet'ion Jr. || Venenatis Spiderling || Prince Black Dragon",
+      "player": "Player1",
       "urls": [
         {
           "label": "Callisto",

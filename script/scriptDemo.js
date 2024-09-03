@@ -327,3 +327,30 @@ window.closeLightbox = function() {
   }
   overlay.classList.remove('active');
 };
+
+const teamScores = {
+  team1: 0,
+  team2: 0,
+  team3: 0,
+  team4: 0
+};
+
+// Function to update the scoreboard
+function updateTeamScores() {
+  document.getElementById('team1Score').textContent = teamScores.team1;
+  document.getElementById('team2Score').textContent = teamScores.team2;
+  document.getElementById('team3Score').textContent = teamScores.team3;
+  document.getElementById('team4Score').textContent = teamScores.team4;
+}
+
+// Example of setting team scores programmatically
+function setTeamScores(newScores) {
+  teamScores.team1 = newScores.team1 || 0;
+  teamScores.team2 = newScores.team2 || 0;
+  teamScores.team3 = newScores.team3 || 0;
+  teamScores.team4 = newScores.team4 || 0;
+  updateTeamScores();
+}
+
+// Initial call to set the scores
+setTeamScores({ team1: 0, team2: 0, team3: 0, team4: 0 });

@@ -20,35 +20,34 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxImg.src = tile.img_path;
     lightboxTitle.textContent = tile.tile;
     lightboxNotes.value = note || '';
-  
-    // Replace text with buttons
+
     const lightboxText = document.getElementById('lightbox-text');
     lightboxText.innerHTML = ''; // Clear any existing content
-  
+
+    // Add player name to the lightbox
+    const playerName = document.createElement('p');
+    playerName.textContent = `Player: ${tile.player}`;
+    playerName.classList.add('lightbox-player-name');
+    lightboxText.appendChild(playerName);
+
     if (tile.urls && tile.urls.length > 0) {
-      tile.urls.forEach(link => {
-        const buttonElement = document.createElement('button');
-        buttonElement.textContent = link.label;
-  
-        // Set the title attribute to show the link on hover
-        buttonElement.title = link.url;
-  
-        // Open the link in a new tab
-        buttonElement.onclick = () => {
-          const newWindow = window.open(link.url, '_blank');
-          if (newWindow) newWindow.opener = null; // Ensures the new window is safe from the original page
-        };
-        buttonElement.classList.add('lightbox-link-button');
-        lightboxText.appendChild(buttonElement);
-  
-        // Optional: add a line break between buttons for better spacing
-        lightboxText.appendChild(document.createElement('br'));
-      });
+        tile.urls.forEach(link => {
+            const buttonElement = document.createElement('button');
+            buttonElement.textContent = link.label;
+            buttonElement.title = link.url;
+            buttonElement.onclick = () => {
+                const newWindow = window.open(link.url, '_blank');
+                if (newWindow) newWindow.opener = null;
+            };
+            buttonElement.classList.add('lightbox-link-button');
+            lightboxText.appendChild(buttonElement);
+            lightboxText.appendChild(document.createElement('br'));
+        });
     }
-  
+
     lightbox.style.display = 'flex';
     closeBtn.focus();
-  }
+}
 
   lightboxNotes.addEventListener('input', () => {
     const tileName = window.tiles[currentIndex].tile;
