@@ -353,4 +353,4 @@ function setTeamScores(newScores) {
 }
 
 // Initial call to set the scores
-setTeamScores({ team1: 0, team2: 0, team3: 0, team4: 0 });
+setTeamScores({ team1: 4, team2: 2, team3: 0, team4: 0 });
