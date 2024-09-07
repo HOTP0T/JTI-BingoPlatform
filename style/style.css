@@ -145,8 +145,6 @@
   transform: rotateY(0deg);
 }
 
-
-
 /* Style for the note textbox to fit within the tile */
 .note-textbox {
   display: none; /* Hidden by default */
@@ -287,7 +285,8 @@
 }
 
 /* General Styles */
-html, body {
+html,
+body {
   /* height: 100%; */
   overflow: hidden;
   margin: 0;
@@ -334,9 +333,6 @@ html, body {
   perspective: 1000px;
   overflow: hidden;
 }
-
-
-
 
 .bingo-tile .buttons button.completed-button {
   color: #00fe00; /* Default color for Mark as Complete */
@@ -998,7 +994,6 @@ body {
   overflow: auto;
 }
 
-
 body {
   font-family: "osrs-font", Arial, sans-serif;
   margin: 0;
@@ -1179,4 +1174,3 @@ body {
   background-color: #d4a36e;
   transform: scale(1.05);
 }
-

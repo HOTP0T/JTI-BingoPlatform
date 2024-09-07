@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxText = document.getElementById('lightbox-text');
     lightboxText.innerHTML = ''; // Clear any existing content
 
-    // Add player name to the lightbox
-    const playerName = document.createElement('p');
-    playerName.textContent = `Player: ${tile.player}`;
-    playerName.classList.add('lightbox-player-name');
-    lightboxText.appendChild(playerName);
+    // // Add player name to the lightbox
+    // const playerName = document.createElement('p');
+    // playerName.textContent = `Player: ${tile.player}`;
+    // playerName.classList.add('lightbox-player-name');
+    // lightboxText.appendChild(playerName);
 
     if (tile.urls && tile.urls.length > 0) {
         tile.urls.forEach(link => {
