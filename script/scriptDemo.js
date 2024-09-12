@@ -383,3 +383,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Example initial call to set the scores (can be omitted if you want to start from zero)
 // setTeamScores({ team1: 10, team2: 20, team3: 15, team4: 5 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const scoreboard = document.getElementById("scoreboard");
+//   let isExpanded = true;
+
+//   // Set the initial state of the scoreboard
+//   scoreboard.style.transition = "all 0.3s ease";
+
+//   scoreboard.addEventListener("click", () => {
+//     if (isExpanded) {
+//       // Collapse scoreboard
+//       scoreboard.style.height = "10px";  // Small rectangle height
+//       scoreboard.style.width = "13px";  // Small rectangle width
+//       scoreboard.innerHTML = `<p class="vertical-text">Score Toggle</p>`; // Vertical text class
+//       scoreboard.style.cursor = "pointer";
+//       isExpanded = false;
+//     } else {
+//       // Expand scoreboard
+//       scoreboard.style.height = "";  // Reset to auto height for full size
+//       scoreboard.style.width = "";   // Reset to full width
+//       scoreboard.innerHTML = `
+//         <p>Completed Tiles: <span id="completedCount">0</span></p>
+//         <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
+//       `;
+//       isExpanded = true;
+//     }
+//   });
+// });
