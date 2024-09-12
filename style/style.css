@@ -1097,6 +1097,11 @@ body {
     font-size: 14px;
     height: auto;
   }
+  
+  .countdown-timer {
+    display: none;
+  }
+  
   /* 
   .bingo-tile img {
     max-width: 100%;
