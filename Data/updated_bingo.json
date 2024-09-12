@@ -275,13 +275,13 @@
     },
     {
       "id" : 13,
-      "tile" : "Teleport scroll",
-      "img_path" : "../assets/WildyBingo/Revenant_cave_teleport_detail.png",
+      "tile" : "Teleport anchoring scroll",
+      "img_path" : "../assets/WildyBingo/Teleport_anchoring_scroll_detail.png",
       "text" : "This is the text for Teleport scroll.",
       "urls" : [
         {
-          "label" : "Teleport scrolls",
-          "url" : "https://oldschool.runescape.wiki/w/Teleport_scrolls#Other"
+          "label" : "Teleport anchoring scroll",
+          "url" : "https://oldschool.runescape.wiki/w/Teleport_anchoring_scroll"
         }
       ]
     },
