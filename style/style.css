@@ -1197,3 +1197,7 @@ body {
   background-color: #d4a36e;
   transform: scale(1.05);
 }
+
+.pop-img {
+  width: 100%;
+}
