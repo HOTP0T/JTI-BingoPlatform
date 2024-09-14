@@ -171,14 +171,27 @@
       </ul>
     </nav>
 <h1>JTI Wildy Event</h1>
-
+<br>
 
     <div id="scoreboard" class="scoreboard">
       <p>Completed Tiles: <span id="completedCount">0</span></p>
       <p>Uncompleted Tiles: <span id="uncompletedCount">0</span></p>
       <!-- <br>
       <p>Click to toggle</p> -->
+      <button id="openIcon" popovertarget="popover">
+        TEAMS SCORES
+      </button>
+      <br>
+      <div id="popover" popover>
+        <button id="close-icon"  popovertarget="popover">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 520 520" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34z"></path></svg>
+          </button>
+        <div id="svg" class="svg-container"></div>
+        <h2>Team Scores</h2>
+        <iframe src="https://docs.google.com/spreadsheets/d/10EE08vxefZnbLsIykrWx-sGqgP9hrW80bpVNyglM6rE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" id="google-sheet-frame"></iframe>
+      </div>
     </div>
+    
     <div id="bingoCard" class="bingo-card"></div>
 
     <button id="resetAllButton" class="reset-all-button" tabindex="0">
@@ -534,6 +547,7 @@ function toggleWidget() {
     <script src="../script/openwidget.js"></script>
     <script src="../script/lightboxDemo.js"></script>
     <script src="../script/scriptDemo.js"></script>
+    <script src="../script/popupScoreboard.js"></script>
 
   </body>
 </html>
