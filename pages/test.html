@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .counter-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .counter-value {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        .btn {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .increment-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .decrement-btn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Counter</h1>
+        <div id="counter-value" class="counter-value">0</div>
+        <button class="btn increment-btn" onclick="increment()">+</button>
+        <button class="btn decrement-btn" onclick="decrement()">-</button>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        function increment() {
+            counter++;
+            document.getElementById("counter-value").textContent = counter;
+        }
+
+        function decrement() {
+            if (counter > 0) {
+                counter--;
+                document.getElementById("counter-value").textContent = counter;
+            }
+        }
+    </script>
+</body>
+</html>
