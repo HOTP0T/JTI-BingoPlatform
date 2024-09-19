@@ -824,6 +824,12 @@ body {
     font-size: 12px;
     margin: 5px 0;
   }
+
+  .scoreboard {
+    width: 75px;
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 768px) {
