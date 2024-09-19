@@ -328,58 +328,58 @@ window.closeLightbox = function() {
   overlay.classList.remove('active');
 };
 
-// Existing teamScores object
-let teamScores = {
-  team1: 0,
-  team2: 0,
-  team3: 0,
-  team4: 0
-};
+// // Existing teamScores object
+// let teamScores = {
+//   team1: 0,
+//   team2: 0,
+//   team3: 0,
+//   team4: 0
+// };
 
-// Function to update the scoreboard UI
-function updateTeamScores() {
-  document.getElementById('team1Score').textContent = teamScores.team1;
-  document.getElementById('team2Score').textContent = teamScores.team2;
-  document.getElementById('team3Score').textContent = teamScores.team3;
-  document.getElementById('team4Score').textContent = teamScores.team4;
-}
+// // Function to update the scoreboard UI
+// function updateTeamScores() {
+//   document.getElementById('team1Score').textContent = teamScores.team1;
+//   document.getElementById('team2Score').textContent = teamScores.team2;
+//   document.getElementById('team3Score').textContent = teamScores.team3;
+//   document.getElementById('team4Score').textContent = teamScores.team4;
+// }
 
-// Function to save scores to localStorage
-function saveScores() {
-  localStorage.setItem('teamScores', JSON.stringify(teamScores));
-}
+// // Function to save scores to localStorage
+// function saveScores() {
+//   localStorage.setItem('teamScores', JSON.stringify(teamScores));
+// }
 
-// Function to load scores from localStorage
-function loadScores() {
-  const savedScores = localStorage.getItem('teamScores');
-  if (savedScores) {
-      teamScores = JSON.parse(savedScores);
-      updateTeamScores();
-  }
-}
+// // Function to load scores from localStorage
+// function loadScores() {
+//   const savedScores = localStorage.getItem('teamScores');
+//   if (savedScores) {
+//       teamScores = JSON.parse(savedScores);
+//       updateTeamScores();
+//   }
+// }
 
-// Function to increment score
-function incrementScore(team) {
-  if (teamScores[team] !== undefined) {
-      teamScores[team]++;
-      updateTeamScores();
-      saveScores(); // Save the updated scores to localStorage
-  }
-}
+// // Function to increment score
+// function incrementScore(team) {
+//   if (teamScores[team] !== undefined) {
+//       teamScores[team]++;
+//       updateTeamScores();
+//       saveScores(); // Save the updated scores to localStorage
+//   }
+// }
 
-// Function to decrement score
-function decrementScore(team) {
-  if (teamScores[team] !== undefined && teamScores[team] > 0) { // Ensure score doesn't go below 0
-      teamScores[team]--;
-      updateTeamScores();
-      saveScores(); // Save the updated scores to localStorage
-  }
-}
+// // Function to decrement score
+// function decrementScore(team) {
+//   if (teamScores[team] !== undefined && teamScores[team] > 0) { // Ensure score doesn't go below 0
+//       teamScores[team]--;
+//       updateTeamScores();
+//       saveScores(); // Save the updated scores to localStorage
+//   }
+// }
 
-// Load scores when the page loads
-window.addEventListener('DOMContentLoaded', () => {
-  loadScores();
-});
+// // Load scores when the page loads
+// window.addEventListener('DOMContentLoaded', () => {
+//   loadScores();
+// });
 
 // Example initial call to set the scores (can be omitted if you want to start from zero)
 // setTeamScores({ team1: 10, team2: 20, team3: 15, team4: 5 });
