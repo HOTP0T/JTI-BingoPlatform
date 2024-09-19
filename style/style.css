@@ -1201,3 +1201,7 @@ body {
 code {
   overflow-wrap: break-word;
 }
+
+.hidden-easter {
+  color: #2A2A2A;
+}
