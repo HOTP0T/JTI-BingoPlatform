@@ -312,7 +312,7 @@ body {
   height: 90vh;
   box-sizing: border-box;
   margin: auto;
-  overflow-y: auto;
+  margin-top: 60px;
   margin-bottom: 10vh;
   }
 
@@ -522,6 +522,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 5px;
+    overflow-y: auto;
+    margin-top: 60px;
   }
 
   .bingo-tile {
@@ -813,6 +815,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 10px;
+    overflow-y: auto;
+    margin-top: 60px;
   }
 
   .bingo-tile {
