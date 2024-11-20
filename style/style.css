@@ -1231,3 +1231,51 @@ code {
   margin-top: 50px;
   margin-bottom: -35px;
 }
+
+/* Banner Styles */
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #2a9d8f; /* Nice green shade */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.banner button {
+  background-color: #e76f51; /* Contrasting orange */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.banner button:hover {
+  background-color: #d65a41;
+}
+
+@media (max-width: 600px) {
+  .banner p {
+    font-size: 0.9rem;
+  }
+  .banner button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

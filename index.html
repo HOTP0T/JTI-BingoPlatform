@@ -143,6 +143,12 @@
     })();
   </script> -->
 </head>
+<div id="update-banner" class="banner">
+  <p>
+    🚀 A new and improved version of our app is in the works! Stay tuned for updates and exciting features. 🎉
+  </p>
+  <button id="close-banner">Got it!</button>
+</div>
 <body>
     <div class="container">
         <h1>Welcome to the OSRS Bingo Platform</h1>
@@ -151,8 +157,8 @@
             <img src="./assets/Coins_10000.webp" alt="OSRS Bingo">
         </div>
         <a href="./pages/login.html" class="redirect-btn">Go to Login</a>
-        <a href="./pages/CardID2.html" class="redirect-btn demo">Guest demo</a>
-        <a href="./pages/JtiBingo.html" class="redirect-btn demo">JTI Wildy Event</a>
+        <a href="./pages/demo.html" class="redirect-btn demo">Guest demo</a>
+        <!-- <a href="./pages/JtiBingo.html" class="redirect-btn demo">JTI Wildy Event</a> -->
     </div>
     <div class="footer-message">
       Made by
@@ -183,6 +189,10 @@ function toggleWidget() {
     widget.style.display = 'none';
   }
 }
-</script>
+
+    document.getElementById("close-banner").addEventListener("click", function () {
+      document.getElementById("update-banner").style.display = "none";
+    });
+  </script>
 </body>
 </html>

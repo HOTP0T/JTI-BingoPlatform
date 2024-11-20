@@ -306,3 +306,8 @@ function adjustTileSizes() {
 //   // Remove the line that sets the height of the bingo card
 //   // bingoCard.style.height = `${rows * rowHeight + 40}px`; // This line is no longer needed
 // }
+
+// Close banner functionality
+document.getElementById("close-banner").addEventListener("click", function () {
+  document.getElementById("update-banner").style.display = "none";
+});
