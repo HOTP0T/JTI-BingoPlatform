@@ -9,6 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       'password1': '../pages/CardID1.html',
     'password2': '../pages/CardID2.html',
     'BINWILDYGO': '../pages/JtiBingo.html',
+    'QUEENYGO': '../pages/queenybee.html',
       // Add more password-URL pairs as needed
   };
 

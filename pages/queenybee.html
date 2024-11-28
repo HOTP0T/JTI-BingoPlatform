@@ -206,7 +206,7 @@
           <button id="close-icon"  popovertarget="popover">
               X
           </button>
-        <iframe src="https://docs.google.com/spreadsheets/d/10EE08vxefZnbLsIykrWx-sGqgP9hrW80bpVNyglM6rE/edit?usp=sharing" id="google-sheet-frame"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/1W8QBzUg8QZkMi790P2aL-lkZOioydSRbvJek14idC3I/edit?usp=sharing" id="google-sheet-frame"></iframe>
         <!-- <iframe src="https://docs.google.com/spreadsheets/d/10EE08vxefZnbLsIykrWx-sGqgP9hrW80bpVNyglM6rE/edit?usp=sharing" id="google-sheet-frame"></iframe> -->
       </div>
     </div>
@@ -311,7 +311,7 @@
         <br />
         <br />
         <!-- <p>-[ ADD ANY DISCORD CHANNEL HERE ]-</p> -->
-        <p>JTI DISCORD</p>
+        <!-- <p>JTI DISCORD</p>
         <iframe 
           src="https://discord.com/widget?id=866006265045975060&theme=dark" 
           width="250" 
@@ -322,7 +322,7 @@
           allow-popups-to-escape-sandbox 
           allow-same-origin 
           allow-scripts"
-        ></iframe>
+        ></iframe> -->
         <br />
         <br />
       </div>
@@ -684,28 +684,32 @@
         <button id="next-button" class="arrow right">&gt;</button>
       </div>
     </div>
-<!-- Crate initialization -->
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-  new Crate({
-    server: '866006265045975060',
-    channel: '1142233931261943889',
-    location: [-60, -20], // Move the button 60px from the top and 20px from the right
-    // token: 'your_jwt_token_here', // Add your JWT token here
-    notifications: true, // Disable notifications
-    indicator: true, // Enable unread message indicator
-    allChannelNotifications: true, // Enable notifications for all channels
-    defer: true, // Load the widget only when the user opens it
-    glyph: ['../../assets/JTI_1.png', '100%']
-  });
-function toggleWidget() {
-  const widget = document.getElementById('discord-widget');
-  if (widget.style.display === 'none' || widget.style.display === '') {
-    widget.style.display = 'block';
-  } else {
-    widget.style.display = 'none';
-  }
-}
-</script>
+    <!-- Crate initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+      new Crate({
+        server: '1258158936603758663',
+        channel: '1262968888799526964',
+        location: [-60, -20], // Move the button 60px from the top and 20px from the right
+        // token: 'your_jwt_token_here', // Add your JWT token here
+        notifications: false, // Disable notifications
+        indicator: true, // Enable unread message indicator
+        allChannelNotifications: true, // Enable notifications for all channels
+        defer: true // Load the widget only when the user opens it
+      });
+    function toggleWidget() {
+      const widget = document.getElementById('discord-widget');
+      if (widget.style.display === 'none' || widget.style.display === '') {
+        widget.style.display = 'block';
+      } else {
+        widget.style.display = 'none';
+      }
+    }
+    
+        document.getElementById("close-banner").addEventListener("click", function () {
+          document.getElementById("update-banner").style.display = "none";
+        });
+      </script>
+
 <!-- POTENTIAL SOLUTION FOR MODDING THE BINGO CARD -->
 <!-- Start of Tawk.to Script-->
 <!-- <script type="text/javascript">
