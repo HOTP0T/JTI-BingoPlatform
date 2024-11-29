@@ -1,0 +1,223 @@
+{
+  "BingoTiles": [
+    {
+      "id": 1,
+      "tile": "A christmas Carol",
+      "img_path": "../../assets/RaidsBingo122024/Cox_Scrolls.gif",
+      "text": "Obtain the Dex and Arcane prayer scroll",
+      "player": "",
+      "urls": [
+        {
+          "label": "Dexterous Prayer Scroll",
+          "url": "https://oldschool.runescape.wiki/w/Dexterous_prayer_scroll"
+        },
+        {
+          "label": "Arcane Prayer Scroll",
+          "url": "https://oldschool.runescape.wiki/w/Arcane_prayer_scroll"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "tile": "That's not a christmas tree?",
+      "img_path": "../../assets/RaidsBingo122024/Equipping_Dinhs_bulwark.gif",
+      "text": "Obtain the Dinhs Bulwark",
+      "player": "",
+      "urls": [
+        {
+          "label": "Dinh's Bulwark",
+          "url": "https://oldschool.runescape.wiki/w/Dinh%27s_bulwark"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tile": "Now that's festive",
+      "img_path": "../../assets/RaidsBingo122024/ancest.webp",
+      "text": "Obtain any piece of Ancestral",
+      "player": "",
+      "urls": [
+        {
+          "label": "Ancestral Robes",
+          "url": "https://oldschool.runescape.wiki/w/Ancestral_robes"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "tile": "Christmas is magical",
+      "img_path": "../../assets/RaidsBingo122024/kodai.webp",
+      "text": "Obtain the kodai insignia",
+      "player": "",
+      "urls": [
+        {
+          "label": "Kodai Insignia",
+          "url": "https://oldschool.runescape.wiki/w/Kodai_insignia"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tile": "Would you like a crossbow or a shield?",
+      "img_path": "../../assets/RaidsBingo122024/buck.webp",
+      "text": "Obtain the twisted buckler or dragon hunter crossbow",
+      "player": "",
+      "urls": [
+        {
+          "label": "Twisted Buckler",
+          "url": "https://oldschool.runescape.wiki/w/Twisted_buckler"
+        },
+        {
+          "label": "Dragon Hunter Crossbow",
+          "url": "https://oldschool.runescape.wiki/w/Dragon_hunter_crossbow"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "tile": "The christmas defender",
+      "img_path": "../../assets/RaidsBingo122024/avern.webp",
+      "text": "Obtain the avernic defender hilt",
+      "player": "",
+      "urls": [
+        {
+          "label": "Avernic Defender Hilt",
+          "url": "https://oldschool.runescape.wiki/w/Avernic_defender_hilt"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "tile": "On guard",
+      "img_path": "../../assets/RaidsBingo122024/rapier.webp",
+      "text": "Obtain the ghrazi rapier",
+      "player": "",
+      "urls": [
+        {
+          "label": "Ghrazi Rapier",
+          "url": "https://oldschool.runescape.wiki/w/Ghrazi_rapier"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "tile": "It looks like snow",
+      "img_path": "../../assets/RaidsBingo122024/justi.webp",
+      "text": "Obtain any piece of justiciar",
+      "player": "",
+      "urls": [
+        {
+          "label": "Justiciar Armour",
+          "url": "https://oldschool.runescape.wiki/w/Justiciar_armour"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "tile": "One gold ring",
+      "img_path": "../../assets/RaidsBingo122024/lb.webp",
+      "text": "Obtain the lightbearer",
+      "player": "",
+      "urls": [
+        {
+          "label": "Lightbearer",
+          "url": "https://oldschool.runescape.wiki/w/Lightbearer"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "tile": "Come here fang",
+      "img_path": "../../assets/RaidsBingo122024/fang.webp",
+      "text": "Obtain the osmuntens fang",
+      "player": "",
+      "urls": [
+        {
+          "label": "Osmumten's Fang",
+          "url": "https://oldschool.runescape.wiki/w/Osmumten%27s_fang"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "tile": "A christmas ward",
+      "img_path": "../../assets/RaidsBingo122024/ward.webp",
+      "text": "Obtain the eldinis ward",
+      "player": "",
+      "urls": [
+        {
+          "label": "Elidinis' Ward",
+          "url": "https://oldschool.runescape.wiki/w/Elidinis%27_ward"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "tile": "Who's masori?",
+      "img_path": "../../assets/RaidsBingo122024/masori.webp",
+      "text": "Obtain any piece of masori",
+      "player": "",
+      "urls": [
+        {
+          "label": "Masori Armour",
+          "url": "https://oldschool.runescape.wiki/w/Masori_armour"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "tile": "Santa is real!",
+      "img_path": "../../assets/RaidsBingo122024/tbow.webp",
+      "text": "Obtain any of the following- twisted bow/ scythe of vitur/ tumekens shadow",
+      "player": "",
+      "urls": [
+        {
+          "label": "Twisted Bow",
+          "url": "https://oldschool.runescape.wiki/w/Twisted_bow"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "tile": "Do you consider this a challenge?",
+      "img_path": "../../assets/RaidsBingo122024/Cox_loot.gif",
+      "text": "Complete a challenge mode cox, a hard mode tob and a 500 raid",
+      "player": "",
+      "urls": [
+        {
+          "label": "Chambers of Xeric",
+          "url": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric/Strategies"
+        },
+        {
+          "label": "Theatre of Blood",
+          "url": "https://oldschool.runescape.wiki/w/Theatre_of_Blood/Strategies"
+        },
+        {
+          "label": "Tombs of Amascut",
+          "url": "https://oldschool.runescape.wiki/w/Tombs_of_Amascut/Strategies"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "tile": "Baby reindeer",
+      "img_path": "../../assets/RaidsBingo122024/Raids_Pets.gif",
+      "text": "Obtain the olmlet/ lil zik or tumekens guardian",
+      "player": "",
+      "urls": [
+        {
+          "label": "Olmlet",
+          "url": "https://oldschool.runescape.wiki/w/Olmlet"
+        },
+        {
+          "label": "Lil' Zik",
+          "url": "https://oldschool.runescape.wiki/w/Lil%27_zik"
+        },
+        {
+          "label": "Tumeken's Guardian",
+          "url": "https://oldschool.runescape.wiki/w/Tumeken%27s_guardian"
+        }
+      ]
+    }
+  ]
+}
