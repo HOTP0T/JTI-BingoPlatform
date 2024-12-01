@@ -729,10 +729,7 @@ button:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* HOTP0T MSG */
-#coffee {
-  opacity: 12.5%;
-}
+
 
 .footer-message {
   position: fixed;
