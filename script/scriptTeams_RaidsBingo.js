@@ -411,4 +411,3 @@ window.closeLightbox = function() {
 //     }
 //   });
 // });
-
